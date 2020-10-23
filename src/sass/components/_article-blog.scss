@@ -1,0 +1,51 @@
+.article-blog{
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0,0,0,0.08);
+    
+    @media screen and (min-width: $lg){
+        box-shadow: 0 0 50px rgba(0,0,0,0.08);
+        border: none;
+    }
+
+    &__img{
+        padding-bottom: 70%;
+        background-size: cover;
+        background-position: center center;
+
+        @media screen and (min-width: $lg){
+            padding-bottom: 55%;
+        }
+    }
+}
+
+.article-blog.article-blog__fullwidth{
+    .article-blog{
+        &__img{
+            @media screen and (min-width: $md){
+                padding-bottom: 50%;
+            }
+            @media screen and (min-width: $lg){
+                padding-bottom: 20%;
+            }
+        }
+    }
+    .icon-arrow{
+        @media screen and (min-width: $lg){
+            background: $blue url('./dist/img/arrow-right-white.svg') center center no-repeat;
+            background-size: 15px 13px;
+            width: 60px;
+            height:100%;
+            position: absolute;
+            right: 0; 
+            bottom: 0;
+            transition: width 0.4s $ease;
+        }
+    }
+    &:hover{
+        .icon-arrow{
+            @media screen and (min-width: $lg){
+                width: 90px;
+            }
+        }
+    }
+}

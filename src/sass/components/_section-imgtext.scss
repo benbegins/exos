@@ -1,0 +1,21 @@
+.section-imgtext{
+    padding-bottom: 5rem;
+    @media screen and (min-width: $lg){
+        padding-bottom: 8rem;
+    }
+    @media screen and (min-width: $xxl){
+        padding-bottom: 10%;
+    }
+
+    &__img-container{
+        height: 30%;
+    }
+
+    &__text-container{
+        padding-top: 4rem;
+        @media screen and (min-width: $lg){
+            @apply w-8/12 ml-auto mr-0 relative bg-light pt-24 pl-24 pr-24;
+            margin-top: -150px;
+        }
+    }
+}

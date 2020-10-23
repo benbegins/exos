@@ -1,16 +1,42 @@
 @charset "UTF-8";
 /*
-Theme Name: Bemy
-Theme URI: https://bemy.studio
+Theme Name: Exos
+Theme URI: https://exos-recrutement.com
 Author: Bemy Studio
 Author URI: https://bemy.studio
-Description: Thème Bemy
+Description: Theme Exos
 Version: 1.0
-Tags: blue, orange, light, three-columns, left-sidebar, responsive-layout, editor-style, featured-images, full-width-template, sticky-post, theme-options, translation-ready, accessibility-ready
 */
 
 @import "tailwindcss/base";
-
 @import "tailwindcss/components";
-
 @import "tailwindcss/utilities";
+
+// Fonts
+// Barlow 700
+// Roboto 400, 500, 700
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=Roboto:wght@400;500;700&display=swap');
+
+// Global
+@import "./variables";
+@import "./global";
+
+// Components
+@import "./components/header";
+@import "./components/footer";
+@import "./components/hero";
+@import "./components/buttons";
+@import "./components/text";
+@import "./components/offre";
+@import "./components/section-split";
+@import "./components/article-blog";
+@import "./components/temoignage";
+@import "./components/slider";
+@import "./components/section-imgtext";
+@import "./components/doc-telechargeable";
+
+// Pages
+@import "./pages/candidat-accueil";
+@import "./pages/candidat-blog";
+@import "./pages/candidat-offre-single";
+@import "./pages/entreprise-accueil";

@@ -1,0 +1,14 @@
+.temoignage{
+    &__content{
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -13px;
+            left: 0;
+            width: 19px;
+            height: 13px;
+            background:url('./dist/img/icon-temoignage.svg') center center no-repeat;
+            background-size: 19px 13px;
+        }    
+    }
+}

@@ -1,0 +1,67 @@
+.section-split{
+    @apply bg-dark text-light;
+
+    @media screen and (min-width: $sm){
+        @apply grid grid-cols-2 items-center justify-center;
+    }
+
+    &__image{
+        padding-bottom: 60%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        @media screen and (min-width: $sm){
+            padding-bottom: 90%;
+            @apply col-start-2 row-start-1;
+        }
+    }
+
+    &__text{
+        @media screen and (min-width: $sm){
+            @apply col-start-1 row-start-1;
+        }
+        .container{
+            @media screen and (min-width: $lg){
+                @apply max-w-screen-md;
+            }
+        }
+    }
+}
+
+.image__espace-interimaire{
+    background-image: url('./dist/img/back/espace-interimaire-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/espace-interimaire.jpg');
+    }
+}
+.image__espace-entreprise{
+    background-image: url('./dist/img/back/espace-entreprise-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/espace-entreprise.jpg');
+    }
+}
+.image__club-rh{
+    background-image: url('./dist/img/back/club-rh-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/club-rh.jpg');
+    }
+}
+.image__collaborateur{
+    background-image: url('./dist/img/back/collaborateur-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/collaborateur.jpg');
+    }
+}
+.image__aucune-offre{
+    background-image: url('./dist/img/back/aucune-offre-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/aucune-offre.jpg');
+    }
+}
+.image__parrainage{
+    background-image: url('./dist/img/back/parrainage-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/parrainage.jpg');
+    }
+}

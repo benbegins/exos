@@ -1,0 +1,90 @@
+.site-footer{
+    &__section-title{
+        font-family: 'Roboto', sans-serif;
+        @apply opacity-50 uppercase text-xs mb-5 font-medium;
+    }
+
+    &__menu{
+        a{
+            position: relative;
+            padding: 10px 0;
+            &::after{
+                content: "";
+                @apply block absolute w-full left-0 bg-blue;
+                height: 2px;
+                bottom: 5px;
+                transform: scaleX(0);
+                transition: transform 0.4s $ease;
+            }
+            &:hover{
+                &::after{
+                    transform: scaleX(1);
+                }
+            }
+        }  
+        &__cta a{
+            padding: 20px 30px;
+            font-weight: $weight-bold;
+            text-align: left;
+            background: $blue url('./dist/img/arrow-right-white.svg') 95% center no-repeat;
+            @media screen and (min-width: $lg){
+                background-image: none;
+                text-align: center;
+                padding: 15px 30px;
+                margin-top: 10px;
+            }
+            &:hover{
+                background-color: $orange;
+                color: $light;
+            }
+            &::after{
+                display: none;
+            }
+        }
+        ul{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            @media screen and (min-width: $lg){
+                display: block;
+            }
+            li{
+                padding: 10px 0;
+                @media screen and (min-width: $lg){
+                    padding:0;
+                    margin-bottom: 20px;
+                }
+            }
+            li:nth-child(2n){
+                text-align: right;
+                @media screen and (min-width: $lg){
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    &__a-propos{
+        font-family: 'Barlow Condensed', sans-serif;
+    }
+    
+    &__mentions{
+        border-top:1px solid #83898D;
+        a{
+            position: relative;
+            padding: 10px 0;
+            &::after{
+                content: "";
+                @apply block absolute w-full left-0 bg-blue;
+                height: 2px;
+                bottom: 5px;
+                transform: scaleX(0);
+                transition: transform 0.4s $ease;
+            }
+            &:hover{
+                &::after{
+                    transform: scaleX(1);
+                }
+            }
+        }  
+    }
+}

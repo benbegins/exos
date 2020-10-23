@@ -1,0 +1,58 @@
+.offre{
+    @apply rounded-md relative;
+    background-color: white;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+
+    &__legende{
+        @apply uppercase font-medium text-xs pl-8 flex items-center;
+        line-height: 1.2;
+        min-height: 22px;
+
+        &.localisation{
+            background: url('./dist/img/icon-localisation-dark.svg') center left no-repeat;
+            background-size: 15px 22px;
+        }
+        &.type{
+            background: url('./dist/img/icon-type-dark.svg') center left no-repeat;
+            background-size: 20px 22px;
+        }
+    }
+    
+    .icon-arrow{
+        background: url('./dist/img/arrow-right-blue.svg') center center no-repeat;
+        background-size: 15px 13px;
+        width: 15px;
+        height:13px;
+        position: absolute;
+        right: 20px; 
+        bottom: 16px;
+    }
+
+    &.offre-fullwidth{
+        @apply overflow-hidden;
+        .icon-arrow{
+            @media screen and (min-width: $lg){
+                background: $blue url('./dist/img/arrow-right-white.svg') center center no-repeat;
+                background-size: 15px 13px;
+                width: 60px;
+                height:100%;
+                position: absolute;
+                right: 0; 
+                bottom: 0;
+                transition: width 0.4s $ease;
+            }
+        }
+        &:hover{
+            .icon-arrow{
+                @media screen and (min-width: $lg){
+                    width: 90px;
+                }
+            }
+        }
+        .h3-title{
+            @media screen and (min-width: $lg){
+                font-size: 1.875rem;
+            }
+        }
+    }
+}

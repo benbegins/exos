@@ -1,0 +1,25 @@
+.offre-single{
+    &__legende{
+        @apply uppercase font-medium text-sm pl-8 flex items-center;
+        line-height: 1.2;
+        min-height: 22px;
+
+        &.localisation{
+            background: url('./dist/img/icon-localisation-white.svg') center left no-repeat;
+            background-size: 15px 22px;
+        }
+        &.type{
+            background: url('./dist/img/icon-type-white.svg') center left no-repeat;
+            background-size: 20px 22px;
+        }
+    }
+
+    &__candidature{
+        background-image: url('./dist/img/back/postuler-mobile.jpg');
+        background-size: cover;
+        background-position: center center;
+        @media screen and (min-width: $lg){
+            background-image: url('./dist/img/back/postuler.jpg');
+        }
+    }
+}

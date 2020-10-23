@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="app">
+<div class="page-pt">
     
 </div>
 

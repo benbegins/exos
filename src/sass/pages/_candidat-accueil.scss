@@ -1,0 +1,51 @@
+.home-c{
+    .offre_a_la_une{
+        &__img{
+            padding-bottom: 70%;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 6px 6px 0 0;
+
+            @media screen and (min-width: $lg){
+                padding-bottom: 60%;
+                border-radius: 6px 0 0 6px;
+            }
+        }
+        &__content{
+            border-radius: 0 0 6px 6px;
+            padding: 60px 25px 30px 25px;
+
+            @media screen and (min-width: $lg){
+                border-radius: 0 6px 6px 0;
+                padding: 60px;
+            }
+        }
+        .localisation{
+            background: url('./dist/img/icon-localisation-white.svg') center left no-repeat;
+            background-size: 15px 22px;
+        }
+        .type{
+            background: url('./dist/img/icon-type-white.svg') center left no-repeat;
+            background-size: 20px 22px;
+        }
+        .btn-primary{
+            position: absolute;
+            top: -30px;
+            right: 25px;
+
+            @media screen and (min-width: $lg){
+                top: calc(100% - 30px);
+                right: 60px;
+            }
+        }
+    }
+
+    .liste-offres{
+        .offre:nth-child(3){
+            display: none;
+            @media screen and (min-width: $lg){
+                display: block;
+            }
+        }
+    }
+}

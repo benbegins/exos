@@ -1,0 +1,102 @@
+// HERO IMAGE FULL WIDTH
+.hero-full{
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    color: $light;
+    position: relative;
+    padding: 120px 0 80px 0;
+
+    @media screen and (min-width: $lg){
+        min-height: auto;
+        // min-height: 650px;
+        padding: 15% 0 80px 0;
+        max-height: calc(100vh - 80px);
+    }
+    @media screen and (min-width: $xl){
+        // min-height: 650px;
+    }
+    @media screen and (min-width: $xxl){
+        padding: 15% 0 80px 3%;
+    }
+
+    .hero-text{
+        @apply leading-relaxed my-8;
+        font-weight: $weight-medium;
+        @media screen and (min-width: $xxl){
+            font-size: 1.15vw;
+        }
+    }
+
+    .hero-title{
+        @media screen and (min-width: $xxl){
+            font-size: 7vw;
+        }
+    }
+
+    .overlay{
+        @apply absolute inset-0;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,0.5032387955182073) 0%, rgba(0,0,0,0) 100%);
+    }
+}
+
+
+// HERO IMAGE SPLIT 1/2
+.hero-split{
+    @apply bg-dark text-light;
+
+    @media screen and (min-width: $md){
+        @apply grid grid-cols-2 items-center;
+    }
+
+    &__img{
+        background-size: cover;
+        background-position: center center;
+        padding-bottom: 80%;
+        @media screen and (min-width: $md){
+            padding-bottom: 90%;
+        }
+    }
+    &__text{
+        @apply py-16;
+        @media screen and (min-width: $md){
+            @apply py-10;
+        }
+        .container{
+            @media screen and (min-width: $lg){
+                @apply max-w-screen-md;
+            }
+        }
+    }
+}
+
+
+// PAGES
+.hero-home-candidat{
+    background-image: url('./dist/img/back/hero-home-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/hero-home.jpg');
+    }
+}
+.hero-home-entreprise{
+    background-image: url('./dist/img/back/hero-home_entreprise-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/hero-home_entreprise.jpg');
+    }
+}
+.hero-blog{
+    background-image: url('./dist/img/back/hero-blog-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/hero-blog.jpg');
+    }
+}
+.hero-interimaire{
+    background-image: url('./dist/img/back/hero-interimaire-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/hero-interimaire.jpg');
+    }
+}
+

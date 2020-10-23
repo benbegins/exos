@@ -1,0 +1,13 @@
+.doc-download{
+    @apply block bg-white rounded-md text-center;
+    box-shadow: 0 0 30px rgba(0,0,0,0.08);
+
+    &__icon{
+        @apply flex items-center justify-center border-b border-dark border-opacity-15;
+        height: 110px;
+    }  
+
+    &__text{
+        @apply font-extrabold uppercase text-xs py-5 px-2 leading-none;
+    }
+}

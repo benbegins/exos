@@ -10,7 +10,9 @@ function bemytheme_setup(){
 
     // Ajouts des menus
     register_nav_menus( array(
-        'main' => 'Menu Principal',
+        'menu-candidat' => 'Menu Candidat',
+        'menu-entreprise' => 'Menu Entreprise',
+        'menu-club-rh' => 'Menu Club RH',
     ) );
 }
 add_action( 'after_setup_theme', 'bemytheme_setup' );
@@ -36,9 +38,20 @@ function bemytheme_register_assets(){
 add_action( 'wp_enqueue_scripts', 'bemytheme_register_assets');
 
 
+// Custom image size
+add_image_size( 'xl', 1440);
+add_image_size( 'xxl', 1900);
 
 /**
  * Customize administration
  */
 require get_template_directory() . '/inc/administration.php';
+
+/**
+ * Custom excerpt length
+ */
+function custom_excerpt_length( $length ) {
+    return 25;
+  }
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
