@@ -22,4 +22,8 @@
             background-image: url('./dist/img/back/postuler.jpg');
         }
     }
+
+    form .forminator-error-message{
+        color: $light;
+    }
 }

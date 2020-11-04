@@ -20,6 +20,7 @@ get_header();
             </div>
         </div>
         <div class="overlay"></div>
+        <div class="reveal bg-light"></div>
     </section>
 
     <!-- DERNIERES OFFRES -->
@@ -91,6 +92,13 @@ get_header();
                         'post_type' 				=> array( 'articleblog' ),
                         'posts_per_page' 			=> '3',
                         'ignore_sticky_posts'    	=> true,
+                        'tax_query'             => array(
+                            array(
+                                'taxonomy' => 'categorie',
+                                'field'    => 'slug',
+                                'terms'    => array('candidat'),
+                            ),
+                        ),
                     );
                     $query = new WP_Query( $args );
                     // 

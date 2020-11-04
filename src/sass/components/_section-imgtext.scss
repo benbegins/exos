@@ -1,14 +1,12 @@
 .section-imgtext{
-    padding-bottom: 5rem;
-    @media screen and (min-width: $lg){
-        padding-bottom: 8rem;
-    }
-    @media screen and (min-width: $xxl){
-        padding-bottom: 10%;
-    }
-
     &__img-container{
-        height: 30%;
+        padding-bottom: 60%;
+        background-size: cover;
+        background-position: center center;
+
+        @media screen and (min-width: $lg){
+            padding-bottom: 50%;
+        }
     }
 
     &__text-container{
@@ -17,5 +15,18 @@
             @apply w-8/12 ml-auto mr-0 relative bg-light pt-24 pl-24 pr-24;
             margin-top: -150px;
         }
+    }
+}
+
+.img-locaux-01{
+    background-image:url('./dist/img/back/locaux-01-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image:url('./dist/img/back/locaux-01.jpg');
+    }
+}
+.img-locaux-02{
+    background-image:url('./dist/img/back/locaux-02-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image:url('./dist/img/back/locaux-02.jpg');
     }
 }

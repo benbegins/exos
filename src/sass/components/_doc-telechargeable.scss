@@ -1,6 +1,11 @@
 .doc-download{
-    @apply block bg-white rounded-md text-center;
-    box-shadow: 0 0 30px rgba(0,0,0,0.08);
+    @apply block bg-white rounded-md text-center relative;
+    transition:0.3s ease;
+    @extend .box-shadow;
+
+    &:hover{
+        @extend .box-shadow-over;
+    }
 
     &__icon{
         @apply flex items-center justify-center border-b border-dark border-opacity-15;

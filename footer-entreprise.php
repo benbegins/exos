@@ -6,7 +6,7 @@
             <div class="hidden lg:block col-span-6">
                 <h6 class="site-footer__section-title">À propos</h6>
                 <p class="site-footer__a-propos text-2xl leading-tight">Depuis 2002 Exos est spécialisé dans le recrutement d’employés et de cadres pour les services : administratif, commerciaux, marketing, informatique, juridique, comptable,…</p>
-                <a href="" class="site-footer__link mt-5">Découvrez-nous</a>
+                <a href="<?php echo get_site_url(); ?>/entreprise/a-propos" class="btn-secondary btn-white mt-5">Découvrez-nous</a>
                 <div class="flex mt-5">
                     <a href="https://www.facebook.com/exos.recrutement/" class="site-footer__icon-social mr-5" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37">
@@ -34,6 +34,9 @@
                             </g>
                         </svg>
                     </a>
+                    <div>
+                        <?php echo do_shortcode('[QUALIDGET type="badge"]'); ?>
+                    </div>
                 </div>
             </div>
 
@@ -47,7 +50,7 @@
                     ?>  
                 </div>
                 <div class="site-footer__menu__cta mt-5">
-                    <a href="<?php echo get_site_url(); ?>/entreprise/contact" class="leading-none block rounded-md text-light lg:transition duration-200 lg:inline-block">Nous <br>contacter</a>
+                    <a href="<?php echo get_site_url(); ?>/entreprise/contact" class="leading-none block rounded-md text-light lg:inline-block">Nous <br>contacter</a>
                 </div>
                 <div class="flex mt-8 lg:hidden">
                     <a href="https://www.facebook.com/exos.recrutement/" class="site-footer__icon-social mr-5" target="_blank">
@@ -86,16 +89,22 @@
                     <p>164 rue de Vaugirard <br>75015 PARIS</p>
                     <p class="text-right lg:text-left lg:mt-5">t. 01 40 19 72 75 <br>f. 01 40 19 72 82</p>
                 </div>
-                <a href="https://www.google.fr/maps/place/EXOS+Recrutement+%26+int%C3%A9rim/@48.8432668,2.3108566,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67204dcead01f:0xcf85489a149e73e6!8m2!3d48.8432668!4d2.3130453" target="_blank" class="site-footer__link mt-5">Voir le plan</a>
+                <a href="https://www.google.fr/maps/place/EXOS+Recrutement+%26+int%C3%A9rim/@48.8432668,2.3108566,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67204dcead01f:0xcf85489a149e73e6!8m2!3d48.8432668!4d2.3130453" target="_blank" class="btn-secondary btn-white mt-5">Voir le plan</a>
             </div>
             
         </div>
 
-        <div class="site-footer__mentions py-10 text-gray text-xs font-bold text-center flex flex-wrap justify-center px-10 sm:justify-between sm:px-0">
-            <p class="my-1 mr-4 sm:flex-grow sm:text-left">© exos 2020</p>
-            <p class="my-1 sm:mr-4 lg:mr-10"><a href="<?php echo get_site_url(); ?>/mentions" class="text-light">Mentions légales</a></p>
-            <p class="my-1 mx-4 sm:mx-0">Réalisation : <a href="https://bemy.studio" class="text-light" target="_blank">bemy studio</a></p>
-        </div>    
+        <div class="site-footer__mentions py-10 text-gray text-xs font-bold text-center md:py-16 lg:flex lg:items-center lg:justify-between">
+            <div class="mb-10 lg:mb-0 lg:order-2 lg:flex-1">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo-exos-white.svg" alt="Logo exos blanc" class="w-32 mx-auto lg:w-40">    
+            </div>
+            <div class=" mb-2 lg:mb-0 lg:order-1 lg:flex-1 lg:text-left">
+                <p>© exos 2020</p>
+            </div>
+            <div class="lg:order-3 lg:flex-1 lg:text-right">
+                <p><a href="<?php echo get_site_url(); ?>/mentions" class="text-light mr-6">Mentions légales</a> Réalisation : <a href="https://bemy.studio" class="text-light" target="_blank">bemy studio</a></p>
+            </div>
+        </div> 
 
     </div>
 </footer>

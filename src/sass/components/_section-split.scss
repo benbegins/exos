@@ -7,13 +7,17 @@
 
     &__image{
         padding-bottom: 60%;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
+        @apply bg-cover bg-center bg-no-repeat;
 
         @media screen and (min-width: $sm){
             padding-bottom: 90%;
             @apply col-start-2 row-start-1;
+        }
+
+        @media screen and (min-width: $lg){
+            // background-attachment: fixed;
+            // background-position: 25vw 50vh;
+            // background-size:cover;
         }
     }
 
@@ -63,5 +67,11 @@
     background-image: url('./dist/img/back/parrainage-mobile.jpg');
     @media screen and (min-width: $lg){
         background-image: url('./dist/img/back/parrainage.jpg');
+    }
+}
+.image__pensez-interim{
+    background-image: url('./dist/img/back/pensez-interim-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/pensez-interim.jpg');
     }
 }

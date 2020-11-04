@@ -1,0 +1,19 @@
+.secteur{
+    &__img{
+        @apply h-0 bg-cover bg-center bg-no-repeat text-light relative;
+        padding-bottom: 90%;
+        @media screen and (min-width: $md){
+            padding-bottom: 80%;
+        }
+        @media screen and (min-width: $lg){
+            padding-bottom: 60%;
+        }
+    }
+
+    .tertiaire{
+        background-image: url('./dist/img/back/secteur-tertiaire-mobile.jpg');
+    }
+    .industrie{
+        background-image: url('./dist/img/back/secteur-industrie-mobile.jpg');
+    }
+}

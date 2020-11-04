@@ -27,6 +27,11 @@ Version: 1.0
 @import "./components/hero";
 @import "./components/buttons";
 @import "./components/text";
+@import "./components/icon-social";
+@import "./components/form";
+@import "./components/pagination";
+@import "./components/cursor";
+
 @import "./components/offre";
 @import "./components/section-split";
 @import "./components/article-blog";
@@ -34,9 +39,15 @@ Version: 1.0
 @import "./components/slider";
 @import "./components/section-imgtext";
 @import "./components/doc-telechargeable";
+@import "./components/secteurs";
+@import "./components/histoire";
+
+@import "./components/revue-talents";
+@import "./components/article-juridique";
+@import "./components/webinar";
 
 // Pages
 @import "./pages/candidat-accueil";
-@import "./pages/candidat-blog";
 @import "./pages/candidat-offre-single";
+@import "./pages/candidat-a-propos";
 @import "./pages/entreprise-accueil";

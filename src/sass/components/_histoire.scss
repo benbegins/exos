@@ -1,0 +1,41 @@
+.histoire{
+    &__item{
+        @apply grid grid-cols-4;
+        @media screen and (min-width: $md){
+            @apply grid-cols-7;
+        }
+    }
+    &__text{
+        @apply col-span-3;
+        @media screen and (min-width: $md){
+            @apply col-span-6;
+        }
+        p{
+            @apply mt-2;
+            padding-bottom: 45px;
+        }
+    }
+    &__date{
+        position: relative;
+        p{
+            @apply h-full inline-block relative;
+            &::after{
+                content: "";
+                left: 50%;
+                top: 30px;
+                width: 1px;
+                height: calc(100% - 40px);
+                z-index: -1;
+                @apply absolute bg-gray;
+            }
+        }
+    }
+    &__item:last-child{
+        .histoire__date p::after{
+            display: none;
+        }
+        .histoire__text p{
+            padding-bottom: 0;
+        }
+    }
+}

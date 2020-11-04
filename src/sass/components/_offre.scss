@@ -1,7 +1,7 @@
 .offre{
     @apply rounded-md relative;
     background-color: white;
-    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+    @extend .box-shadow;
 
     &__legende{
         @apply uppercase font-medium text-xs pl-8 flex items-center;
@@ -26,6 +26,18 @@
         position: absolute;
         right: 20px; 
         bottom: 16px;
+        transition: opacity 0.1s linear; 
+    }
+    
+
+    &.offre-compact{
+        transition:0.3s ease;
+        &:hover{
+            @extend .box-shadow-over;
+            .icon-arrow{
+                opacity: 0;
+            }
+        }
     }
 
     &.offre-fullwidth{

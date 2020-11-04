@@ -8,38 +8,54 @@ get_header();
 <div class="page-pt">
 
     <!-- RECHERCHE OFFRE -->
-    <section class="section-pad bg-dark text-light">
+    <section class="section-pad bg-dark text-light relative">
         <div class="container lg:flex">
-            <h1 class="h1-title lg:w-1/2">Trouver une offre</h1>
-            <div class="mt-16 lg:mt-6 lg:w-1/3 lg:ml-auto">
-                <input type="text" class="w-full h-16 px-6 rounded-md mb-4" placeholder="test">
-                <input type="text" class="w-full h-16 px-6 rounded-md mb-4" placeholder="test">
-                <input type="text" class="w-full h-16 px-6 rounded-md mb-4" placeholder="test">
-                <input type="submit" value="Chercher" class="h-16 px-6 bg-orange text-dark rounded-md block ml-auto font-bold">
+            <h1 class="h1-title lg:w-1/2">
+                Trouver une offre
+            </h1>
+            <div class="form mt-16 lg:mt-6 lg:w-1/3 lg:ml-auto">
+                <?php echo do_shortcode('[searchandfilter slug="offres-demploi"]'); ?>
             </div>
         </div>
     </section>
 
     <!-- LISTE DES OFFRES -->
-    <section class="section-pad">
-        <div class="container">
-            <?php 
-            $args = array(
-                'post_type'             => 'post',
-                'ignore_sticky_posts'   => true,
-                'paged'          => $paged,
-				'posts_per_page' => '20',
-            );
-            $query = new WP_Query( $args );
+    <section class="section-pad" id="offres">
+        <div class="container" id="main">
+            <?php
+            $args = array('post_type' => 'post');
+            $args['search_filter_id'] = 1279083;
+            $query = new WP_Query($args);
 
             if ( $query->have_posts() ) :
                 while ( $query->have_posts() ) : $query->the_post();
                     get_template_part( 'template-parts/offre-fullwidth' );
                 endwhile;
-            endif; 
+            else :
+                echo 'Pas de résultat';
+            endif;
 
             wp_reset_postdata();
             ?>
+
+            <!-- PAGINATION -->
+            <div class="pagination mt-16">
+                <div class="pagination__list">
+                <?php
+                    $big = 999999999;
+                    echo paginate_links( array(
+                        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                        'format' => '?paged=%#%',
+                        'current' => max( 1, get_query_var('paged') ),
+                        'total' => $query->max_num_pages,
+                        'show_all' => true,
+                        'prev_next' => false
+                    ) );
+                ?>        
+                </div>
+            </div>
+
+            
         </div>
     </section>
 
@@ -64,29 +80,38 @@ get_header();
                 <div class="btn-pagination pagination-left-dark pagination-left-articles mr-2"></div>
                 <div class="btn-pagination pagination-right-dark pagination-right-articles"></div>
             </div>
-            
-            <div class="swiper-articles swiper-container liste-articles md:mt-6 lg:mt-24">
-                <div class="swiper-wrapper">
-                    <?php
-                        // LE BLOG
-                        $args = array(
-                            'post_type' 				=> array( 'articleblog' ),
-                            'posts_per_page' 			=> '3',
-                            'ignore_sticky_posts'    	=> true,
-                        );
-                        $query = new WP_Query( $args );
-                        // 
-                        if ( $query->have_posts() ) {
-                            while ( $query->have_posts() ) { 
-                                $query->the_post();
-                                get_template_part( 'template-parts/article-blog');
-                            }
+        </div>
+
+        <div class="swiper-articles swiper-container liste-articles lg:mt-24">
+            <div class="swiper-wrapper">
+                <?php
+                    // LE BLOG
+                    $args = array(
+                        'post_type' 				=> array( 'articleblog' ),
+                        'posts_per_page' 			=> '3',
+                        'ignore_sticky_posts'    	=> true,
+                        'tax_query'             => array(
+                            array(
+                                'taxonomy' => 'categorie',
+                                'field'    => 'slug',
+                                'terms'    => array('candidat'),
+                            ),
+                        ),
+                    );
+                    $query = new WP_Query( $args );
+                    // 
+                    if ( $query->have_posts() ) {
+                        while ( $query->have_posts() ) { 
+                            $query->the_post();
+                            get_template_part( 'template-parts/article-blog');
                         }
-                        wp_reset_postdata();
-                    ?>    
-                </div>
+                    }
+                    wp_reset_postdata();
+                ?>    
             </div>
-            
+        </div>
+
+        <div class="container">
             <div class="text-right mt-6 md:mt-10 lg:mt-24">
                 <a href="<?php echo get_site_url(); ?>/le-blog" class="btn-primary btn-white">Voir plus d'articles</a>
             </div>
@@ -94,6 +119,14 @@ get_header();
     </section>
 
     <?php echo get_template_part('./template-parts/question-demande'); ?>
+
+    <!-- SCROLL TO CONTENT IF IS_PAGED=TRUE -->
+    <?php if(is_paged()):?>
+    <script>
+        const offres = document.querySelector('#offres');
+        window.scrollTo(0, offres.offsetTop);
+    </script>
+    <?php endif; ?>
 
 </div>
 

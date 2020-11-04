@@ -18,11 +18,13 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
 <div class="page-pt">
 
     <section class="hero-split">
-            <div class="hero-split__img hero-interimaire"></div>
+            <div class="hero-split__img hero-interimaire">
+                <div class="reveal bg-dark"></div>
+            </div>
             <div class="hero-split__text">
                 <div class="container">
-                    <h1 class="h1-title">Espace intérimaires</h1>
-                    <p class="mt-6">Toutes les infos, liens et documents nécessaires au bon déroulement de votre mission avec Exos.</p>
+                    <h1 class="h1-title hero-title opacity-0">Espace intérimaires</h1>
+                    <p class="mt-6 hero-text opacity-0">Toutes les infos, liens et documents nécessaires au bon déroulement de votre mission avec Exos.</p>
                 </div>
             </div>
     </section>
@@ -48,6 +50,7 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
                             </svg>
                         </div>
                         <p class="doc-download__text">Conseil CV</p>
+                        <div class="cursor-over absolute inset-0"></div>
                     </a>
                     <?php endif; ?>
                     <!-- CONSEIL ENTRETIEN -->
@@ -62,6 +65,7 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
                             </svg>
                         </div>
                         <p class="doc-download__text">Conseil Entretien</p>
+                        <div class="cursor-over absolute inset-0"></div>
                     </a>
                     <?php endif; ?>
                 </div>
@@ -80,6 +84,7 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
                             </svg>
                         </div>
                         <p class="doc-download__text">Relevé d'heures</p>
+                        <div class="cursor-over absolute inset-0"></div>
                     </a>
                     <?php endif; ?>
                 </div>    
@@ -101,6 +106,7 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
                             </svg>
                         </div>
                         <p class="doc-download__text">Votre mission chez Exos</p>
+                        <div class="cursor-over absolute inset-0"></div>
                     </a>
                     <?php endif; ?>
                     <!-- PASSEPORT -->
@@ -115,6 +121,7 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
                             </svg>
                         </div>
                         <p class="doc-download__text">Passeport pour l'intérim</p>
+                        <div class="cursor-over absolute inset-0"></div>
                     </a>
                     <?php endif; ?>
                 </div>    
@@ -133,6 +140,7 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
                             </svg>
                         </div>
                         <p class="doc-download__text">Avantages</p>
+                        <div class="cursor-over absolute inset-0"></div>
                     </a>
                     <?php endif; ?>
                     <!-- NOTICE PREVOYANCE -->
@@ -144,6 +152,7 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
                             </svg>
                         </div>
                         <p class="doc-download__text">Notice prévoyance</p>
+                        <div class="cursor-over absolute inset-0"></div>
                     </a>
                     <?php endif; ?>
                     <!-- COMPLEMENTAIRE SANTE -->
@@ -155,6 +164,7 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
                             </svg>
                         </div>
                         <p class="doc-download__text">Complémentaire santé</p>
+                        <div class="cursor-over absolute inset-0"></div>
                     </a>
                     <?php endif; ?>
                 </div>  

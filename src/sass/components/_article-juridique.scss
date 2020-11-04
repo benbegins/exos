@@ -1,0 +1,25 @@
+.article-juridique{
+    @apply block bg-light text-dark px-6 py-10 rounded-md my-4 relative;
+
+    @media screen and (min-width: $lg){
+        @apply my-8 p-10;
+    }
+
+    &::after{
+        content: "";
+        background: url('./dist/img/arrow-right-dark.svg') center center no-repeat;
+        background-size: 15px 13px;
+        width: 15px;
+        height: 13px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        transition: opacity 0.1s linear;
+    }
+
+    &:hover{
+        &::after{
+            opacity: 0;
+        }
+    }
+}

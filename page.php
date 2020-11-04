@@ -5,7 +5,7 @@
         <div class="container">
             <h1 class="h1-title"><?php the_title(); ?></h1>
             <div class="mt-16 md:mt-24 lg:mt-32">
-                <div class="page-content zone-text lg:w-8/12 lg:ml-auto">
+                <div class="page-content zone-text lg:w-8/12 lg:ml-auto lg:pr-24">
                     <?php the_content(); ?>
                 </div>
             </div>

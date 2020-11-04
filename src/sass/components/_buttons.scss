@@ -3,7 +3,7 @@
     font-weight: $weight-bold;
     padding: 0 50px 0 20px;
     line-height: 60px;
-    box-shadow: 0 0 50px rgba(0,0,0,0.08);
+    @extend .box-shadow;
     transition: color 0.2s;
 
     &::after{
@@ -21,7 +21,7 @@
         @apply block absolute w-full h-full left-0;
         z-index:-1;
         transform: translateX(-101%);
-        transition: transform 0.4s $ease;
+        transition: transform 0.3s $ease;
     }
 
     &:hover{
@@ -70,6 +70,7 @@
             }
         }
     }
+
     &.btn-white-2{
         background: white;
         color: $dark;
@@ -86,6 +87,21 @@
                 background: url('./dist/img/arrow-right-white.svg') center center no-repeat;
                 background-size: 15px 13px;
             }
+        }
+    }
+
+    &.btn-dark{
+        background: white;
+        color: $dark;
+        &::after{
+            background: url('./dist/img/arrow-right-dark.svg') center center no-repeat;
+            background-size: 15px 13px;
+        }
+        &::before{
+            background-color: $orange;
+        }
+        &:hover{
+            color: $dark;
         }
     }
 }
@@ -120,9 +136,17 @@
             background-size: 15px 13px;
         }
     }
+    &.btn-dark{
+        color: $dark;
+        &::after{
+            background: url('./dist/img/arrow-right-dark.svg') center center no-repeat;
+            background-size: 15px 13px;
+        }
+    }
 
     &.btn-back{
         padding-left: 25px;
+        padding-right: 0;
         &::after{
             background: url('./dist/img/arrow-right-blue.svg') center center no-repeat;
             background-size: 15px 13px;
@@ -134,6 +158,12 @@
             &::after{
                 transform: rotate(180deg) translateX(5px);
             }
+        }
+    }
+    &.btn-back.text-orange{
+        &::after{
+            background: url('./dist/img/arrow-right-orange.svg') center center no-repeat;
+            background-size: 15px 13px;
         }
     }
     

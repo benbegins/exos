@@ -2,6 +2,10 @@
 	background: $blue;
 	color: $light;
 }
+.club-rh *::selection{
+	background: $orange;
+	color: $light;
+}
 
 .container{
     max-width: 1440px;
@@ -64,4 +68,22 @@ h1,h2,h3,h4,h5,h6{
     @media screen and (min-width: $xxl){
         padding-bottom: 10.4%;
     }
+}
+
+// BOX SHADOW
+.box-shadow{
+    box-shadow:0 10px 35px rgba(0,0,0,0.07);
+}
+.box-shadow-over{
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+// REVEAL
+.reveal-std{
+    transform-origin: center bottom;
+    @apply absolute inset-0 z-20;
+}
+.fade{
+    @apply fixed inset-0 z-20;
+    pointer-events:none;
 }

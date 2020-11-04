@@ -6,4 +6,5 @@
             <p><?php the_excerpt(); ?></p>
         </div>     
     </div>
+    <div class="cursor-over absolute inset-0"></div>
 </a>

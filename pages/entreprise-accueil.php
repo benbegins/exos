@@ -13,12 +13,13 @@ get_header("entreprise");
                 <h1 class="hero-title h1-title">Votre <br>fournisseur <br>de talents</h1>
                 <p class="hero-text hidden lg:block">Depuis 2002, nous accompagnons candidats et recruteurs sur des missions de recrutement ou intérim.</p>
                 <div class="flex flex-col items-start lg:flex-row lg:items-center">
-                    <a href="<?php echo get_site_url(); ?>/nos-offres" class="btn-primary btn-orange mt-4 mr-10">Nous confier une mission</a>
-                    <a href="<?php echo get_site_url(); ?>/entreprise/" class="btn-secondary btn-white mt-4">Vous êtes un candidat ?</a>        
+                    <a href="<?php echo get_site_url(); ?>/entreprise/contact" class="btn-primary btn-orange mt-4 mr-10">Nous confier une mission</a>
+                    <a href="<?php echo get_site_url(); ?>" class="btn-secondary btn-white mt-4">Vous êtes un candidat ?</a>        
                 </div>
             </div>
         </div>
         <div class="overlay"></div>
+        <div class="reveal bg-light"></div>
     </section>
 
     <!-- DOMAINES D EXPERTISE -->
@@ -118,10 +119,8 @@ get_header("entreprise");
     </section>
 
     <!-- PARTENAIRE DE CONFIANCE -->
-    <section class="section-imgtext">
-        <div class="section-imgtext__img-container">
-            <img class="w-full object-cover section-imgtext__img" src="<?php echo get_template_directory_uri(); ?>/dist/img/back/hero-home.jpg" alt="">
-        </div>
+    <section class="section-imgtext section-pad-bot">
+        <div class="section-imgtext__img-container img-locaux-01"></div>
         <div class="container">
             <div class="section-imgtext__text-container">
                 <h2 class="h2-title mb-10">Partenaire de confiance depuis 2002</h2>
@@ -168,7 +167,7 @@ get_header("entreprise");
         
         <div class="container">
             <div class="text-right">
-                <a href="<?php echo get_site_url(); ?>/temoignages" class="btn-primary btn-white-2 mt-10 lg:mt-16">Tous les avis</a>
+                <a href="<?php echo get_site_url(); ?>/entreprise/temoignages" class="btn-primary btn-white-2 mt-10 lg:mt-16">Tous les avis</a>
             </div>      
         </div>
     </section>
@@ -188,7 +187,7 @@ get_header("entreprise");
         </div>
     </section>
 
-    <!-- BLOG -->
+    <!-- LE BLOG -->
     <section class="section-pad">
         <div class="container">
             <h2 class="h2-title lg:w-1/2">Conseils et infos sur le monde de l’emploi</h2>
@@ -197,31 +196,40 @@ get_header("entreprise");
                 <div class="btn-pagination pagination-left-dark pagination-left-articles mr-2"></div>
                 <div class="btn-pagination pagination-right-dark pagination-right-articles"></div>
             </div>
-            
-            <div class="swiper-articles swiper-container liste-articles md:mt-6 lg:mt-24">
-                <div class="swiper-wrapper">
-                    <?php
-                        // LE BLOG
-                        $args = array(
-                            'post_type' 				=> array( 'articleblog' ),
-                            'posts_per_page' 			=> '3',
-                            'ignore_sticky_posts'    	=> true,
-                        );
-                        $query = new WP_Query( $args );
-                        // 
-                        if ( $query->have_posts() ) {
-                            while ( $query->have_posts() ) { 
-                                $query->the_post();
-                                get_template_part( 'template-parts/article-blog');
-                            }
+        </div>
+
+        <div class="swiper-articles swiper-container liste-articles lg:mt-24">
+            <div class="swiper-wrapper">
+                <?php
+                    // LE BLOG
+                    $args = array(
+                        'post_type' 				=> array( 'articleblog' ),
+                        'posts_per_page' 			=> '3',
+                        'ignore_sticky_posts'    	=> true,
+                        'tax_query'             => array(
+                            array(
+                                'taxonomy' => 'categorie',
+                                'field'    => 'slug',
+                                'terms'    => array('entreprise'),
+                            ),
+                        ),
+                    );
+                    $query = new WP_Query( $args );
+                    // 
+                    if ( $query->have_posts() ) {
+                        while ( $query->have_posts() ) { 
+                            $query->the_post();
+                            get_template_part( 'template-parts/article-blog');
                         }
-                        wp_reset_postdata();
-                    ?>    
-                </div>
+                    }
+                    wp_reset_postdata();
+                ?>    
             </div>
-            
+        </div>
+
+        <div class="container">
             <div class="text-right mt-6 md:mt-10 lg:mt-24">
-                <a href="<?php echo get_site_url(); ?>/le-blog" class="btn-primary btn-white">Voir plus d'articles</a>
+                <a href="<?php echo get_site_url(); ?>/entreprise/blog" class="btn-primary btn-white">Voir plus d'articles</a>
             </div>
         </div>
     </section>

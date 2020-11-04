@@ -1,9 +1,13 @@
 .article-blog{
     background-color: white;
-    box-shadow: 0 0 30px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    @extend .box-shadow;
+
+    &:hover{
+        @extend .box-shadow-over;
+    }
     
     @media screen and (min-width: $lg){
-        box-shadow: 0 0 50px rgba(0,0,0,0.08);
         border: none;
     }
 

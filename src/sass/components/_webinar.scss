@@ -1,0 +1,68 @@
+.webinar{
+    @apply rounded-md block bg-light text-dark overflow-hidden relative;
+
+    &__img{
+        padding-bottom: 70%;
+        @apply bg-cover bg-center relative h-full;
+
+        @media screen and (min-width: $lg){
+            padding-bottom:60%;
+        }
+    }
+
+    &__theme{
+        @apply absolute bg-gray text-light px-4 py-2 top-0 left-0 rounded-br-md text-xs font-bold;
+    }
+    .icon-arrow{
+        display: none;
+        @media screen and (min-width: $lg){
+            display: block;
+            background: $orange url('./dist/img/arrow-right-dark.svg') center center no-repeat;
+            background-size: 15px 13px;
+            width: 60px;
+            height:100%;
+            position: absolute;
+            right: 0; 
+            bottom: 0;
+            transition: width 0.4s $ease;
+        }
+    }
+    &:hover{
+        .icon-arrow{
+            @media screen and (min-width: $lg){
+                width: 90px;
+            }
+        }
+    }
+}
+
+.icon-webinar{
+    min-height: 22px;
+    padding-left: 30px;
+    @apply flex items-center;
+}
+.icon-calendar{
+    background: url('./dist/img/icon-calendar.svg') center left no-repeat;
+    background-size: 22px 22px;
+}
+.icon-time{
+    background: url('./dist/img/icon-time.svg') center left no-repeat;
+    background-size: 22px 22px;
+}
+
+.intervenant{
+    position: relative;
+    z-index: 1;
+    &::before{
+        content: "";
+        z-index: -1;
+        @apply bg-orange absolute h-full w-full top-0 left-0;
+
+        @media screen and (min-width: $lg){
+            width:66%;
+        }
+        @media screen and (min-width: $xxl){
+            width:calc(50% + 240px);
+        }
+    }
+}

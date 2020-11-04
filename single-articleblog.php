@@ -1,12 +1,33 @@
-<?php get_header(); ?>
+<?php 
+// Récupère la catégorie de l'article
+$categories = get_the_terms( $post->ID , 'categorie' );
+// Si la catégorie correspond à entreprise, 
+// on affiche le header correspondant
+if($categories[0]->slug == "entreprise"){
+    get_header('entreprise');
+} else {
+    get_header();
+}
+?>
 
 
 <div class="page-pt">
 
     <section class="section-pad">
         <div class="container">
-            <a href="<?php echo get_site_url(); ?>/le-blog" class="btn-secondary btn-back text-blue mb-10">Retour aux articles</a>
-            <h1 class="h1-title lg:w-2/3"><?php the_title(); ?></h1>
+            <a 
+            href="<?php 
+                if($categories[0]->slug == "entreprise"){
+                    echo get_site_url() . '/entreprise/blog';
+                } else {
+                    echo get_site_url() . '/le-blog';
+                } 
+            ?>" 
+            class="btn-secondary btn-back text-blue mb-10">Tous les articles</a>
+            <h1 class="h1-title lg:w-2/3 relative">
+                <?php the_title(); ?>
+                <div class="reveal-text bg-dark"></div>
+            </h1>
         </div>
     </section>
 
@@ -14,7 +35,7 @@
         <div class="container">
             <div class="zone-text lg:w-2/3 lg:ml-auto">
                 <img class="w-full" src="<?php echo the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>">
-                <div class="mt-10 lg:mt-24">
+                <div class="mt-10 lg:mt-24 lg:pr-24">
                     <?php the_content(); ?>
                 </div>
             </div>
@@ -41,6 +62,13 @@
                         'posts_per_page' 			=> '3',
                         'ignore_sticky_posts'    	=> true,
                         'post__not_in'              => array($post->ID),
+                        'tax_query'             => array(
+                            array(
+                                'taxonomy' => 'categorie',
+                                'field'    => 'slug',
+                                'terms'    => array($categories[0]->slug),
+                            ),
+),
                     );
                     $query = new WP_Query( $args );
                     // 
@@ -68,4 +96,10 @@
 </div>
 
 
-<?php get_footer(); ?>
+<?php 
+if($categories[0]->slug == "entreprise"){
+    get_footer('entreprise');
+} else {
+    get_footer();
+}
+?>

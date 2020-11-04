@@ -1,0 +1,16 @@
+.icon-social{
+    height: 38px;
+    width: 38px;
+    text-indent: -9999px;
+    display: inline-block;
+    background-size: 38px 38px;
+    background-repeat: no-repeat;
+
+    &.icon-facebook-dark{
+        background-image:url('./dist/img/icon-facebook-dark.svg');
+    }
+
+    &.icon-linkedin-dark{
+        background-image:url('./dist/img/icon-linkedin-dark.svg');
+    }
+}

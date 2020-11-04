@@ -1,0 +1,41 @@
+.pagination{
+    @apply text-center;
+
+    &__list{
+        @apply text-center rounded-md overflow-hidden inline-block;
+    }
+
+    .page-numbers{
+        @apply inline-block bg-white px-5 py-4 leading-none font-bold
+        transition duration-200;
+
+        &.current{
+            @apply bg-dark text-light;
+            &:hover{
+                @apply bg-dark text-light;
+            }
+        }
+
+        &:hover{
+            @apply bg-dark text-light;
+        }
+    }
+}
+
+// Pagination Club RH
+.pagination.pagination-club-rh{
+    .page-numbers{
+        @apply text-dark bg-light;
+
+        &.current{
+            @apply bg-orange text-dark;
+            &:hover{
+                @apply bg-orange text-dark;
+            }
+        }
+
+        &:hover{
+            @apply bg-orange text-dark;
+        }
+    }
+}

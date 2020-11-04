@@ -1,0 +1,32 @@
+.revue-talent{
+    &__item{
+        @apply block bg-light text-dark px-6 py-4 font-bold rounded-md text-center border border-2 border-light leading-tight relative;
+        margin-bottom: 20px;
+        transition: 0.2s;
+
+        @media screen and (min-width: $lg){
+            min-height: 120px;
+            @apply flex items-center justify-center;
+        }
+
+        &:hover{
+            @apply bg-dark text-light;
+        }
+
+        &::after{
+            @media screen and (min-width: $lg){
+                content: "";
+                @apply bg-light absolute opacity-50;
+                left:50%;
+                top:100%;
+                width: 1px;
+                height: 22px;    
+            }
+        }
+    }
+    &__item:last-child{
+        &::after{
+            display: none;
+        }
+    }
+}

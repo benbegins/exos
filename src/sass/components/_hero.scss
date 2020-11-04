@@ -1,22 +1,12 @@
 // HERO IMAGE FULL WIDTH
 .hero-full{
-    background-size: cover;
-    background-position: center center;
-    min-height: 100vh;
-    display: flex;
-    align-items: flex-end;
-    color: $light;
-    position: relative;
+    @apply bg-cover bg-center bg-no-repeat min-h-screen flex items-end text-light relative;
     padding: 120px 0 80px 0;
 
     @media screen and (min-width: $lg){
         min-height: auto;
-        // min-height: 650px;
         padding: 15% 0 80px 0;
         max-height: calc(100vh - 80px);
-    }
-    @media screen and (min-width: $xl){
-        // min-height: 650px;
     }
     @media screen and (min-width: $xxl){
         padding: 15% 0 80px 3%;
@@ -41,23 +31,31 @@
         background: rgb(0,0,0);
         background: linear-gradient(0deg, rgba(0,0,0,0.5032387955182073) 0%, rgba(0,0,0,0) 100%);
     }
+
+    .reveal{
+        transform-origin: center top;
+        @apply absolute inset-0 z-20;
+    }
 }
 
 
 // HERO IMAGE SPLIT 1/2
 .hero-split{
-    @apply bg-dark text-light;
+    @apply bg-dark text-light relative;
 
     @media screen and (min-width: $md){
         @apply grid grid-cols-2 items-center;
     }
 
     &__img{
-        background-size: cover;
-        background-position: center center;
+        @apply bg-cover bg-center relative;
         padding-bottom: 80%;
         @media screen and (min-width: $md){
             padding-bottom: 90%;
+        }
+        .reveal{
+            transform-origin: right center;
+            @apply absolute inset-0 z-20;
         }
     }
     &__text{
@@ -70,6 +68,14 @@
                 @apply max-w-screen-md;
             }
         }
+    }
+    &.hero-split-club-rh{
+        @apply bg-light text-dark;
+    }
+
+    .reveal-hero{
+        transform-origin: center top;
+        @apply absolute inset-0 z-20;
     }
 }
 
@@ -97,6 +103,42 @@
     background-image: url('./dist/img/back/hero-interimaire-mobile.jpg');
     @media screen and (min-width: $lg){
         background-image: url('./dist/img/back/hero-interimaire.jpg');
+    }
+}
+.hero-temoignages{
+    background-image: url('./dist/img/back/hero-temoignages-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/hero-temoignages.jpg');
+    }
+}
+.hero-club-rh{
+    background-image: url('./dist/img/back/club-rh-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/club-rh.jpg');
+    }
+}
+.hero-revue-talents{
+    background-image: url('./dist/img/back/hero-revue-talents-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/hero-revue-talents.jpg');
+    }
+}
+.hero-veille-juridique{
+    background-image: url('./dist/img/back/hero-veille-juridique-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/hero-veille-juridique.jpg');
+    }
+}
+.hero-webinars{
+    background-image: url('./dist/img/back/hero-webinars-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/hero-webinars.jpg');
+    }
+}
+.hero-404{
+    background-image: url('./dist/img/back/404-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image: url('./dist/img/back/404.jpg');
     }
 }
 

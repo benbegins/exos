@@ -7,7 +7,9 @@
         <div class="container">
             <div class="lg:flex lg:items-center">
                 <div class="lg:w-1/2">
-                    <h1 class="h2-title"><?php the_title(); ?></h1>    
+                    <h1 class="h2-title">
+                        <?php the_title(); ?>
+                    </h1>    
                 </div>
                 <div class="mt-4 lg:mt-0 lg:w-1/4 lg:ml-auto">
                     <p class="offre-single__legende localisation"><?php the_field('localisation'); ?></p>
@@ -47,6 +49,7 @@
             $telephone = get_field('telephone', $collaborateur->ID);
             $email = get_field('email', $collaborateur->ID);
             $photo = get_the_post_thumbnail_url($collaborateur->ID, 'medium');
+
             ?>
             <div class="hidden lg:block w-4/12 ml-auto mt-5">
                 <a href="#postuler" class="btn-primary btn-orange w-full mb-10">Postuler</a>
@@ -58,7 +61,7 @@
                         <p class="h2-title">Besoin d'aide&nbsp;?</p>
                         <p class="mt-4">N'hésitez pas à contacter <?php echo $prenom; ?> pour en savoir plus.</p>
                         <p class="mt-2">Tel. <?php echo $telephone; ?></p>
-                        <a href="mailto:<?php echo $email; ?>" class="btn-primary btn-white mt-4">Envoyer un mail</a>
+                        <a href="<?php echo get_site_url(); ?>/mail?mail=<?php echo $email; ?>" class="btn-primary btn-white mt-4" id="mailto-collaborateur">Envoyer un mail</a>
                     </div>    
                 </div>
                 
@@ -85,12 +88,12 @@
     <!-- POSTULER A L OFFRE -->
     <section id="postuler" class="section-pad offre-single__candidature text-light relative">
         <div class="container z-10 relative lg:flex lg:justify-center">
-            <div class="lg:w-4/12">
+            <div class="lg:w-1/3 lg:mr-6">
                 <h2 class="h2-title">Cette mission est faite pour vous&nbsp;?</h2>
                 <p class="mt-4">Envoyez-nous votre candidature !</p>    
             </div>
-            <div class="lg:w-4/12">
-                <i>Formulaire</i>
+            <div class="form mt-10 lg:w-1/3 lg:ml-6 lg:-mt-4">
+                <?php echo do_shortcode('[forminator_form id="1279068"]'); ?>
             </div>
         </div>
         <div class="overlay absolute inset-0 bg-dark opacity-50"></div>
@@ -110,7 +113,7 @@
                     <p class="h2-title">Besoin d'aide&nbsp;?</p>
                     <p class="mt-4">N'hésitez pas à contacter <?php echo $prenom; ?> pour en savoir plus.</p>
                     <p class="mt-2">Tel. <?php echo $telephone; ?></p>
-                    <a href="mailto:<?php echo $email; ?>" class="btn-primary btn-white mt-4">Envoyer un mail</a>
+                    <a href="<?php echo get_site_url(); ?>/mail?mail=<?php echo $email; ?>" class="btn-primary btn-white mt-4">Envoyer un mail</a>
                 </div>
             </div>
         </div>
@@ -123,12 +126,14 @@
     $metiers = get_the_terms( $post->ID , 'metiers' );
     
     // Ajoute la liste des métiers dans un tableau $listeMetiers
-    $metiersLength = count($metiers);
-    $listeMetiers = array();
+    if(!empty($metiers)):
+        $metiersLength = count($metiers);
+        $listeMetiers = array();
 
-    for ($i=0; $i < $metiersLength; $i++) { 
-        array_push($listeMetiers, $metiers[$i]->slug);
-    }
+        for ($i=0; $i < $metiersLength; $i++) { 
+            array_push($listeMetiers, $metiers[$i]->slug);
+        }
+    endif;
 
     // Requête : 3 posts dans la même catégorie de métier
     $args = array(
@@ -179,6 +184,13 @@
     </section>
 
     <?php echo get_template_part('./template-parts/question-demande'); ?>
+
+    <div class="hidden" id="mail-collaborateur"><?php echo $email; ?></div>
+    <script>
+        const inputCollaborateur = document.querySelector('.input-collaborateur input');
+        const emailCollaborateur = document.querySelector('#mail-collaborateur');
+        inputCollaborateur.value = emailCollaborateur.textContent;
+    </script>
 
 </div>
 

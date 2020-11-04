@@ -7,12 +7,14 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-barba="wrapper">
 <?php wp_body_open(); ?>
 
-<div id="page" class="site">
+<div id="page" class="site" data-barba="container">
 
-    <header class="site-header fixed w-full z-30 flex items-center justify-between px-5 bg-light lg:px-10 lg:py-2">
+    <div class="cursor"></div>
+
+    <header class="site-header fixed w-full z-30 flex items-center justify-between px-5 bg-light lg:px-10">
         <div class="site-header__logo flex-grow z-30 lg:flex-none lg:mr-10">
             <a href="<?php echo get_site_url(); ?>"></a>
         </div>
@@ -29,11 +31,11 @@
                 <a href="https://www.linkedin.com/company/2740192/admin/" class="icon-social icon-linkedin" target="_blank">Linkedin</a>
             </div>
             <div class="site-header__nav__espace absolute inset-x-0 bottom-0 lg:hidden">
-                <a href="<?php echo get_site_url(); ?>/entreprise" class="site-header__nav__espace-btn block text-left">Vous êtes une entreprise ?</a>
+                <a href="<?php echo get_site_url(); ?>/entreprise" class="site-header__nav__espace-btn">Vous êtes une entreprise ?</a>
             </div>
         </div>
         <div class="site-header__cta">
-            <a href="<?php echo get_site_url(); ?>/candidature-spontanee" class="bg-blue text-light text-sm sm:text-base lg:hover:bg-orange lg:transition duration-200 lg:rounded-md">Candidature <br>spontanée</a>
+            <a href="<?php echo get_site_url(); ?>/candidature-spontanee" class="bg-blue text-light text-sm sm:text-base lg:rounded-md">Candidature <br>spontanée</a>
         </div>
         <div class="site-header__espaces hidden lg:flex text-xs leading-tight text-gray font-medium">
             <a class="mx-5 text-blue">Espace <br>CANDIDAT</a>
