@@ -123,7 +123,7 @@ get_header();
 
     <script>
         const offres = document.querySelector('#offres');
-        window.scrollTo(0, offres.offsetTop);
+        window.scrollTo(0, 0);
     </script>
 
 </div>
