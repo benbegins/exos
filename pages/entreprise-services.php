@@ -22,7 +22,7 @@ get_header("entreprise");
                 <!-- recrutement -->
                 <li class="mb-20 md:grid md:grid-cols-3">
                     <div>
-                        <img class="md:ml-auto md:mr-10" src="<?php echo get_template_directory_uri(); ?>/dist/img/icon-services-recrutement.svg" alt="icon recrutement">
+                        <img class="md:ml-auto md:mr-10" src="<?php echo get_template_directory_uri(); ?>/dist/img/icon-services-recrutement.svg" alt="icon recrutement" width="137" height="102">
                     </div>
                     <div class="mt-4 md:col-span-2 md:mt-0">
                         <h2 class="h3-title">Recrutement</h2>
@@ -32,7 +32,7 @@ get_header("entreprise");
                 <!-- interim_gestion -->
                 <li class="mb-20 md:grid md:grid-cols-3">
                     <div>
-                        <img class="md:ml-auto md:mr-10" src="<?php echo get_template_directory_uri(); ?>/dist/img/icon-services-interim_gestion.svg" alt="icon interim_gestion">
+                        <img class="md:ml-auto md:mr-10" src="<?php echo get_template_directory_uri(); ?>/dist/img/icon-services-interim_gestion.svg" alt="icon interim_gestion" width="137" height="102">
                     </div>
                     <div class="mt-4 md:col-span-2 md:mt-0">
                         <h2 class="h3-title">Intérim en gestion</h2>
@@ -42,7 +42,7 @@ get_header("entreprise");
                 <!-- interim_delegation -->
                 <li class="mb-20 md:grid md:grid-cols-3">
                     <div>
-                        <img class="md:ml-auto md:mr-10" src="<?php echo get_template_directory_uri(); ?>/dist/img/icon-services-interim_delegation.svg" alt="icon interim_delegation">
+                        <img class="md:ml-auto md:mr-10" src="<?php echo get_template_directory_uri(); ?>/dist/img/icon-services-interim_delegation.svg" alt="icon interim_delegation" width="137" height="102">
                     </div>
                     <div class="mt-4 md:col-span-2 md:mt-0">
                         <h2 class="h3-title">Intérim en délégation</h2>
@@ -52,7 +52,7 @@ get_header("entreprise");
                 <!-- aide_recrutement -->
                 <li class=" md:grid md:grid-cols-3">
                     <div>
-                        <img class="md:ml-auto md:mr-10" src="<?php echo get_template_directory_uri(); ?>/dist/img/icon-services-aide_recrut.svg" alt="icon aide au recrutement">
+                        <img class="md:ml-auto md:mr-10" src="<?php echo get_template_directory_uri(); ?>/dist/img/icon-services-aide_recrut.svg" alt="icon aide au recrutement" width="137" height="102">
                     </div>
                     <div class="mt-4 md:col-span-2 md:mt-0">
                         <h2 class="h3-title">Aide au recrutement</h2>

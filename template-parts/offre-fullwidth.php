@@ -1,4 +1,4 @@
-<a class="offre offre-fullwidth block p-6 mt-6 lg:px-12 lg:py-20 lg:mt-8 lg:flex lg:items-center" href="<?php the_permalink(); ?>">
+<a class="offre offre-fullwidth block p-6 mt-6 lg:px-16 lg:py-20 lg:mt-8 lg:flex lg:items-center" href="<?php the_permalink(); ?>">
     <div class="lg:w-1/2">
         <p class="h3-title mb-6 lg:mb-0"><?php echo ucfirst(strtolower(get_the_title())); ?></p>    
     </div>

@@ -44,14 +44,15 @@ get_header("club-rh");
             </div>
     </section>
 
-    <section class="section-pad">
+    <section class="section-pad" id="webinars">
         <div class="container">
         <?php 
             $args = array(
                 'post_type'             => 'conference',
                 'ignore_sticky_posts'   => true,
-                'paged'          => $paged,
-				'posts_per_page' => '10',
+                'order'                 => 'ASC',
+                'paged'                 => $paged,
+				'posts_per_page'        => '10',
             );
             $query = new WP_Query( $args );
 
@@ -90,6 +91,14 @@ get_header("club-rh");
     <div class="bg-light text-dark">
         <?php echo get_template_part('./template-parts/question-demande-entreprise'); ?>
     </div>
+
+    <!-- SCROLL TO CONTENT IF IS_PAGED=TRUE -->
+    <?php if(is_paged()):?>
+    <script>
+        const offres = document.querySelector('#webinars');
+        window.scrollTo(0, offres.offsetTop);
+    </script>
+    <?php endif; ?>
 
 </div>
 

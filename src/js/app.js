@@ -80,7 +80,7 @@ let swiperArticles = new Swiper('.swiper-articles', {
         },
         1024: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 32,
         }
     }
 });
@@ -129,6 +129,26 @@ const imgParallax = () => {
 
 // ANIMATION REVEAL
 const animation = () => {
+    // Page transition
+    const pageTransition = document.querySelector('.page-transition');
+    if (pageTransition) {
+        // Fade intro
+        pageTransition.classList.add('fade-out');
+        // Fade outro
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', e => {
+                if (!link.classList.contains("no-transition")) {
+                    const href = link.href;
+                    e.preventDefault();
+                    pageTransition.classList.remove('fade-out');
+                    pageTransition.addEventListener("transitionend", function () {
+                        window.location.assign(href);
+                    });
+                }
+            })
+        })
+    }
 
     // Reveal Hero Full Width
     const heroFull = document.querySelector('.hero-full');
@@ -171,7 +191,6 @@ const pageInit = () => {
     //imgParallax();
     animation();
 }
-//pageInit();
 
 window.addEventListener('load', pageInit);
 

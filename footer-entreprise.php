@@ -87,7 +87,7 @@
                 <h6 class="site-footer__section-title">Nous trouver</h6>
                 <div class="grid grid-cols-2 text-sm sm:text-base lg:block">
                     <p>164 rue de Vaugirard <br>75015 PARIS</p>
-                    <p class="text-right lg:text-left lg:mt-5">t. 01 40 19 72 75 <br>f. 01 40 19 72 82</p>
+                    <p class="text-right lg:text-left lg:mt-5">t. 01 40 19 72 75<br>f. 01 40 19 72 82</p>
                 </div>
                 <a href="https://www.google.fr/maps/place/EXOS+Recrutement+%26+int%C3%A9rim/@48.8432668,2.3108566,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67204dcead01f:0xcf85489a149e73e6!8m2!3d48.8432668!4d2.3130453" target="_blank" class="btn-secondary btn-white mt-5">Voir le plan</a>
             </div>
@@ -102,7 +102,7 @@
                 <p>© exos 2020</p>
             </div>
             <div class="lg:order-3 lg:flex-1 lg:text-right">
-                <p><a href="<?php echo get_site_url(); ?>/mentions" class="text-light mr-6">Mentions légales</a> Réalisation : <a href="https://bemy.studio" class="text-light" target="_blank">bemy studio</a></p>
+                <p><a href="<?php echo get_site_url(); ?>/mentions" class="text-light mb-2 lg:mb-0 lg:mr-6 block lg:inline">Mentions légales</a> Réalisation : <a href="https://bemy.studio" class="text-light" target="_blank">bemy studio</a></p>
             </div>
         </div> 
 

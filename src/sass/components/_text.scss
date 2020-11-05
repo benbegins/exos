@@ -58,6 +58,11 @@
     p:first-child{
         font-size: 160%;
     }
+    &.zone-text__offre{
+        p:first-child{
+            font-size: 100%;
+        }
+    }
     li{
         @apply mt-4;
         list-style: disc;
@@ -68,6 +73,7 @@
         position: relative;
         z-index: 1;
         transition:color 0.25s;
+        display: inline-block;
         &::after{
             content: "";
             @apply block absolute bg-blue;
@@ -88,7 +94,7 @@
         }
     }
     span{
-        color: $dark;
+        //color: $dark;
     }
     blockquote{
         @apply relative mt-10 mb-16 text-blue font-extrabold leading-tight;

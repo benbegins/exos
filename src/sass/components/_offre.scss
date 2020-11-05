@@ -67,4 +67,15 @@
             }
         }
     }
+
+    &__avantages{
+        a{
+            &::after{
+                background: $light;
+            }
+            &:hover{
+                color: $light;
+            }
+        }
+    }
 }

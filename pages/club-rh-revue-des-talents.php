@@ -40,7 +40,7 @@ get_header("club-rh");
                 <div class="container">
                     <h1 class="h1-title hero-title opacity-0">Revue des talents</h1>
                     <p class="mt-6 hero-text opacity-0">Vous recherchez vos Collaborateurs de demain ? Cliquez sur la fonction qui vous intéresse. Pour une mise en relation ou une demande d’information, contactez Jérôme Trybou.</p>
-                    <a href="mailto:jerome@exos-recrutement.com" class="btn-primary btn-orange my-4">Écrire un mail</a>
+                    <a href="<?php echo get_site_url(); ?>/mail?mail=jerome" class="btn-primary btn-orange my-4 no-transition">Écrire un mail</a>
                     <p>Tel. 01 40 19 72 75</p>
                 </div>
             </div>

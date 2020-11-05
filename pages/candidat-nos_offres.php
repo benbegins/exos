@@ -120,13 +120,11 @@ get_header();
 
     <?php echo get_template_part('./template-parts/question-demande'); ?>
 
-    <!-- SCROLL TO CONTENT IF IS_PAGED=TRUE -->
-    <?php if(is_paged()):?>
+
     <script>
         const offres = document.querySelector('#offres');
         window.scrollTo(0, offres.offsetTop);
     </script>
-    <?php endif; ?>
 
 </div>
 

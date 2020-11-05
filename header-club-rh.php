@@ -13,6 +13,7 @@
 <div id="page" class="site bg-dark text-light club-rh">
 
     <div class="cursor cursor-orange"></div>
+    <div class="page-transition bg-dark"></div>
 
     <header class="site-header header-club-rh fixed w-full z-30 flex items-center justify-between px-5 bg-dark text-light lg:px-10">
         <div class="site-header__logo logo-club-rh flex-grow z-30 lg:flex-none lg:mr-10">

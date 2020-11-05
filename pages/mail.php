@@ -14,7 +14,7 @@ if (isset($mail)) {
     // // trim function removes space before and after the strings
     $mail = trim($mail);
 
-    header("Location: mailto:" . $mail . "@exos-recrutement.com?subject=Demande de reseignements offre Exos");
+    header("Location: mailto:" . $mail . "@exos-recrutement.com");
     
 } else {
     header("Location: https://exos-recrutement.com");

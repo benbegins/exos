@@ -206,6 +206,42 @@ get_header("entreprise");
         </div>
     </section>
 
+
+    <!-- L'EQUIPE -->
+    <section class="section-pad">
+        <div class="container">
+            <h2 class="h2-title">L'équipe</h2>
+            <ul class="a-propos__equipe__list mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+            <?php
+            $args = array(
+                'post_type'         => array('collaborateur'),
+                'order'             => "ASC",
+            );
+            $query = new WP_Query ($args);
+
+            if ($query->have_posts()):
+                while($query->have_posts()):
+                    $query->the_post();
+            ?>
+
+                <li class="a-propos__equipe__item">
+                    <div class="a-propos__equipe__photo" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>')"></div>
+                    <div class="p-6 lg:p-10">
+                        <p class="uppercase font-extrabold"><?php echo get_field('prenom') . ' ' . get_field('nom'); ?></p>
+                        <p class="text-blue font-bold text-xs mt-1"><?php the_field('poste'); ?></p>       
+                    </div>
+                </li>
+            
+            <?php
+                endwhile;
+            endif;
+            wp_reset_postdata(); 
+            ?>
+            </ul>
+        </div>
+    </section>
+
+
     <!-- NOUVEAU COLLABORATEUR -->
     <section class="section-imgtext">
         <div class="section-imgtext__img-container img-locaux-02"></div>
@@ -219,6 +255,7 @@ get_header("entreprise");
             </div>
         </div>
     </section>
+
 
     <?php echo get_template_part('./template-parts/question-demande-entreprise'); ?>
 

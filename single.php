@@ -26,14 +26,14 @@
             <div class="lg:w-7/12">
                 <?php if( get_field('mission') ): ?>
                 <h2 class="h1-title">Mission</h2>
-                <div class="zone-text mt-10">
+                <div class="zone-text zone-text__offre mt-10">
                     <?php the_field('mission'); ?>	
                 </div>
                 <?php endif; ?>    
 
                 <?php if( get_field('requis') ): ?>
                 <h2 class="h1-title mt-20">Requis</h2>
-                <div class="zone-text mt-10">
+                <div class="zone-text zone-text__offre mt-10">
                     <?php the_field('requis'); ?>	
                 </div>
                 <?php endif; ?>        
@@ -73,11 +73,11 @@
     
     <!-- AVANTAGES -->
     <?php if( get_field('avantages') ): ?>
-    <section class="section-pad bg-blue text-light">
+    <section class="section-pad bg-blue text-light offre__avantages">
         <div class="container">
             <div class="lg:w-7/12">
                 <h2 class="h1-title">Avantages</h2>
-                <div class="zone-text mt-10">
+                <div class="zone-text zone-text__offre mt-10">
                     <?php the_field('avantages'); ?>	
                 </div>
             </div>

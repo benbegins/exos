@@ -44,7 +44,7 @@ get_header("club-rh");
             </div>
     </section>
 
-    <section class="section-pad">
+    <section class="section-pad" id="articles">
         <div class="container">
             <div class="xl:w-3/4 xl:mx-auto">
                 <?php 
@@ -92,6 +92,14 @@ get_header("club-rh");
     <div class="bg-light text-dark">
         <?php echo get_template_part('./template-parts/question-demande-entreprise'); ?>
     </div>
+
+    <!-- SCROLL TO CONTENT IF IS_PAGED=TRUE -->
+    <?php if(is_paged()):?>
+    <script>
+        const offres = document.querySelector('#articles');
+        window.scrollTo(0, offres.offsetTop);
+    </script>
+    <?php endif; ?>
 
 </div>
 

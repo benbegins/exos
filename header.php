@@ -13,6 +13,7 @@
 <div id="page" class="site" data-barba="container">
 
     <div class="cursor"></div>
+    <div class="page-transition bg-light"></div>
 
     <header class="site-header fixed w-full z-30 flex items-center justify-between px-5 bg-light lg:px-10">
         <div class="site-header__logo flex-grow z-30 lg:flex-none lg:mr-10">
@@ -38,8 +39,8 @@
             <a href="<?php echo get_site_url(); ?>/candidature-spontanee" class="bg-blue text-light text-sm sm:text-base lg:rounded-md">Candidature <br>spontanée</a>
         </div>
         <div class="site-header__espaces hidden lg:flex text-xs leading-tight text-gray font-medium">
-            <a class="mx-5 text-blue">Espace <br>CANDIDAT</a>
-            <a href="<?php echo get_site_url(); ?>/entreprise">Espace <br>ENTREPRISE</a>
+            <a class="mx-5 text-blue">Vous êtes un<br>CANDIDAT</a>
+            <a href="<?php echo get_site_url(); ?>/entreprise">Vous êtes une<br>ENTREPRISE</a>
         </div>
         <div class="site-header__burger pl-5 z-30 lg:hidden">
             <div class="line line1"></div>
