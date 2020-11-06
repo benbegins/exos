@@ -197,7 +197,7 @@ const animation = () => {
                 scaleY: 0,
                 scrollTrigger: {
                     trigger: section,
-                    start: "top 90%"
+                    start: "top 70%"
                 }
             });
         })
