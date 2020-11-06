@@ -14,7 +14,7 @@ if(post_password_required( )):
     <section class="hero hero-full hero-club-rh">
         <div class="z-10 container xxl:max-w-none">
             <div class="md:w-3/5 lg:w-7/12 hero-full__content">
-                <h1 class="hero-title h1-title">Le rendez-vous des managers</h1>
+                <h1 class="hero-title">Le rendez-vous des managers</h1>
                 <div class="form max-w-sm mt-10">
                     <?php echo get_the_password_form(); ?> 
                 </div>
