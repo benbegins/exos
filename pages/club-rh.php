@@ -30,7 +30,7 @@ else:
     <section class="hero hero-full hero-club-rh">
         <div class="z-10 container xxl:max-w-none">
             <div class="md:w-3/5 lg:w-7/12 hero-full__content">
-                <h1 class="hero-title h1-title lg:py-16 xl:py-24">Le rendez-vous des managers</h1>
+                <h1 class="hero-title lg:py-16 xl:py-24">Le rendez-vous des managers</h1>
             </div> 
         </div>
         <div class="overlay"></div>
