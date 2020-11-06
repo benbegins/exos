@@ -195,6 +195,8 @@ const animation = () => {
             //Animation
             gsap.to(reveal, {
                 scaleY: 0,
+                ease: "power3.out",
+                duration: 1,
                 scrollTrigger: {
                     trigger: section,
                     start: "top 70%"
