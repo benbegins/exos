@@ -8,12 +8,10 @@ get_header();
 <div class="page-pt">
 
     <section class="hero-split">
-            <div class="hero-split__img hero-blog">
-                <div class="reveal bg-dark"></div>
-            </div>
+            <div class="hero-split__img hero-blog"></div>
             <div class="hero-split__text">
                 <div class="container">
-                    <h1 class="h1-title hero-title opacity-0">Conseils & actus</h1>
+                    <h1 class="hero-title opacity-0">Conseils & actus</h1>
                     <p class="mt-6 hero-text opacity-0">L’actualité de l’emploi et les meilleurs conseils de nos experts.</p>
                 </div>
             </div>

@@ -33,12 +33,10 @@ get_header("club-rh");
     <?php else: ?>
 
     <section class="hero-split hero-split-club-rh">
-            <div class="hero-split__img hero-webinars">
-                <div class="reveal bg-light"></div>
-            </div>
+            <div class="hero-split__img hero-webinars"></div>
             <div class="hero-split__text">
                 <div class="container">
-                    <h1 class="h1-title hero-title opacity-0">Nos Webinars</h1>
+                    <h1 class="hero-title opacity-0">Nos Webinars</h1>
                     <p class="mt-6 hero-text opacity-0">Le Club RH vous donne rendez-vous une fois par mois pour une conférence en ligne animée par un expert sur une thématique managériale.</p>
                 </div>
             </div>

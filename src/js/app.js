@@ -164,21 +164,59 @@ const animation = () => {
     // Reveal Hero Split
     const heroSplit = document.querySelector('.hero-split');
     if (heroSplit) {
-        const revealImg = heroSplit.querySelector('.reveal');
-        let tl = gsap.timeline({ defaults: { duration: 0.8 } });
 
-        tl.to(revealImg, { scaleX: 0 });
+        // Ajoute une div .reveal-std dans .hero-split
+        const reveal = document.createElement('div');
+        reveal.classList.add('reveal-std');
+        heroSplit.appendChild(reveal);
+
+        // Reveal devient noir dans le club RH
+        if (heroSplit.classList.contains('hero-split-club-rh')) {
+            reveal.classList.add('bg-dark');
+        } else {
+            reveal.classList.add('bg-light');
+        }
+
+        // Animation
+        let tl = gsap.timeline({ defaults: { duration: 0.8 } });
+        tl.to(reveal, { scaleY: 0 });
         tl.fromTo('.hero-title', { y: "5vh", opacity: "0" }, { y: 0, opacity: 1, ease: "power3.out", }, "-=0.4");
         tl.fromTo('.hero-text', { y: "10vh", opacity: "0" }, { y: 0, opacity: 1, ease: "power3.out" }, "-=0.7");
     }
 
-    //Reveal Standard (volet vertical)
-    const revealStd = document.querySelectorAll('.reveal-std');
-    revealStd.forEach(reveal => {
-        gsap.to(reveal, {
-            scaleY: 0,
+    // Reveal Section split
+    const sectionSplit = document.querySelectorAll('.section-split');
+    if (sectionSplit) {
+        sectionSplit.forEach(section => {
+            // Ajoute une div .reveal-std dans .section-split
+            const reveal = document.createElement('div');
+            reveal.classList.add('reveal-std', 'bg-dark');
+            section.appendChild(reveal);
+            //Animation
+            gsap.to(reveal, {
+                scaleY: 0,
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 90%"
+                }
+            });
         })
-    });
+    }
+
+    // Title reveal
+    const titles = document.querySelectorAll('.h1-title, .h2-title');
+    titles.forEach(title => {
+        gsap.from(title, {
+            y: "5vh",
+            opacity: "0",
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: title,
+                start: "top 90%"
+            }
+        });
+    })
+
 }
 
 

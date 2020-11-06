@@ -80,7 +80,7 @@ h1,h2,h3,h4,h5,h6{
 
 // REVEAL
 .reveal-std{
-    transform-origin: center bottom;
+    transform-origin: center top;
     @apply absolute inset-0 z-20;
 }
 .fade{

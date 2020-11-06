@@ -11,7 +11,7 @@ get_header();
     <section class="hero hero-full hero-home-candidat">
         <div class="z-10 container xxl:max-w-none">
             <div class="lg:w-1/2 xl:w-5/12 hero-full__content">
-                <h1 class="hero-title h1-title">Partenaire <br>de votre carrière</h1>
+                <h1 class="hero-title">Partenaire <br>de votre carrière</h1>
                 <p class="hero-text hidden lg:block">Depuis 2002, nous accompagnons candidats et recruteurs sur des missions de recrutement en CDI, CDD ou intérim.</p>
                 <div class="flex flex-col items-start lg:flex-row lg:items-center">
                     <a href="<?php echo get_site_url(); ?>/nos-offres" class="btn-primary btn-orange mt-4 mr-10">Voir nos offres</a>
@@ -121,6 +121,22 @@ get_header();
     </section>
     
     <!-- TEMOIGNAGES -->
+    <?php 
+        $args = array(
+            'post_type' 				=> array( 'temoignage' ),
+            'posts_per_page' 			=> '3',
+            'tax_query'             => array(
+                array(
+                    'taxonomy' => 'type_temoignage',
+                    'field'    => 'slug',
+                    'terms'    => array('candidat'),
+                ),
+            ),
+        );
+        $query = new WP_Query( $args );
+        // 
+        if ( $query->have_posts() ) : 
+    ?>
     <section class="bg-blue section-pad">
         <div class="container">
             <h2 class="h1-title text-center text-light">Ils nous ont fait confiance</h2>
@@ -134,20 +150,10 @@ get_header();
         <div class="swiper-container swiper-temoignages">
             <div class="lg:mt-16 swiper-wrapper">
                 <?php
-                    // TEMOIGNAGES
-                    $args = array(
-                        'post_type' 				=> array( 'temoignage' ),
-                        'posts_per_page' 			=> '3',
-                    );
-                    $query = new WP_Query( $args );
-                    // 
-                    if ( $query->have_posts() ) {
-                        while ( $query->have_posts() ) { 
-                            $query->the_post();
-                            get_template_part( 'template-parts/temoignage');
-                        }
+                    while ( $query->have_posts() ) { 
+                        $query->the_post();
+                        get_template_part( 'template-parts/temoignage');
                     }
-                    wp_reset_postdata();
                 ?>
             </div>
         </div>
@@ -158,6 +164,10 @@ get_header();
             </div>      
         </div>
     </section>
+    <?php
+        endif;
+        wp_reset_postdata();
+    ?>
     
     <!-- ESPACE ENTREPRISE -->
     <section class="section-split">

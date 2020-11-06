@@ -21,6 +21,7 @@
     }
 
     .hero-title{
+        @extend .h1-title;
         @media screen and (min-width: $xxl){
             font-size: 7vw;
         }
@@ -47,6 +48,10 @@
         @apply grid grid-cols-2 items-center;
     }
 
+    .hero-title{
+        @extend .h1-title;
+    }
+
     &__img{
         @apply bg-cover bg-center relative;
         padding-bottom: 80%;
@@ -71,11 +76,6 @@
     }
     &.hero-split-club-rh{
         @apply bg-light text-dark;
-    }
-
-    .reveal-hero{
-        transform-origin: center top;
-        @apply absolute inset-0 z-20;
     }
 }
 

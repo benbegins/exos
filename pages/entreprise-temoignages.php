@@ -1,8 +1,8 @@
 <?php 
 /*
-Template Name: Candidat Temoignages
+Template Name: Entreprise Temoignages
 */
-get_header();
+get_header('entreprise');
 ?>
 
 <div class="page-pt">
@@ -32,7 +32,7 @@ get_header();
                         array(
                             'taxonomy' => 'type_temoignage',
                             'field'    => 'slug',
-                            'terms'    => array('candidat'),
+                            'terms'    => array('entreprise'),
                         ),
                     ),
                 );
@@ -89,4 +89,4 @@ get_header();
 
 </div>
 
-<?php get_footer(); ?>
+<?php get_footer('entreprise'); ?>

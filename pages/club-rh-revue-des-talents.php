@@ -33,12 +33,10 @@ get_header("club-rh");
     <?php else: ?>
     
     <section class="hero-split hero-split-club-rh">
-            <div class="hero-split__img hero-revue-talents">
-                <div class="reveal bg-light"></div>
-            </div>
+            <div class="hero-split__img hero-revue-talents"></div>
             <div class="hero-split__text">
                 <div class="container">
-                    <h1 class="h1-title hero-title opacity-0">Revue des talents</h1>
+                    <h1 class="hero-title opacity-0">Revue des talents</h1>
                     <p class="mt-6 hero-text opacity-0">Vous recherchez vos Collaborateurs de demain ? Cliquez sur la fonction qui vous intéresse. Pour une mise en relation ou une demande d’information, contactez Jérôme Trybou.</p>
                     <a href="<?php echo get_site_url(); ?>/mail?mail=jerome" class="btn-primary btn-orange my-4 no-transition">Écrire un mail</a>
                     <p>Tel. 01 40 19 72 75</p>

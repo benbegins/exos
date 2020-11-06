@@ -168,6 +168,22 @@ get_header("entreprise");
     </section>
 
     <!-- TEMOIGNAGES -->
+    <?php 
+        $args = array(
+            'post_type' 				=> array( 'temoignage' ),
+            'posts_per_page' 			=> '3',
+            'tax_query'             => array(
+                array(
+                    'taxonomy' => 'type_temoignage',
+                    'field'    => 'slug',
+                    'terms'    => array('entreprise'),
+                ),
+            ),
+        );
+        $query = new WP_Query( $args );
+        // 
+        if ( $query->have_posts() ) : 
+    ?>
     <section class="bg-blue section-pad">
         <div class="container">
             <h2 class="h1-title text-center text-light">Ils nous ont fait confiance</h2>
@@ -181,30 +197,24 @@ get_header("entreprise");
         <div class="swiper-container swiper-temoignages">
             <div class="lg:mt-16 swiper-wrapper">
                 <?php
-                    // TEMOIGNAGES
-                    $args = array(
-                        'post_type' 				=> array( 'temoignage' ),
-                        'posts_per_page' 			=> '3',
-                    );
-                    $query = new WP_Query( $args );
-                    // 
-                    if ( $query->have_posts() ) {
-                        while ( $query->have_posts() ) { 
-                            $query->the_post();
-                            get_template_part( 'template-parts/temoignage');
-                        }
+                    while ( $query->have_posts() ) { 
+                        $query->the_post();
+                        get_template_part( 'template-parts/temoignage');
                     }
-                    wp_reset_postdata();
                 ?>
             </div>
         </div>
         
         <div class="container">
             <div class="text-right">
-                <a href="<?php echo get_site_url(); ?>/temoignages" class="btn-primary btn-white-2 mt-10 lg:mt-16">Tous les avis</a>
+                <a href="<?php echo get_site_url(); ?>/entreprise/temoignages" class="btn-primary btn-white-2 mt-10 lg:mt-16">Tous les avis</a>
             </div>      
         </div>
     </section>
+    <?php
+        endif;
+        wp_reset_postdata();
+    ?>
 
 
     <!-- L'EQUIPE -->

@@ -10,7 +10,7 @@ get_header("entreprise");
     <section class="hero hero-full hero-home-entreprise">
         <div class="z-10 container xxl:max-w-none">
             <div class="lg:w-1/2 xl:w-5/12 hero-full__content">
-                <h1 class="hero-title h1-title">Votre <br>fournisseur <br>de talents</h1>
+                <h1 class="hero-title">Votre <br>fournisseur <br>de talents</h1>
                 <p class="hero-text hidden lg:block">Depuis 2002, nous accompagnons candidats et recruteurs sur des missions de recrutement ou intérim.</p>
                 <div class="flex flex-col items-start lg:flex-row lg:items-center">
                     <a href="<?php echo get_site_url(); ?>/entreprise/contact" class="btn-primary btn-orange mt-4 mr-10">Nous confier une mission</a>
@@ -76,9 +76,25 @@ get_header("entreprise");
     </section>
 
     <!-- TEMOIGNAGES -->
+    <?php 
+        $args = array(
+            'post_type' 				=> array( 'temoignage' ),
+            'posts_per_page' 			=> '3',
+            'tax_query'             => array(
+                array(
+                    'taxonomy' => 'type_temoignage',
+                    'field'    => 'slug',
+                    'terms'    => array('entreprise'),
+                ),
+            ),
+        );
+        $query = new WP_Query( $args );
+        // 
+        if ( $query->have_posts() ) : 
+    ?>
     <section class="bg-blue section-pad">
         <div class="container">
-            <h2 class="h1-title text-center text-light">Ils nous font confiance</h2>
+            <h2 class="h1-title text-center text-light">Ils nous ont fait confiance</h2>
             
             <div class="text-right mt-6 lg:hidden">
                 <div class="btn-pagination pagination-left-white pagination-left mr-2"></div>
@@ -89,20 +105,10 @@ get_header("entreprise");
         <div class="swiper-container swiper-temoignages">
             <div class="lg:mt-16 swiper-wrapper">
                 <?php
-                    // TEMOIGNAGES
-                    $args = array(
-                        'post_type' 				=> array( 'temoignage' ),
-                        'posts_per_page' 			=> '3',
-                    );
-                    $query = new WP_Query( $args );
-                    // 
-                    if ( $query->have_posts() ) {
-                        while ( $query->have_posts() ) { 
-                            $query->the_post();
-                            get_template_part( 'template-parts/temoignage');
-                        }
+                    while ( $query->have_posts() ) { 
+                        $query->the_post();
+                        get_template_part( 'template-parts/temoignage');
                     }
-                    wp_reset_postdata();
                 ?>
             </div>
         </div>
@@ -113,6 +119,10 @@ get_header("entreprise");
             </div>      
         </div>
     </section>
+    <?php
+        endif;
+        wp_reset_postdata();
+    ?>
 
     <!-- CLUB RH -->
     <section class="section-split">
