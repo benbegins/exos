@@ -199,7 +199,7 @@ const animation = () => {
                 duration: 1,
                 scrollTrigger: {
                     trigger: section,
-                    start: "top 70%"
+                    start: "top 90%"
                 }
             });
         })
