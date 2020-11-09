@@ -33,13 +33,16 @@ get_header("club-rh");
     <?php else: ?>
 
     <section class="hero-split hero-split-club-rh">
-            <div class="hero-split__img hero-veille-juridique"></div>
-            <div class="hero-split__text">
-                <div class="container">
-                    <h1 class="hero-title opacity-0">Veille juridique</h1>
-                    <p class="mt-6 hero-text opacity-0">Retrouvez les dernières actualités juridiques mises à jour chaque semaine. N’hésitez pas à nous interroger pour toute question spécifique. Bonne lecture !</p>
-                </div>
+        <div class="overflow-hidden">
+            <div class="hero-split__img hero-veille-juridique img-parallax"></div>   
+        </div>
+            
+        <div class="hero-split__text">
+            <div class="container">
+                <h1 class="hero-title opacity-0">Veille juridique</h1>
+                <p class="mt-6 hero-text opacity-0">Retrouvez les dernières actualités juridiques mises à jour chaque semaine. N’hésitez pas à nous interroger pour toute question spécifique. Bonne lecture !</p>
             </div>
+        </div>
     </section>
 
     <section class="section-pad" id="articles">

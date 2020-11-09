@@ -86,7 +86,7 @@
     <?php endif; ?>
     
     <!-- POSTULER A L OFFRE -->
-    <section id="postuler" class="section-pad offre-single__candidature text-light relative">
+    <section id="postuler" class="section-pad text-light relative overflow-hidden">
         <div class="container z-10 relative lg:flex lg:justify-center">
             <div class="lg:w-1/3 lg:mr-6">
                 <h2 class="h2-title">Cette mission est faite pour vous&nbsp;?</h2>
@@ -96,6 +96,7 @@
                 <?php echo do_shortcode('[forminator_form id="1279068"]'); ?>
             </div>
         </div>
+        <div class="offre-single__candidature img-parallax"></div>
         <div class="overlay absolute inset-0 bg-dark opacity-50"></div>
     </section>
 

@@ -1,8 +1,7 @@
 .section-imgtext{
     &__img-container{
         padding-bottom: 60%;
-        background-size: cover;
-        background-position: center center;
+        @apply bg-cover bg-center bg-no-repeat;
 
         @media screen and (min-width: $lg){
             padding-bottom: 50%;

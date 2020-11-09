@@ -33,7 +33,10 @@ get_header("club-rh");
     <?php else: ?>
     
     <section class="hero-split hero-split-club-rh">
-            <div class="hero-split__img hero-revue-talents"></div>
+            <div class="overflow-hidden">
+                <div class="hero-split__img hero-revue-talents img-parallax"></div>
+            </div>
+            
             <div class="hero-split__text">
                 <div class="container">
                     <h1 class="hero-title opacity-0">Revue des talents</h1>

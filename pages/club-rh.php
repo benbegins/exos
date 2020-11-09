@@ -11,7 +11,7 @@ get_header("club-rh");
 if(post_password_required( )):
 ?>
     <!-- HEADER NON CONNECTE -->
-    <section class="hero hero-full hero-club-rh">
+    <section class="hero hero-full">
         <div class="z-10 container xxl:max-w-none">
             <div class="md:w-3/5 lg:w-7/12 hero-full__content">
                 <h1 class="hero-title">Le rendez-vous des managers</h1>
@@ -20,6 +20,7 @@ if(post_password_required( )):
                 </div>
             </div> 
         </div>
+        <div class="hero-full__img hero-club-rh img-parallax"></div>
         <div class="overlay"></div>
         <div class="reveal bg-dark"></div>
     </section>
@@ -27,12 +28,13 @@ if(post_password_required( )):
 else:
 ?>
     <!-- HEADER CONNECTE -->
-    <section class="hero hero-full hero-club-rh">
+    <section class="hero hero-full">
         <div class="z-10 container xxl:max-w-none">
             <div class="md:w-3/5 lg:w-7/12 hero-full__content">
                 <h1 class="hero-title lg:py-16 xl:py-24">Le rendez-vous des managers</h1>
             </div> 
         </div>
+        <div class="hero-full__img hero-club-rh img-parallax"></div>
         <div class="overlay"></div>
         <div class="reveal bg-dark"></div>
     </section>

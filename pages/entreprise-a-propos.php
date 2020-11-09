@@ -99,7 +99,9 @@ get_header("entreprise");
 
     <!-- PHOTO LOCAUX -->
     <section class="section-imgtext">
-        <div class="section-imgtext__img-container img-locaux-01"></div>
+        <div class="overflow-hidden">
+            <div class="section-imgtext__img-container img-locaux-01 img-parallax"></div>
+        </div>
         <div class="container">
             <div class="section-imgtext__text-container">
                 <p>Dirigé par une équipe de plus de 25 ans d’expérience dans le recrutement et la gestion des ressources humaines, Exos s’est donné comme mission de rechercher pour ses clients les meilleurs collaborateurs potentiels.</p>
@@ -254,7 +256,10 @@ get_header("entreprise");
 
     <!-- NOUVEAU COLLABORATEUR -->
     <section class="section-imgtext">
-        <div class="section-imgtext__img-container img-locaux-02"></div>
+        <div class="overflow-hidden">
+            <div class="section-imgtext__img-container img-locaux-02 img-parallax"></div>
+        </div>
+        
         <div class="container">
             <div class="section-imgtext__text-container">
                 <h2 class="h2-title mb-10">Vous rechercher un nouveau collaborateur&nbsp;?</h2>

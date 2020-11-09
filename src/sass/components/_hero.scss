@@ -1,6 +1,6 @@
 // HERO IMAGE FULL WIDTH
 .hero-full{
-    @apply bg-cover bg-center bg-no-repeat min-h-screen flex items-end text-light relative;
+    @apply bg-cover bg-center bg-no-repeat min-h-screen flex items-end text-light relative overflow-hidden;
     padding: 120px 0 80px 0;
 
     @media screen and (min-width: $lg){
@@ -10,6 +10,10 @@
     }
     @media screen and (min-width: $xxl){
         padding: 15% 0 80px 3%;
+    }
+
+    &__img{
+        @apply absolute bg-cover bg-no-repeat bg-center inset-0 z-0;
     }
 
     .hero-text{
@@ -53,7 +57,7 @@
     }
 
     &__img{
-        @apply bg-cover bg-center relative;
+        @apply bg-cover bg-center bg-no-repeat relative;
         padding-bottom: 80%;
         @media screen and (min-width: $md){
             padding-bottom: 90%;

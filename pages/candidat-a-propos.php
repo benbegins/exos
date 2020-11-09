@@ -92,7 +92,9 @@ get_header();
 
     <!-- PHOTO LOCAUX -->
     <section class="section-imgtext section-pad-bot">
-        <div class="section-imgtext__img-container img-locaux-01"></div>
+        <div class="overflow-hidden">
+            <div class="section-imgtext__img-container img-locaux-01 img-parallax"></div>
+        </div>
         <div class="container">
             <div class="section-imgtext__text-container">
                 <p>Dirigé par une équipe de plus de 25 ans d’expérience dans le recrutement et la gestion des ressources humaines, Exos s’est donné comme objectif d’offrir le meilleur accompagnement possible à ses candidats en les accompagnant pour trouver la mission qui correspond le mieux à leurs profils et leurs attentes.</p>

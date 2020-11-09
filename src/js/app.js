@@ -109,22 +109,30 @@ const cursorOver = () => {
 }
 
 
-// PARALLAX BACKGROUND EFFECT
+// PARALLAX ELEMENTS
 const imgParallax = () => {
-    const parallaxContainers = document.querySelectorAll('.section-split');
-    if (parallaxContainers && window.innerWidth >= 1024) {
-        parallaxContainers.forEach(container => {
-            let img = container.querySelector('.section-split__image');
-            gsap.to(img, {
-                backgroundPositionY: `${-innerHeight / 2}px`,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: container,
-                    scrub: true,
-                }
-            })
+    const imgParallax = document.querySelectorAll('.img-parallax');
+    if (imgParallax && window.innerWidth >= 1024) {
+        imgParallax.forEach(img => {
+            parallax(img);
         });
     }
+}
+
+// PARALLAX BACKGROUND EFFECT
+const parallax = (element) => {
+    gsap.fromTo(element, {
+        yPercent: -20,
+        scale: 1.2,
+    }, {
+        yPercent: 20,
+        scale: 1.2,
+        ease: "none",
+        scrollTrigger: {
+            trigger: element,
+            scrub: true,
+        }
+    })
 }
 
 // ANIMATION REVEAL
@@ -228,7 +236,7 @@ const pageInit = () => {
     cursorOver();
     header();
     minHeightHero();
-    //imgParallax();
+    imgParallax();
     animation();
 }
 

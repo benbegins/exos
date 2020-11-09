@@ -8,7 +8,7 @@ get_header();
 <div class="home-c page-pt">
 
     <!-- HERO -->
-    <section class="hero hero-full hero-home-candidat">
+    <section class="hero hero-full">
         <div class="z-10 container xxl:max-w-none">
             <div class="lg:w-1/2 xl:w-5/12 hero-full__content">
                 <h1 class="hero-title">Partenaire <br>de votre carrière</h1>
@@ -19,6 +19,7 @@ get_header();
                 </div>
             </div>
         </div>
+        <div class="hero-full__img hero-home-candidat img-parallax"></div>
         <div class="overlay"></div>
         <div class="reveal bg-light"></div>
     </section>
@@ -63,7 +64,9 @@ get_header();
     
     <!-- ESPACE INTERIMAIRE -->
     <section class="section-split">
-        <div class="section-split__image image__espace-interimaire"></div>
+        <div class="section-split__img-container">
+            <div class="section-split__image img-parallax image__espace-interimaire"></div>
+        </div>
         <div class="section-split__text py-10">
             <div class="container">
                 <h2 class="h2-title">Intérimaire chez nous&nbsp;? Facilitez-vous la vie.</h2>
@@ -171,7 +174,9 @@ get_header();
     
     <!-- ESPACE ENTREPRISE -->
     <section class="section-split">
-        <div class="section-split__image image__espace-entreprise"></div>
+        <div class="section-split__img-container">
+            <div class="section-split__image img-parallax image__espace-entreprise"></div>
+        </div>
         <div class="section-split__text py-10">
             <div class="container">
                 <h2 class="h2-title">Vous êtes une <br>entreprise&nbsp;?</h2>

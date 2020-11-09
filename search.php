@@ -56,7 +56,10 @@ get_header();
 
     <!-- AUCUNE OFFRE -->
     <section class="section-split">
-        <div class="section-split__image image__aucune-offre"></div>
+        <div class="section-split__img-container">
+            <div class="section-split__image img-parallax image__aucune-offre"></div>
+        </div>
+        
         <div class="section-split__text py-10">
             <div class="container">
                 <h2 class="h2-title">Aucune offre ne vous correspond&nbsp;?</h2>

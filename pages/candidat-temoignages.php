@@ -8,13 +8,16 @@ get_header();
 <div class="page-pt">
 
     <section class="hero-split">
-            <div class="hero-split__img hero-temoignages"></div>
-            <div class="hero-split__text">
-                <div class="container">
-                    <h1 class="h1-title">Témoignages et avis</h1>
-                    <p class="mt-6">Ils ont aimé travailler avec nous et ils vous le font savoir.</p>
-                </div>
+        <div class="overflow-hidden">
+            <div class="hero-split__img hero-temoignages img-parallax"></div>    
+        </div>
+            
+        <div class="hero-split__text">
+            <div class="container">
+                <h1 class="h1-title">Témoignages et avis</h1>
+                <p class="mt-6">Ils ont aimé travailler avec nous et ils vous le font savoir.</p>
             </div>
+        </div>
     </section>
 
     <section class="section-pad-top" id="temoignages">

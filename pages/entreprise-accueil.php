@@ -7,7 +7,7 @@ get_header("entreprise");
 
 <div class="home-e page-pt">
 
-    <section class="hero hero-full hero-home-entreprise">
+    <section class="hero hero-full">
         <div class="z-10 container xxl:max-w-none">
             <div class="lg:w-1/2 xl:w-5/12 hero-full__content">
                 <h1 class="hero-title">Votre <br>fournisseur <br>de talents</h1>
@@ -18,6 +18,7 @@ get_header("entreprise");
                 </div>
             </div>
         </div>
+        <div class="hero-full__img hero-home-entreprise img-parallax"></div>
         <div class="overlay"></div>
         <div class="reveal bg-light"></div>
     </section>
@@ -62,7 +63,10 @@ get_header("entreprise");
 
     <!-- PARTENAIRE DE CONFIANCE -->
     <section class="section-imgtext section-pad-bot">
-        <div class="section-imgtext__img-container img-locaux-01"></div>
+        <div class="overflow-hidden">
+            <div class="section-imgtext__img-container img-locaux-01 img-parallax"></div>    
+        </div>
+        
         <div class="container">
             <div class="section-imgtext__text-container">
                 <h2 class="h2-title mb-10">Partenaire de confiance depuis 2002</h2>
@@ -126,7 +130,10 @@ get_header("entreprise");
 
     <!-- CLUB RH -->
     <section class="section-split">
-        <div class="section-split__image image__club-rh"></div>
+        <div class="section-split__img-container">
+            <div class="section-split__image img-parallax image__club-rh"></div>
+        </div>
+        
         <div class="section-split__text py-10">
             <div class="container">
                 <div class="mb-3">
@@ -188,7 +195,10 @@ get_header("entreprise");
 
     <!-- NOUVEAU COLLABORATEUR -->
     <section class="section-split">
-        <div class="section-split__image image__collaborateur"></div>
+        <div class="section-split__img-container">
+            <div class="section-split__image img-parallax image__collaborateur"></div>
+        </div>
+        
         <div class="section-split__text py-10">
             <div class="container">
                 <h2 class="h2-title">Vous recherchez un nouveau collaborateur&nbsp;?</h2>

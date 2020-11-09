@@ -138,7 +138,10 @@ get_header("entreprise");
 
     <!-- TROP TOT POUR L'INTERIM -->
     <section class="section-split">
-        <div class="section-split__image image__pensez-interim"></div>
+        <div class="section-split__img-container">
+            <div class="section-split__image img-parallax image__pensez-interim"></div>
+        </div>
+        
         <div class="section-split__text py-10">
             <div class="container">
                 <h2 class="h2-title">Trop tôt pour un CDD/CDI&nbsp;? Pensez à l’intérim&nbsp;!</h2>
@@ -166,7 +169,10 @@ get_header("entreprise");
 
     <!-- NOUVEAU COLLABORATEUR -->
     <section class="section-split">
-        <div class="section-split__image image__collaborateur"></div>
+        <div class="section-split__img-container">
+            <div class="section-split__image img-parallax image__collaborateur"></div>
+        </div>
+        
         <div class="section-split__text py-10">
             <div class="container">
                 <h2 class="h2-title">Vous recherchez un nouveau collaborateur&nbsp;?</h2>

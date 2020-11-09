@@ -8,7 +8,10 @@ get_header("entreprise");
 <div class="page-pt">
 
     <section class="hero-split">
-            <div class="hero-split__img hero-blog"></div>
+            <div class="overflow-hidden">
+                <div class="hero-split__img hero-blog img-parallax"></div>
+            </div>
+            
             <div class="hero-split__text">
                 <div class="container">
                     <h1 class="hero-title opacity-0">Actualités</h1>

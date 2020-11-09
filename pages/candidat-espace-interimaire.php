@@ -18,7 +18,10 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
 <div class="page-pt">
 
     <section class="hero-split">
-            <div class="hero-split__img hero-interimaire"></div>
+            <div class="overflow-hidden">
+                <div class="hero-split__img hero-interimaire img-parallax"></div>
+            </div>
+            
             <div class="hero-split__text">
                 <div class="container">
                     <h1 class="hero-title opacity-0">Espace intérimaires</h1>
@@ -222,7 +225,10 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
 
     <!-- PARRAINAGE -->
     <section class="section-split">
-        <div class="section-split__image image__parrainage"></div>
+        <div class="section-split__img-container">
+            <div class="section-split__image img-parallax image__parrainage"></div>
+        </div>
+        
         <div class="section-split__text py-10">
             <div class="container">
                 <h2 class="h2-title">Parrainez un candidat ou une entreprise.</h2>
