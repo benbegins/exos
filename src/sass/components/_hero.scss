@@ -25,9 +25,25 @@
     }
 
     .hero-title{
-        @extend .h1-title;
+        @apply uppercase leading-none;
+        font-size: 3.2rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight:800;
+
+        @media screen and (min-width: $sm){
+            font-size: 4rem;
+        }
+
+        @media screen and (min-width: $lg){
+            font-size: 5.5rem;
+        }
+
+        @media screen and (min-width: $xl){
+            font-size: 6.5rem;
+        }
+
         @media screen and (min-width: $xxl){
-            font-size: 7vw;
+            font-size: 7.5vw;
         }
     }
 
