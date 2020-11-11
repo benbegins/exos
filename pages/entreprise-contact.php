@@ -17,11 +17,11 @@ get_header('entreprise');
             <div class="form mb-20 lg:mb-0 lg:w-1/2">
                 <?php echo do_shortcode('[forminator_form id="1279071"]'); ?>
             </div>
-            <div class="lg:w-5/12 lg:ml-auto">
+            <div class="lg:w-5/12 lg:ml-auto lg:mt-6">
                 <div>
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/img/back/locaux-03.jpg" alt="Locaux Exos" class="w-full">
                 </div>
-                <p class="mt-10">Nous avons hâte de discuter de votre projet professionnel et de trouver la mission qui vous convient. N’hésitez pas à nous écrire ou nous appeler pour en parler.</p>
+                <p class="mt-10">Vous souhaitez nous confier une mission ou en savoir plus sur nos services ? Notre équipe est à votre disposition par mail ou par téléphone.</p>
                 <div class="md:flex">
                     <div class="mt-10 md:w-2/5">
                         <p class="uppercase text-gray text-xs mb-2">Adresse</p>
@@ -33,8 +33,8 @@ get_header('entreprise');
                         <p>t. 01 40 19 72 75</p>
                         <p>f. 01 40 19 72 82</p>
                         <div class="mt-4">
-                            <a href="#" class="icon-social icon-facebook-dark">Facebook</a>
-                            <a href="#" class="icon-social icon-linkedin-dark ml-4">Linkedin</a>
+                            <a href="https://www.facebook.com/exos.recrutement/" class="icon-social icon-facebook-dark no-transition" target="_blank">Facebook</a>
+                            <a href="https://www.linkedin.com/company/2740192/admin/" class="icon-social icon-linkedin-dark ml-4 no-transition" target="_blank">Linkedin</a>
                         </div>
                     </div>
                 </div>

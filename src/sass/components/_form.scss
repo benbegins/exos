@@ -8,17 +8,18 @@
             a{
                 text-decoration: underline;
                 &:hover{
-                    color: $blue;
+                    text-decoration: none;
                 }
             }
         }
     }
-    span .forminator-required{
+    span.forminator-required{
         display: none;
     }
 
     //INPUT TEXT EMAIL SELECT & TEXTAREA
     input[type="text"], input[type="email"], input[type="file"], input[type="password"], select{
+        appearance: none;
         @apply w-full bg-white rounded-md px-5 text-dark text-base;
         @extend .box-shadow;
         outline-color: rgba(0,0,0,0.1);
@@ -37,6 +38,7 @@
     select{
         appearance: none;
         position: relative;
+        cursor: pointer;
     }
     .sf-field-category, .sf-field-taxonomy-metiers{
         position: relative;
@@ -49,6 +51,7 @@
             right: 20px;
             top: calc(50% - 6px);
             z-index: 10;
+            pointer-events: none;
         }
     }
 
@@ -126,24 +129,54 @@
     }
     .forminator-checkbox, .forminator-radio{
         @apply flex items-center pr-2 my-2;
+        p{
+            @apply font-normal;
+        }
     }
 
     // FORMINATOR
-    .forminator-error-message{
-        @apply text-xs leading-tight text-gray float-left mt-2;
-    }
     .forminator-row{
         display: flex;
         flex-direction: column;
         //width: 100%;
     }
+
     .forminator-description{
         @apply float-right text-xs mt-2;
     }
+
     .forminator-row.forminator-row-last{
         margin-bottom: 0;
     }
-    .forminator-has_error input{
-        border: 1px solid red;
+
+    .forminator-error-message{
+        display: none;
+    }
+
+    .forminator-has_error{
+        position: relative;
+        input, textarea{
+            outline: 1px solid red;
+        }
+        .forminator-error-message{
+            background: red;
+            @apply absolute text-light block px-2 py-1 text-xs leading-tight bottom-0 right-0;
+            width: fit-content;
+        }
+    }
+
+    .forminator-file-upload{
+        input{
+            cursor: pointer;
+        }
+        button, span{
+            display: none;
+        }
+    }
+
+    .forminator-is_filled{
+        .forminator-error-message{
+            display: none;
+        }
     }
 }

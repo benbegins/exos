@@ -8,7 +8,7 @@
                 <p class="site-footer__a-propos text-2xl leading-tight">Depuis 2002 Exos est spécialisé dans le recrutement d’employés et de cadres pour les services : administratif, commerciaux, marketing, informatique, juridique, comptable,…</p>
                 <a href="<?php echo get_site_url(); ?>/a-propos" class="btn-secondary btn-white mt-5">Découvrez-nous</a>
                 <div class="flex mt-5">
-                    <a href="https://www.facebook.com/exos.recrutement/" class="site-footer__icon-social mr-5" target="_blank">
+                    <a href="https://www.facebook.com/exos.recrutement/" class="site-footer__icon-social mr-5 no-transition" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37">
                             <g id="facebook" transform="translate(0 0.291)">
                                 <path id="facebook-2" data-name="facebook" d="M12.481,2.557h1.406V.108A18.151,18.151,0,0,0,11.838,0C9.812,0,8.423,1.275,8.423,3.618V5.774H6.187V8.511H8.423V15.4h2.742V8.511h2.146l.341-2.737H11.165V3.889c0-.791.214-1.332,1.316-1.332Z" transform="translate(7.627 9.719)" fill="#f6f9fb"/>
@@ -19,7 +19,7 @@
                             </g>
                         </svg>
                     </a>
-                    <a href="https://www.linkedin.com/company/2740192/admin/" class="site-footer__icon-social" target="_blank">
+                    <a href="https://www.linkedin.com/company/2740192/admin/" class="site-footer__icon-social no-transition" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="37" viewBox="0 0 38 37">
                             <g id="linkedin" transform="translate(0.326 0.291)">
                                 <g id="linkedin-2" data-name="linkedin" transform="translate(11.302 8.791)">
@@ -53,7 +53,7 @@
                     <a href="<?php echo get_site_url(); ?>/candidature-spontanee" class="leading-none block rounded-md text-light lg:inline-block">Candidature spontanée</a>
                 </div>
                 <div class="flex mt-8 lg:hidden">
-                    <a href="https://www.facebook.com/exos.recrutement/" class="site-footer__icon-social mr-5" target="_blank">
+                    <a href="https://www.facebook.com/exos.recrutement/" class="site-footer__icon-social mr-5 no-transition" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37">
                             <g id="facebook" transform="translate(0 0.291)">
                                 <path id="facebook-2" data-name="facebook" d="M12.481,2.557h1.406V.108A18.151,18.151,0,0,0,11.838,0C9.812,0,8.423,1.275,8.423,3.618V5.774H6.187V8.511H8.423V15.4h2.742V8.511h2.146l.341-2.737H11.165V3.889c0-.791.214-1.332,1.316-1.332Z" transform="translate(7.627 9.719)" fill="#f6f9fb"/>
@@ -64,7 +64,7 @@
                             </g>
                         </svg>
                     </a>
-                    <a href="https://www.linkedin.com/company/2740192/admin/" class="site-footer__icon-social" target="_blank">
+                    <a href="https://www.linkedin.com/company/2740192/admin/" class="site-footer__icon-social no-transition" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="37" viewBox="0 0 38 37">
                             <g id="linkedin" transform="translate(0.326 0.291)">
                                 <g id="linkedin-2" data-name="linkedin" transform="translate(11.302 8.791)">

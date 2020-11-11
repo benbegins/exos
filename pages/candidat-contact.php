@@ -17,7 +17,7 @@ get_header();
             <div class="form mb-20 lg:mb-0 lg:w-1/2">
                 <?php echo do_shortcode('[forminator_form id="1279065"]'); ?>
             </div>
-            <div class="lg:w-5/12 lg:ml-auto">
+            <div class="lg:w-5/12 lg:ml-auto lg:mt-6">
                 <div>
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/img/back/locaux-03.jpg" alt="Locaux Exos" class="w-full">
                 </div>
@@ -33,8 +33,8 @@ get_header();
                         <p>t. 01 40 19 72 75</p>
                         <p>f. 01 40 19 72 82</p>
                         <div class="mt-4">
-                            <a href="#" class="icon-social icon-facebook-dark">Facebook</a>
-                            <a href="#" class="icon-social icon-linkedin-dark ml-4">Linkedin</a>
+                        <a href="https://www.facebook.com/exos.recrutement/" class="icon-social icon-facebook-dark no-transition" target="_blank">Facebook</a>
+                            <a href="https://www.linkedin.com/company/2740192/admin/" class="icon-social icon-linkedin-dark ml-4 no-transition" target="_blank">Linkedin</a>
                         </div>
                     </div>
                 </div>

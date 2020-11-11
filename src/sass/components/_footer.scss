@@ -22,34 +22,41 @@
                 }
             }
         }  
-        &__cta a{
-            padding: 20px 30px;
-            @apply font-bold text-left relative overflow-hidden;
-            z-index:1;
-            background: $blue url('./dist/img/arrow-right-white.svg') 95% center no-repeat;
-            @media screen and (min-width: $lg){
-                background-image: none;
-                text-align: center;
-                padding: 15px 30px;
-                margin-top: 10px;
-            }
-            &::before{
-                @apply absolute w-full h-full top-0 left-0;
-                content: "";
-                background: $blue-over;
-                z-index: -1;
-                transform: translateX(-101%);
-                transition: transform 0.4s $ease;
-            }
-            &:hover{
+        &__cta {
+            a{
+                padding: 20px 30px;
+                @apply font-bold text-left relative overflow-hidden;
+                z-index:1;
+                background: $blue url('./dist/img/arrow-right-white.svg') 95% center no-repeat;
+                @media screen and (min-width: $lg){
+                    background-image: none;
+                    text-align: center;
+                    padding: 15px 30px;
+                    margin-top: 10px;
+                }
                 &::before{
-                    transform: translateX(0);
+                    @apply absolute w-full h-full top-0 left-0;
+                    content: "";
+                    background: $blue-over;
+                    z-index: -1;
+                    transform: translateX(-101%);
+                    transition: transform 0.4s $ease;
+                }
+                &:hover{
+                    &::before{
+                        transform: translateX(0);
+                    }
+                }
+                &::after{
+                    display: none;
                 }
             }
-            &::after{
-                display: none;
+            .cta-entreprise{
+                line-height: 60px;
+                padding: 0 30px;
             }
-        }
+        } 
+        
         ul{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -95,5 +102,17 @@
                 }
             }
         }  
+    }
+
+    &__icon-social{
+        &:hover{
+            opacity: 0.75;
+        }
+    }
+}
+
+.icon-social{
+    &:hover{
+        opacity: 0.75;
     }
 }

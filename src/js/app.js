@@ -240,7 +240,9 @@ const pageInit = () => {
     animation();
 }
 
+window.addEventListener('popstate', animation, false);
 window.addEventListener('load', pageInit);
+
 
 
 
