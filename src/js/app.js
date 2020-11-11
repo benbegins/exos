@@ -36,7 +36,6 @@ const header = () => {
 }
 
 
-
 //HERO MIN HEIGHT
 const minHeightHero = () => {
     const hero = document.querySelector('.hero-full');
@@ -53,7 +52,6 @@ const minHeightHero = () => {
     minHeight();
     window.addEventListener('resize', minHeight);
 }
-
 
 
 // SWIPER
@@ -118,7 +116,6 @@ const imgParallax = () => {
         });
     }
 }
-
 // PARALLAX BACKGROUND EFFECT
 const parallax = (element) => {
     gsap.fromTo(element, {
@@ -134,6 +131,7 @@ const parallax = (element) => {
         }
     })
 }
+
 
 // ANIMATION REVEAL
 const animation = () => {
@@ -227,6 +225,16 @@ const animation = () => {
         });
     })
 
+}
+
+
+// BTN POSTULER
+const btnPostuler = document.querySelector('#btn-postuler');
+const sectionPostuler = document.querySelector('#postuler');
+if (btnPostuler && sectionPostuler) {
+    btnPostuler.addEventListener('click', () => {
+        window.scrollTo(0, sectionPostuler.offsetTop);
+    })
 }
 
 
