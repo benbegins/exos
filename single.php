@@ -52,7 +52,7 @@
 
             ?>
             <div class="hidden lg:block w-4/12 ml-auto mt-5">
-                <a href="#postuler" class="btn-primary btn-orange w-full mb-10">Postuler</a>
+                <a href="#postuler" class="btn-primary btn-orange w-full mb-10 no-transition">Postuler</a>
                 <div class="bg-dark text-light">
                     <div>
                         <img src="<?php echo $photo; ?>" alt="<?php echo $prenom . ' ' . $nom; ?>" class="w-full">
