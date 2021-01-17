@@ -96,7 +96,7 @@
 
         <div class="site-footer__mentions py-10 text-gray text-xs font-bold text-center md:py-16 lg:flex lg:items-center lg:justify-between">
             <div class="mb-10 lg:mb-0 lg:order-2 lg:flex-1">
-                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo-exos-white.svg" alt="Logo exos blanc" class="w-32 mx-auto lg:w-40">    
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo-exos-white.svg" alt="Logo exos blanc" class="w-32 mx-auto">    
             </div>
             <div class=" mb-2 lg:mb-0 lg:order-1 lg:flex-1 lg:text-left">
                 <p>© exos 2020</p>
