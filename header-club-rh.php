@@ -17,7 +17,9 @@
 
     <header class="site-header header-club-rh fixed w-full z-30 flex items-center justify-between px-5 bg-dark text-light lg:px-10">
         <div class="site-header__logo logo-club-rh flex-grow z-30 lg:flex-none lg:mr-10">
-            <a href="<?php echo get_site_url(); ?>/entreprise/club-rh"></a>
+            <a href="<?php echo get_site_url(); ?>/entreprise/club-rh">
+                <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-club-rh.png" alt="logo Club RH Exos">
+            </a>
         </div>
         <div class="site-header__nav bg-dark fixed inset-0 text-light text-center text-sm z-20 flex flex-col justify-center lg:static lg:block lg:text-gray lg:bg-transparent lg:flex-grow lg:text-xs">
             <div class="site-header__nav__main uppercase font-medium">

@@ -48,12 +48,23 @@ get_header("club-rh");
     <section class="section-pad" id="webinars">
         <div class="container">
         <?php 
+            $date_now = date('Y-m-d');
             $args = array(
                 'post_type'             => 'conference',
                 'ignore_sticky_posts'   => true,
-                'order'                 => 'ASC',
                 'paged'                 => $paged,
-				'posts_per_page'        => '10',
+                'posts_per_page'        => '10',
+                'meta_key' => 'date',
+                'orderby' => 'meta_value',
+                'order' => 'ASC',
+                'meta_query' => array(
+                    array(
+                        'key'           => 'date',
+                        'compare'       => '>=',
+                        'value'         => $date_now,
+                        'type'          => 'DATETIME',
+                    )                   
+                )
             );
             $query = new WP_Query( $args );
 

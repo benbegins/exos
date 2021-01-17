@@ -5,7 +5,7 @@
             <!-- A propos -->
             <div class="hidden lg:block col-span-6">
                 <h6 class="site-footer__section-title">À propos</h6>
-                <p class="site-footer__a-propos text-2xl leading-tight">Depuis 2002 Exos est spécialisé dans le recrutement d’employés et de cadres pour les services : administratif, commerciaux, marketing, informatique, juridique, comptable,…</p>
+                <p class="site-footer__a-propos text-2xl leading-tight">Depuis 2002 EXOS est spécialisé dans le recrutement d’employés et de cadres pour les fonctions support et industrie-ingénierie.</p>
                 <a href="<?php echo get_site_url(); ?>/a-propos" class="btn-secondary btn-white mt-5">Découvrez-nous</a>
                 <div class="flex mt-5">
                     <a href="https://www.facebook.com/exos.recrutement/" class="site-footer__icon-social mr-5 no-transition" target="_blank">

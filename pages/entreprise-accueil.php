@@ -11,7 +11,7 @@ get_header("entreprise");
         <div class="z-10 container xxl:max-w-none">
             <div class="lg:w-1/2 xl:w-5/12 hero-full__content">
                 <h1 class="hero-title">Votre <br>fournisseur <br>de talents</h1>
-                <p class="hero-text hidden lg:block">Depuis 2002, nous accompagnons candidats et recruteurs sur des missions de recrutement ou intérim.</p>
+                <p class="hero-text hidden lg:block">Depuis 2002, nous accompagnons de manière professionnelle et conviviale les candidats et les entreprises sur des missions de recrutement en CDI, en CDD ou en intérim.</p>
                 <div class="flex flex-col items-start lg:flex-row lg:items-center">
                     <a href="<?php echo get_site_url(); ?>/entreprise/contact" class="btn-primary btn-orange mt-4 mr-10">Nous confier une mission</a>
                     <a href="<?php echo get_site_url(); ?>" class="btn-secondary btn-white mt-4">Vous êtes un candidat ?</a>        
@@ -140,8 +140,61 @@ get_header("entreprise");
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo-club-rh.png" alt="Logo Club RH by Exos" width="130">
                 </div>
                 <h2 class="h2-title">Le rendez-vous des managers</h2>
-                <p class="hidden lg:block mt-8 lg:mt-10">Webinars, veille juridique, revue de talents, nous avons imaginé le club RH pour aider les managers à se former et s’informer sur les évolutions des ressources humaines.</p>
+                <p class="hidden lg:block mt-8 lg:mt-10">Webinaires, veille juridique, revue de talents, nous avons imaginé le club RH pour aider les managers à se former et s’informer sur les évolutions des ressources humaines.</p>
                 <a href="<?php echo get_site_url(); ?>/entreprise/club-rh" class="btn-primary btn-white mt-6 sm:mt-8 lg:mt-10">Entrer dans le club</a>   
+            </div>
+        </div>
+    </section>
+    <section class="section-pad bg-dark text-light">
+        <div class="container">
+            <div class="lg:w-3/4 lg:mx-auto">
+                <h2 class="h2-title">Nos prochains Webinaires</h2>
+                <p class="hidden md:block mt-6 lg:mt-6">Jetez un oeil à nos derniers webinaires et inscrivez vous au club RH pour y assister et parfaire vos connaissances.</p>
+                <div class="border-b border-light border-opacity-25 mt-10">
+                    <?php 
+                    $date_now = date('Y-m-d');
+                    $args = array(
+                        'post_type' => 'conference',
+                        'posts_per_page' => '3',
+                        'meta_key' => 'date',
+                        'orderby' => 'meta_value',
+                        'order' => 'ASC',
+                        'meta_query' => array(
+                            array(
+                                'key'           => 'date',
+                                'compare'       => '>=',
+                                'value'         => $date_now,
+                                'type'          => 'DATETIME',
+                            )                   
+                         )
+                    );
+                    $query = new WP_Query( $args );
+        
+                    if ( $query->have_posts() ) :
+                        while ( $query->have_posts() ) : $query->the_post();
+                    ?>
+
+                    <a href="<?php the_permalink(); ?>" class="block border-t border-light border-opacity-25 py-10 lg:grid lg:grid-cols-10 lg:items-center lg:gap-12 hover:opacity-75 transition duration-200">
+                        <h3 class="h3-title lg:col-span-5"><?php the_title(); ?></h3>
+                        <div class="my-5 lg:my-0 lg:col-span-3">
+                            <p class="text-gray">Le <?php the_field('date'); ?> de <?php the_field('heure_de_debut'); ?> à <?php the_field('heure_de_fin'); ?></p>
+                            <p class="text-gray uppercase">Gratuit</p>     
+                        </div>
+                        <div class="lg:text-right lg:col-span-2">
+                            <p class="btn-secondary btn-white">En savoir plus</p>    
+                        </div>
+                    </a>
+
+                    <?php
+                        endwhile;
+                    endif;
+
+                    wp_reset_postdata();
+                    ?>
+                </div>
+                <div class="text-right">
+                    <a href="<?php echo get_site_url(); ?>/entreprise/club-rh/webinars" class="btn-primary btn-white mt-6 sm:mt-8 lg:mt-10">Tous nos webinaires</a>     
+                </div>
             </div>
         </div>
     </section>

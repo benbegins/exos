@@ -3,18 +3,12 @@
         height: 78px;
     }
     &__logo{
-        a{
-            display: block;
-            background: url('./dist/img/logo-exos.svg') center left no-repeat;
-            background-size: 94px 28px;
-            min-width: 94px;
-            height: 28px;
-            @media screen and (min-width: $lg){
+        img{
+            width: 96px;
+            @media screen and (min-width: $md){
                 width: 110px;
-                height: 33px;
-                background-size: 110px 33px;
             }
-        }    
+        }
     } 
     &__cta{
         a{
@@ -195,11 +189,6 @@
             }
         }
         &__logo a{
-            display: block;
-            width: 115px;
-            height: 47px;
-            background: url('./dist/img/logo-club-rh.png') center center no-repeat;
-            background-size: contain;
         }
     }
 }

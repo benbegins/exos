@@ -86,6 +86,41 @@ endif;
         </div>
     </section>
 
+    <!-- WEBINAIRES -->
+    <section class="section-pad-top">
+        <div class="container">
+            <h2 class="h2-title mb-10 lg:mb-16">Nos prochains webinaires</h2>
+            <?php 
+            $date_now = date('Y-m-d');
+            $args = array(
+                'post_type' => 'conference',
+                'posts_per_page' => '3',
+                'meta_key' => 'date',
+                'orderby' => 'meta_value',
+                'order' => 'ASC',
+                'meta_query' => array(
+                    array(
+                        'key'           => 'date',
+                        'compare'       => '>=',
+                        'value'         => $date_now,
+                        'type'          => 'DATETIME',
+                    )                   
+                 )
+            );
+            $query = new WP_Query( $args );
+
+            if ( $query->have_posts() ) :
+                while ( $query->have_posts() ) : $query->the_post();
+                    get_template_part( 'template-parts/webinar' );
+                endwhile;
+            endif;
+            ?>
+            <div class="text-right">
+                <a href="<?php echo get_site_url(); ?>/entreprise/club-rh/webinars" class="btn-primary btn-orange mt-6 sm:mt-8 lg:mt-10">Tous nos webinaires</a>     
+            </div>
+        </div>
+    </section>
+
 
     <!-- CONNEXION -->
     <?php if(post_password_required( )): ?>

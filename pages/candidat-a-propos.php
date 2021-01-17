@@ -28,10 +28,10 @@ get_header();
             <!-- Fonctions supports -->
             <div class="flex mt-10 lg:w-7/12 lg:ml-auto lg:mt-24">
                 <div class="w-1/4 md:w-1/6">
-                    <p class="font-display font-extrabold text-2xl -mt-1 lg:mt-0">01</p>
+                    <p class="font-display font-extrabold text-2xl -mt-1 lg:mt-1">01</p>
                 </div>
                 <div class="w-3/4 md:w-5/6 md:flex">
-                    <h2 class="h2-title mb-3 md:w-1/2">Fonctions support</h2>
+                    <h2 class="h2-title mb-3 md:w-1/2">Tertiaire</h2>
                     <ul class="uppercase text-gray md:w-1/3 md:ml-auto">
                         <li class="mb-3">Administratif</li>
                         <li class="mb-3">Comptabilité</li>
@@ -45,7 +45,7 @@ get_header();
             <!-- Fonctions industrie -->
             <div class="flex mt-10 lg:w-7/12 lg:ml-auto lg:mt-20">
                 <div class="w-1/4 md:w-1/6">
-                    <p class="font-display font-extrabold text-2xl -mt-1 lg:mt-0">02</p>
+                    <p class="font-display font-extrabold text-2xl -mt-1 lg:mt-1">02</p>
                 </div>
                 <div class="w-3/4 md:w-5/6 md:flex">
                     <h2 class="h2-title mb-3 md:w-1/2">Industrie-ingénierie</h2>

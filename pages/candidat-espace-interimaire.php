@@ -129,8 +129,8 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
 
 
                 <!-- AVANTAGES INTERIMAIRES -->
-                <h3 class="h3-title mt-20 lg:mt-24">Votre mission, mode d'emploi</h3>
-                <p class="mt-2 lg:w-1/2">Tout savoir sur votre mission en intérim.</p>
+                <h3 class="h3-title mt-20 lg:mt-24">Vos avantages intérimaires</h3>
+                <p class="mt-2 lg:w-1/2">Formation, actions sociales, mutuelle santé,  découvrez tous vos avantages.</p>
                 <div class="mt-8 lg:mt-10 grid grid-cols-2 gap-4 lg:gap-8">
                     <!-- AVANTAGES -->
                     <?php if($avantages_interimaires): ?>
@@ -182,8 +182,8 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
                         <a class="btn-secondary btn-blue mt-1 no-transition" href="https://www.fastt.org/" target="_blank">fastt.org</a>
                     </li>
                     <li class="pt-10 pb-3">
-                        <p>Fonds d'assurance formation du travail temporaire</p>
-                        <a class="btn-secondary btn-blue mt-1 no-transition" href="https://www.faftt.fr/site/j_6/fr/accueil" target="_blank">faftt.fr</a>
+                        <p>Fonds de formation des intérimaires</p>
+                        <a class="btn-secondary btn-blue mt-1 no-transition" href="https://www.faftt.fr/site/j_6/fr/accueil" target="_blank">AKTO</a>
                     </li>
                     <li class="pt-10 pb-3">
                         <p>Pôle emploi</p>
@@ -232,7 +232,7 @@ $notice_complementaire_sante = get_field('notice_complementaire_sante');
         <div class="section-split__text py-10">
             <div class="container">
                 <h2 class="h2-title">Parrainez un candidat ou une entreprise.</h2>
-                <p class="hidden lg:block mt-8 lg:mt-10">Exos vous récompense pour chaque candidat qui prend poste et à chaque commande de mission. Demandez la liste des gains à votre chargé de recrutement (places de cinéma, primes, box…).</p>
+                <p class="hidden lg:block mt-8 lg:mt-10">EXOS vous récompense pour chaque candidat proposé qui décrochera un poste et pour chaque entreprise qui nous commandera une mission en venant de votre part. Demandez la liste des cadeaux et des primes à votre consultant EXOS.</p>
                 <a href="<?php echo get_site_url(); ?>/contact" class="btn-primary btn-white mt-6 sm:mt-8 lg:mt-10">Recommander quelqu'un</a>    
             </div>
         </div>

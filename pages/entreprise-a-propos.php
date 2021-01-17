@@ -160,7 +160,7 @@ get_header("entreprise");
                         <p class="text-xs">2020</p>
                     </div>
                     <div class="histoire__text">
-                        <h3 class="h3-title">Reprise de la société Search Protech</h3>
+                        <h3 class="h3-title">Reprise de la société SearchProTech</h3>
                         <p>Spécialisée depuis 2012 dans l’intérim et le recrutement des fonctions industrie-ingénierie</p>
                     </div>
                 </li>

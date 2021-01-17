@@ -12,7 +12,7 @@ get_header();
         <div class="z-10 container xxl:max-w-none">
             <div class="lg:w-1/2 xl:w-5/12 hero-full__content">
                 <h1 class="hero-title">Partenaire <br>de votre carrière</h1>
-                <p class="hero-text hidden lg:block">Depuis 2002, nous accompagnons candidats et recruteurs sur des missions de recrutement en CDI, CDD ou intérim.</p>
+                <p class="hero-text hidden lg:block">Depuis 2002, nous accompagnons de manière professionnelle et conviviale les candidats et les entreprises sur des missions de recrutement en CDI, en CDD ou en intérim.</p>
                 <div class="flex flex-col items-start lg:flex-row lg:items-center">
                     <a href="<?php echo get_site_url(); ?>/nos-offres" class="btn-primary btn-orange mt-4 mr-10">Voir nos offres</a>
                     <a href="<?php echo get_site_url(); ?>/entreprise/" class="btn-secondary btn-white mt-4">Vous êtes une entreprise ?</a>    
