@@ -24,6 +24,8 @@
                 if($lien): 
                 ?>
                 <a href="<?php echo $lien; ?>" class="btn-primary btn-orange mt-4">S'inscrire</a>
+                <?php else: ?>
+                <p class="mt-6 italic text-gray text-xs">Inscription bientôt disponible</p>    
                 <?php endif; ?>
             </div>
         </div>
@@ -72,18 +74,20 @@
             
             <!-- INSCRIPTION -->
             <div class="bg-dark py-10 md:py-20 lg:p-0 flex flex-col items-center lg:w-1/4 lg:ml-auto">
-                <div class="uppercase font-medium text-xs">
-                    <p class="icon-webinar icon-calendar">Le <?php the_field('date'); ?></p>
-                    <p class="icon-webinar icon-time my-2">De <?php the_field('heure_de_debut'); ?> à <?php the_field('heure_de_fin'); ?></p>
-                    <p class="text-gray">Gratuit</p>  
-                </div>
+                <div class="font-medium text-xs">
+                    <p class="uppercase icon-webinar icon-calendar">Le <?php the_field('date'); ?></p>
+                    <p class="uppercase icon-webinar icon-time my-2">De <?php the_field('heure_de_debut'); ?> à <?php the_field('heure_de_fin'); ?></p>
+                    <p class="uppercase text-gray">Gratuit</p>  
 
-                <?php 
-                $lien = get_field('lien');
-                if($lien): 
-                ?>
-                <a href="<?php echo $lien; ?>" class="btn-primary btn-orange mt-4">S'inscrire</a>
-                <?php endif; ?>
+                    <?php 
+                    $lien = get_field('lien');
+                    if($lien): 
+                    ?>
+                    <a href="<?php echo $lien; ?>" class="btn-primary btn-orange mt-4">S'inscrire</a>
+                    <?php else: ?>
+                    <p class="mt-6 italic text-gray">Inscription bientôt disponible</p>   
+                    <?php endif; ?>
+                </div>
             </div>    
 
         </div>
