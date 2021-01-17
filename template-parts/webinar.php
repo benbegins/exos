@@ -16,6 +16,14 @@ foreach ($terms as $term) {
         <h3 class="h3-title"><?php the_title(); ?></h3>
         <p class="text-gray mt-4 lg:mt-5">Le <?php the_field('date'); ?> de <?php the_field('heure_de_debut'); ?> à <?php the_field('heure_de_fin'); ?></p>
         <p class="text-gray uppercase">Gratuit</p>
+        <p class="text-sm font-bold mt-4 italic">
+            <?php 
+                $lien = get_field('lien');
+                if($lien){
+                    echo 'Inscriptions ouvertes';
+                } 
+            ?>
+        </p>
     </div>
     <div class="icon-arrow"></div>
 </a>
