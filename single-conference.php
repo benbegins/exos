@@ -3,31 +3,7 @@
 
 <div class="page-pt">
 
-    <!-- CONNEXION -->
-    <?php if(post_password_required( )): ?>
-
-    <section class="section-pad">
-        <div class="container">
-            <div class="md:flex xl:w-10/12 xl:mx-auto xl:justify-between">
-                <div class="md:w-1/2 md:pr-6 xl:w-2/5">
-                    <h2 class="h2-title">Connectez-vous</h2>
-                    <div class="form mt-10">
-                        <?php echo get_the_password_form(); ?> 
-                    </div>
-                </div>
-                <div class="mt-20 md:mt-0 md:w-1/2 md:pl-6 xl:w-2/5">
-                    <p>Vous n’êtes pas encore membre ? Demandez votre mot de passe gratuitement :</p>
-                    <div class="form mt-10">
-                        <?php echo do_shortcode('[forminator_form id="1279072"]'); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- DEBUT ZONE PROTEGEE -->
-    <?php else: ?>
-
+    <!-- TITRE & DATE -->
     <section class="section-pad">
         <div class="container md:flex md:items-center">
             <div class="md:w-2/3 lg:w-1/2">
@@ -53,6 +29,7 @@
         </div>
     </section>
 
+    <!-- CONTENU -->
     <section class="section-pad-bot">
         <div class="container">
             <div class="zone-text lg:w-2/3 lg:ml-auto">
@@ -63,7 +40,8 @@
             </div>
         </div>
     </section>
-
+    
+    <!-- INTERVENANT -->
     <section class="intervenant mt-10">
         <div class="lg:max-w-screen-xxl lg:px-16 lg:mx-auto lg:flex lg:items-center">
             
@@ -111,8 +89,52 @@
         </div>
     </section>
 
-    <?php endif; ?>
-    <!-- FIN ZONE PROTEGEE -->
+
+    <!-- PROCHAINS WEBINAIRES -->
+    <?php 
+        $date_now = date('Y-m-d');
+        $args = array(
+            'post_type'             => 'conference',
+            'ignore_sticky_posts'   => true,
+            'paged'                 => $paged,
+            'posts_per_page'        => '2',
+            'post__not_in'          => array($post->ID),
+            'meta_key' => 'date',
+            'orderby' => 'meta_value',
+            'order' => 'ASC',
+            'meta_query' => array(
+                array(
+                    'key'           => 'date',
+                    'compare'       => '>=',
+                    'value'         => $date_now,
+                    'type'          => 'DATETIME',
+                )                   
+            )
+        );
+        $query = new WP_Query( $args );
+
+        if ( $query->have_posts() ) :
+    ?>
+    <section class="section-pad">
+        <div class="container">
+            <h2 class="h2-title mb-6 lg:mb-16">Nos prochains webinaires</h2>
+            
+                <?php 
+                while ( $query->have_posts() ) : $query->the_post();
+                    get_template_part( 'template-parts/webinar' );
+                endwhile;
+                ?>
+                
+            <div class="text-right">
+                <a href="<?php echo get_site_url(); ?>/entreprise/club-rh" class="btn-primary btn-orange">Tous nos webinaires</a>
+            </div>
+        </div>
+    </section>
+    <?php
+        endif;
+    ?>
+
+
 
     <!-- QUESTION DEMANDE -->
     <div class="bg-light text-dark">

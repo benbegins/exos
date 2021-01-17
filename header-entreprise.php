@@ -17,9 +17,7 @@
 
     <header class="site-header fixed w-full z-30 flex items-center justify-between px-5 bg-light lg:px-10">
         <div class="site-header__logo flex-grow z-30 lg:flex-none lg:mr-10">
-            <a href="<?php echo get_site_url(); ?>/entreprise">
-                <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-exos.svg" alt="logo Exos">
-            </a>
+            <a href="<?php echo get_site_url(); ?>/entreprise"></a>
         </div>
         <div class="site-header__nav bg-dark fixed inset-0 text-light text-center text-sm z-20 flex flex-col justify-center lg:static lg:block lg:text-gray lg:bg-transparent lg:flex-grow lg:text-xs">
             <div class="site-header__nav__main uppercase font-medium">

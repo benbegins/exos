@@ -1,3 +1,28 @@
+.hero-split-club-rh{
+    .club-rh-by-exos{
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+
+        &::after{
+            content: "";
+            width: 61px;
+            height: 12px;
+            background: url('./dist/img/by-exos.svg') center center no-repeat;
+            background-size: contain;
+            right: 0;
+            bottom: -17px;
+            position: absolute;
+
+            @media screen and (min-width: $lg){
+                width: 85px;
+                height: 17px;
+                right:5px;
+            }
+        }
+    } 
+}
+
 .webinar{
     @apply rounded-md block bg-light text-dark overflow-hidden relative;
 

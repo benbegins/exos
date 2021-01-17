@@ -17,28 +17,30 @@
 
     <header class="site-header header-club-rh fixed w-full z-30 flex items-center justify-between px-5 bg-dark text-light lg:px-10">
         <div class="site-header__logo logo-club-rh flex-grow z-30 lg:flex-none lg:mr-10">
-            <a href="<?php echo get_site_url(); ?>/entreprise/club-rh">
-                <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-club-rh.png" alt="logo Club RH Exos">
-            </a>
+            <a href="<?php echo get_site_url(); ?>/entreprise"></a>
         </div>
         <div class="site-header__nav bg-dark fixed inset-0 text-light text-center text-sm z-20 flex flex-col justify-center lg:static lg:block lg:text-gray lg:bg-transparent lg:flex-grow lg:text-xs">
             <div class="site-header__nav__main uppercase font-medium">
                 <?php 
                 wp_nav_menu(array( 
-                    'theme_location' => 'menu-club-rh',
+                    'theme_location' => 'menu-entreprise',
                 )); 
-                ?>     
+                ?>      
             </div>
             <div class="site-header__nav__social lg:hidden">
                 <a href="https://www.facebook.com/exos.recrutement/" class="icon-social icon-facebook" target="_blank">Facebook</a>
                 <a href="https://www.linkedin.com/company/2740192/admin/" class="icon-social icon-linkedin" target="_blank">Linkedin</a>
             </div>
             <div class="site-header__nav__espace absolute inset-x-0 bottom-0 lg:hidden">
-                <a href="<?php echo get_site_url(); ?>/entreprise" class="site-header__nav__espace-btn">Retour sur Exos</a>
+                <a href="<?php echo get_site_url(); ?>" class="site-header__nav__espace-btn">Vous êtes un candidat ?</a>
             </div>
         </div>
-        <div class="site-header__retour">
-            <a href="<?php echo get_site_url(); ?>/entreprise" class="btn-secondary btn-back text-xs opacity-50">Retour sur Exos</a>
+        <div class="site-header__cta">
+            <a href="<?php echo get_site_url(); ?>/entreprise/contact" class="bg-orange text-light text-sm sm:text-base lg:rounded-md">Nous <br>contacter</a>
+        </div>
+        <div class="site-header__espaces hidden lg:flex text-xs leading-tight text-gray font-medium">
+            <a href="<?php echo get_site_url(); ?>" class="mx-5">Vous êtes un<br>CANDIDAT</a>
+            <a class="text-orange">Vous êtes une<br>ENTREPRISE</a>
         </div>
         <div class="site-header__burger pl-5 z-30 lg:hidden">
             <div class="line line1"></div>

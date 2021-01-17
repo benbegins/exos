@@ -140,7 +140,7 @@ get_header("entreprise");
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo-club-rh.png" alt="Logo Club RH by Exos" width="130">
                 </div>
                 <h2 class="h2-title">Le rendez-vous des managers</h2>
-                <p class="hidden lg:block mt-8 lg:mt-10">Webinaires, veille juridique, revue de talents, nous avons imaginé le club RH pour aider les managers à se former et s’informer sur les évolutions des ressources humaines.</p>
+                <p class="hidden lg:block mt-8 lg:mt-10">Le Club RH vous donne rendez-vous une fois par mois pour une conférence en ligne animée par un expert sur une thématique managériale.</p>
                 <a href="<?php echo get_site_url(); ?>/entreprise/club-rh" class="btn-primary btn-white mt-6 sm:mt-8 lg:mt-10">Entrer dans le club</a>   
             </div>
         </div>
@@ -149,7 +149,6 @@ get_header("entreprise");
         <div class="container">
             <div class="lg:w-3/4 lg:mx-auto">
                 <h2 class="h2-title">Nos prochains Webinaires</h2>
-                <p class="hidden md:block mt-6 lg:mt-6">Jetez un oeil à nos derniers webinaires et inscrivez vous au club RH pour y assister et parfaire vos connaissances.</p>
                 <div class="border-b border-light border-opacity-25 mt-10">
                     <?php 
                     $date_now = date('Y-m-d');
@@ -193,7 +192,7 @@ get_header("entreprise");
                     ?>
                 </div>
                 <div class="text-right">
-                    <a href="<?php echo get_site_url(); ?>/entreprise/club-rh/webinars" class="btn-primary btn-white mt-6 sm:mt-8 lg:mt-10">Tous nos webinaires</a>     
+                    <a href="<?php echo get_site_url(); ?>/entreprise/club-rh" class="btn-primary btn-white mt-6 sm:mt-8 lg:mt-10">Tous nos webinaires</a>     
                 </div>
             </div>
         </div>
