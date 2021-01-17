@@ -83,7 +83,7 @@
                     $lien = get_field('lien');
                     if($lien): 
                     ?>
-                    <a href="<?php echo $lien; ?>" class="btn-primary btn-orange mt-4">S'inscrire</a>
+                    <a href="<?php echo $lien; ?>" class="btn-primary btn-orange mt-4 text-base">S'inscrire</a>
                     <?php else: ?>
                     <p class="mt-6 italic text-gray">Inscription bientôt disponible</p>   
                     <?php endif; ?>
