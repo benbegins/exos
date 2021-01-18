@@ -169,6 +169,7 @@ get_header("entreprise");
                     <div class="histoire__text">
                         <h3 class="h3-title">Reprise de la société SearchProTech</h3>
                         <p>Spécialisée depuis 2012 dans l’intérim et le recrutement des fonctions industrie-ingénierie</p>
+                        <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-search-protech.png" alt="logo SearchProTech" class="mt-2">
                     </div>
                 </li>
                  
