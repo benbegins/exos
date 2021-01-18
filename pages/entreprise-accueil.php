@@ -70,7 +70,7 @@ get_header("entreprise");
         <div class="container">
             <div class="section-imgtext__text-container">
                 <h2 class="h2-title mb-10">Partenaire de confiance depuis 2002</h2>
-                <p class="mb-10">Nous sommes spécialisés dans le recrutement permanent (CDI) et temporaire (CDD, Intérim) d’employés et de cadres à travers 2 départements spécialisés : les fonctions supports et les foncions industrie-ingénierie.</p>
+                <p class="mb-10">Nous sommes spécialisés dans le recrutement permanent (CDI) et temporaire (CDD, Intérim) d’employés et de cadres à travers 2 départements spécialisés : les fonctions supports et les fonctions industrie-ingénierie.</p>
                 <p class="mb-10">Nous gérons plus de 150 recrutements par mois et 78% de nos clients travaillent avec nous depuis plus de 10 ans.</p>
                 <div class="text-right">
                     <a href="<?php echo get_site_url(); ?>/entreprise/a-propos" class="btn-primary btn-white">Nous connaître</a>    
@@ -201,7 +201,7 @@ get_header("entreprise");
     <!-- LE BLOG -->
     <section class="section-pad">
         <div class="container">
-            <h2 class="h2-title lg:w-1/2">Conseils et infos sur le monde de l’emploi</h2>
+            <h2 class="h2-title lg:w-1/2">Notre actualité</h2>
             
             <div class="text-right mt-6 lg:hidden">
                 <div class="btn-pagination pagination-left-dark pagination-left-articles mr-2"></div>
