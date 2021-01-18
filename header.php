@@ -7,10 +7,10 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> data-barba="wrapper">
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<div id="page" class="site" data-barba="container">
+<div id="page" class="site">
 
     <div class="cursor"></div>
     <div class="page-transition bg-light"></div>

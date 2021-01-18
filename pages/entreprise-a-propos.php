@@ -97,6 +97,13 @@ get_header("entreprise");
         </div>
     </section>
 
+    <!-- LUTTE CONTRE LA DISCRIMINATION -->
+    <section class="section-pad-bot">
+        <div class="container">
+            <?php echo get_template_part('./template-parts/egalite-professionnelle'); ?>
+        </div>
+    </section>
+
     <!-- PHOTO LOCAUX -->
     <section class="section-imgtext">
         <div class="overflow-hidden">

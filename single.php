@@ -180,7 +180,13 @@
     <section class="section-pad bg-white">
         <div class="container">
             <h2 class="h1-title text-blue lg:w-9/12 lg:ml-20">Engagé pour l'égalité des chances</h2>
-            <p class="mt-10 md:w-2/3 md:ml-auto lg:w-5/12 lg:mr-20">Nous nous impliquons chaque jour dans la lutte contre les discriminations et pour l’égalité des chances. Vous ne serez évalué que sur vos compétences et nous travaillerons en toute transparence pour la réussite de votre carrière. Pour cette raison, nous avons signé la charte des intermédiaires de l’emploi pour l’égalité dans les recrutements.</p>
+            <div class="mt-10 md:w-2/3 md:ml-auto lg:w-5/12 lg:mr-20">
+                <p class="">Nous nous impliquons chaque jour dans la lutte contre les discriminations et pour l’égalité des chances. Vous ne serez évalué que sur vos compétences et nous travaillerons en toute transparence pour la réussite de votre carrière. Pour cette raison, nous avons signé la charte des intermédiaires de l’emploi pour l’égalité dans les recrutements.</p>
+                <div class="flex items-end mt-10">
+                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-charte-diversite.png" alt="Logo Charte de la diversité" class="mr-10">
+                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-a-competence-egale.png" alt="Logo A compétence égale">
+                </div>
+            </div>
         </div>
     </section>
 

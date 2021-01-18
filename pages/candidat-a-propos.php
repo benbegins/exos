@@ -100,7 +100,14 @@ get_header();
                 <p>Dirigé par une équipe de plus de 25 ans d’expérience dans le recrutement et la gestion des ressources humaines, Exos s’est donné comme objectif d’offrir le meilleur accompagnement possible à ses candidats en les accompagnant pour trouver la mission qui correspond le mieux à leurs profils et leurs attentes.</p>
             </div>
         </div>
-    </section>         
+    </section> 
+
+    <!-- LUTTE CONTRE LA DISCRIMINATION -->
+    <section class="section-pad-bot">
+        <div class="container">
+            <?php echo get_template_part('./template-parts/egalite-professionnelle'); ?>
+        </div>
+    </section>
     
     <!-- TEMOIGNAGES -->
     <?php 

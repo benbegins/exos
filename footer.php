@@ -7,7 +7,7 @@
                 <h6 class="site-footer__section-title">À propos</h6>
                 <p class="site-footer__a-propos text-2xl leading-tight">Depuis 2002 EXOS est spécialisé dans le recrutement d’employés et de cadres pour les fonctions support et industrie-ingénierie.</p>
                 <a href="<?php echo get_site_url(); ?>/a-propos" class="btn-secondary btn-white mt-5">Découvrez-nous</a>
-                <div class="flex mt-5">
+                <div class="flex my-5">
                     <a href="https://www.facebook.com/exos.recrutement/" class="site-footer__icon-social mr-5 no-transition" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37">
                             <g id="facebook" transform="translate(0 0.291)">
@@ -38,6 +38,11 @@
                         <?php echo do_shortcode('[QUALIDGET type="badge"]'); ?>
                     </div>
                 </div>
+                <div class="flex items-center justify-start">
+                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-charte-diversite-white.png" alt="Logo Charte de la diversité">
+                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-a-competence-egale-white.png" alt="Logo Association A compétence égale" class="md:mx-16">
+                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-prism-emploi-white.png" alt="Logo Prism'emploi">
+                </div>
             </div>
 
             <!-- Menu -->
@@ -52,7 +57,7 @@
                 <div class="site-footer__menu__cta mt-5">
                     <a href="<?php echo get_site_url(); ?>/candidature-spontanee" class="leading-none block rounded-md text-light lg:inline-block">Candidature spontanée</a>
                 </div>
-                <div class="flex mt-8 lg:hidden">
+                <div class="flex mt-8 mb-6 lg:hidden">
                     <a href="https://www.facebook.com/exos.recrutement/" class="site-footer__icon-social mr-5 no-transition" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" viewBox="0 0 36 37">
                             <g id="facebook" transform="translate(0 0.291)">
@@ -79,6 +84,11 @@
                             </g>
                         </svg>
                     </a>
+                </div>
+                <div class="flex items-center justify-between md:justify-start lg:hidden">
+                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-charte-diversite-white.png" alt="Logo Charte de la diversité">
+                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-a-competence-egale-white.png" alt="Logo Association A compétence égale" class="md:mx-16">
+                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-prism-emploi-white.png" alt="Logo Prism'emploi">
                 </div>
             </div>
 

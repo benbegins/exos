@@ -1,7 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Swiper, { Navigation } from 'swiper';
-// import barba from '@barba/core';
 
 gsap.registerPlugin(ScrollTrigger);
 Swiper.use([Navigation]);
@@ -250,31 +249,3 @@ const pageInit = () => {
 
 window.addEventListener('popstate', animation, false);
 window.addEventListener('load', pageInit);
-
-
-
-
-
-
-// BARBA
-// barba.init({
-//     transitions: [{
-//         leave(data) {
-//             return gsap.to(data.current.container, {
-//                 opacity: 0,
-//                 duration: 0.4,
-//                 ease: "none",
-//             });
-//         },
-//         enter(data) {
-//             window.scrollTo(0, 0);
-//         },
-//         after(data) {
-//             return gsap.from(data.next.container, {
-//                 opacity: 0,
-//                 duration: 0.4,
-//                 ease: "none",
-//             });
-//         }
-//     }]
-// });

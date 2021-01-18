@@ -19370,7 +19370,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_3__);
 
 
- // import barba from '@barba/core';
 
 gsap__WEBPACK_IMPORTED_MODULE_0__["gsap"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
 swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__["Navigation"]]);
@@ -19649,28 +19648,7 @@ var pageInit = function pageInit() {
 };
 
 window.addEventListener('popstate', animation, false);
-window.addEventListener('load', pageInit); // BARBA
-// barba.init({
-//     transitions: [{
-//         leave(data) {
-//             return gsap.to(data.current.container, {
-//                 opacity: 0,
-//                 duration: 0.4,
-//                 ease: "none",
-//             });
-//         },
-//         enter(data) {
-//             window.scrollTo(0, 0);
-//         },
-//         after(data) {
-//             return gsap.from(data.next.container, {
-//                 opacity: 0,
-//                 duration: 0.4,
-//                 ease: "none",
-//             });
-//         }
-//     }]
-// });
+window.addEventListener('load', pageInit);
 
 /***/ }),
 
