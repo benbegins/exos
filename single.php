@@ -114,7 +114,7 @@
                     <p class="h2-title">Besoin d'aide&nbsp;?</p>
                     <p class="mt-4">N'hésitez pas à contacter <?php echo $prenom; ?> pour en savoir plus.</p>
                     <p class="mt-2">Tel. <?php echo $telephone; ?></p>
-                    <a href="<?php echo get_site_url(); ?>/mail?mail=<?php echo $email; ?>" class="btn-primary btn-white mt-4">Envoyer un mail</a>
+                    <a href="mailto:<?php echo $email; ?>" class="btn-primary btn-white mt-4">Envoyer un mail</a>
                 </div>
             </div>
         </div>
