@@ -51,7 +51,12 @@ get_header("entreprise");
                     <p class="font-display font-extrabold text-2xl -mt-1 lg:mt-0">02</p>
                 </div>
                 <div class="w-3/4 md:w-5/6 md:flex">
-                    <h2 class="h2-title mb-3 md:w-1/2">Industrie-ingénierie</h2>
+                    <h2 class="h2-title mb-3 md:w-1/2">
+                        Industrie-ingénierie
+                        <div class="my-4">
+                            <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-search-protech.png" alt="Logo SearchProTech">
+                        </div>
+                    </h2>
                     <ul class="uppercase text-gray md:w-1/3 md:ml-auto">
                         <li class="mb-3">Techniciens</li>
                         <li class="mb-3">Ingénieurs</li>

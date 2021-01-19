@@ -14,7 +14,7 @@ if (isset($mail)) {
     // // trim function removes space before and after the strings
     $mail = trim($mail);
 
-    header("Location: mailto:" . $mail . "@exos-recrutement.com");
+    header("Location: mailto:" . $mail);
     
 } else {
     header("Location: https://exos-recrutement.com");
