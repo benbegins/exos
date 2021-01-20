@@ -68,7 +68,7 @@
                 $site_web = get_field('site_web', 'intervenant_' . $intervenants[0]->term_id);
                 if($site_web):
                 ?>
-                <a href="<?php echo $site_web['url']; ?>" class="btn-secondary btn-dark mt-4" target="_blank">Son site web</a>
+                <a href="<?php echo $site_web['url']; ?>" class="no-transition btn-secondary btn-dark mt-4" target="_blank">Son site web</a>
                 <?php endif; ?>
             </div>
             
