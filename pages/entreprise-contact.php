@@ -36,7 +36,7 @@ get_header('entreprise');
                         <p class="uppercase text-gray text-xs mb-2">Téléphone & Fax</p>
                         <p>t. 01 40 19 72 75</p>
                         <p>f. 01 40 19 72 82</p>
-                        <p class="mt-4"><strong>SearchProTech</strong></p>
+                        <p class="uppercase text-gray text-xs mt-4 mb-2">SearchProTech</p>
                         <p>t. 01 40 19 72 79</p>
                     </div>
                 </div>
