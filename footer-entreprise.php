@@ -98,6 +98,7 @@
                 <div class="grid grid-cols-2 text-sm sm:text-base lg:block">
                     <p>164 rue de Vaugirard <br>75015 PARIS</p>
                     <p class="text-right lg:text-left lg:mt-5">t. 01 40 19 72 75<br>f. 01 40 19 72 82</p>
+                    <p class="text-right lg:text-left lg:mt-5">Tel. SearchProTech<br>01 40 19 72 79</p>
                 </div>
                 <a href="https://www.google.fr/maps/place/EXOS+Recrutement+%26+int%C3%A9rim/@48.8432668,2.3108566,17z/data=!3m1!4b1!4m5!3m4!1s0x47e67204dcead01f:0xcf85489a149e73e6!8m2!3d48.8432668!4d2.3130453" target="_blank" class="btn-secondary btn-white mt-5">Voir le plan</a>
             </div>
