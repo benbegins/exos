@@ -48,7 +48,7 @@
             $nom = get_field('nom', $collaborateur->ID);
             $telephone = get_field('telephone', $collaborateur->ID);
             $email = get_field('email', $collaborateur->ID);
-            $photo = get_the_post_thumbnail_url($collaborateur->ID, 'medium');
+            $photo = get_the_post_thumbnail_url($collaborateur->ID, 'medium_large');
 
             ?>
             <div class="hidden lg:block w-4/12 ml-auto mt-5">

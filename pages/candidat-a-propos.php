@@ -181,7 +181,7 @@ get_header();
             ?>
 
                 <li class="a-propos__equipe__item">
-                    <div class="a-propos__equipe__photo" style="background-image: url('<?php the_post_thumbnail_url('medium'); ?>')"></div>
+                    <div class="a-propos__equipe__photo" style="background-image: url('<?php the_post_thumbnail_url('medium_large'); ?>')"></div>
                     <div class="p-6 lg:p-10">
                         <p class="uppercase font-extrabold"><?php echo get_field('prenom') . ' ' . get_field('nom'); ?></p>
                         <p class="text-blue font-bold text-xs mt-1"><?php the_field('poste'); ?></p>       
