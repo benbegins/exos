@@ -275,7 +275,7 @@ get_header("entreprise");
         
         <div class="container">
             <div class="section-imgtext__text-container">
-                <h2 class="h2-title mb-10">Vous rechercher un nouveau collaborateur&nbsp;?</h2>
+                <h2 class="h2-title mb-10">Vous recherchez un nouveau collaborateur&nbsp;?</h2>
                 <p>N’hésitez pas à nous contacter pour en discuter : nous saurons vous accompagner pour trouver LE profil que vous recherchez !</p>
                 <div class="text-right mt-10">
                     <a href="<?php echo get_site_url(); ?>/entreprise/contact" class="btn-primary btn-white">Nous confier une mission</a>    
