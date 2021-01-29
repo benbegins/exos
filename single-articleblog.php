@@ -85,7 +85,13 @@ if($categories[0]->slug == "entreprise"){
 
         <div class="container">
             <div class="text-right mt-6 md:mt-10 lg:mt-24">
-                <a href="<?php echo get_site_url(); ?>/le-blog" class="btn-primary btn-white">Voir plus d'articles</a>
+                <a href="<?php 
+                if($categories[0]->slug == "entreprise"){
+                    echo get_site_url() . '/entreprise/blog';
+                } else {
+                    echo get_site_url() . '/le-blog';
+                } 
+                ?>" class="btn-primary btn-white">Voir plus d'articles</a>
             </div>
         </div>
     </section>
