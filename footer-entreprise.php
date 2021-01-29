@@ -5,7 +5,7 @@
             <!-- A propos -->
             <div class="hidden lg:block col-span-6">
                 <h6 class="site-footer__section-title">À propos</h6>
-                <p class="site-footer__a-propos text-2xl leading-tight">Depuis 2002 EXOS est spécialisé dans le recrutement d’employés et de cadres pour les fonctions support et industrie-ingénierie.</p>
+                <p class="site-footer__a-propos text-2xl leading-tight">Depuis 2001 EXOS est spécialisé dans le recrutement d’employés et de cadres pour les fonctions support et industrie-ingénierie.</p>
                 <a href="<?php echo get_site_url(); ?>/entreprise/a-propos" class="btn-secondary btn-white mt-5">Découvrez-nous</a>
                 <div class="flex my-5">
                     <a href="https://www.facebook.com/exos.recrutement/" class="site-footer__icon-social mr-5 no-transition" target="_blank">
@@ -110,7 +110,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo-exos-white.svg" alt="Logo exos blanc" class="w-32 mx-auto">    
             </div>
             <div class=" mb-2 lg:mb-0 lg:order-1 lg:flex-1 lg:text-left">
-                <p>© exos 2020</p>
+                <p>© exos 2021</p>
             </div>
             <div class="lg:order-3 lg:flex-1 lg:text-right">
                 <p><a href="<?php echo get_site_url(); ?>/mentions" class="text-light mb-2 lg:mb-0 lg:mr-6 block lg:inline">Mentions légales</a> Réalisation : <a href="https://bemy.studio" class="text-light" target="_blank">bemy studio</a></p>

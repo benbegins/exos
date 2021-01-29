@@ -11,7 +11,7 @@ get_header("entreprise");
         <div class="z-10 container xxl:max-w-none">
             <div class="lg:w-1/2 xl:w-5/12 hero-full__content">
                 <h1 class="hero-title">Votre <br>fournisseur <br>de talents</h1>
-                <p class="hero-text hidden lg:block">Depuis 2002, nous accompagnons de manière professionnelle et conviviale les candidats et les entreprises sur des missions de recrutement en CDI, en CDD ou en intérim.</p>
+                <p class="hero-text hidden lg:block">Depuis 2001, nous accompagnons de manière professionnelle et conviviale les candidats et les entreprises sur des missions de recrutement en CDI, en CDD ou en intérim.</p>
                 <div class="flex flex-col items-start lg:flex-row lg:items-center">
                     <a href="<?php echo get_site_url(); ?>/entreprise/contact" class="btn-primary btn-orange mt-4 mr-10">Nous confier une mission</a>
                     <a href="<?php echo get_site_url(); ?>" class="btn-secondary btn-white mt-4">Vous êtes un candidat ?</a>        
@@ -64,12 +64,12 @@ get_header("entreprise");
     <!-- PARTENAIRE DE CONFIANCE -->
     <section class="section-imgtext section-pad-bot">
         <div class="overflow-hidden">
-            <div class="section-imgtext__img-container img-locaux-01 img-parallax"></div>    
+            <div class="section-imgtext__img-container img-equipe-01 img-parallax"></div>    
         </div>
         
         <div class="container">
             <div class="section-imgtext__text-container">
-                <h2 class="h2-title mb-10">Partenaire de confiance depuis 2002</h2>
+                <h2 class="h2-title mb-10">Partenaire de confiance depuis 2001</h2>
                 <p class="mb-10">Nous sommes spécialisés dans le recrutement permanent (CDI) et temporaire (CDD, Intérim) d’employés et de cadres à travers 2 départements spécialisés : les fonctions supports et les fonctions industrie-ingénierie.</p>
                 <p class="mb-10">Nous gérons plus de 150 recrutements par mois et 78% de nos clients travaillent avec nous depuis plus de 10 ans.</p>
                 <div class="text-right">

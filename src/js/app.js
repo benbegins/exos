@@ -118,11 +118,11 @@ const imgParallax = () => {
 // PARALLAX BACKGROUND EFFECT
 const parallax = (element) => {
     gsap.fromTo(element, {
-        yPercent: -20,
-        scale: 1.2,
+        yPercent: -15,
+        scale: 1.15,
     }, {
-        yPercent: 20,
-        scale: 1.2,
+        yPercent: 15,
+        scale: 1.15,
         ease: "none",
         scrollTrigger: {
             trigger: element,

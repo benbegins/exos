@@ -29,3 +29,9 @@
         background-image:url('./dist/img/back/locaux-02.jpg');
     }
 }
+.img-equipe-01{
+    background-image:url('./dist/img/back/equipe-exos-01-mobile.jpg');
+    @media screen and (min-width: $lg){
+        background-image:url('./dist/img/back/equipe-exos-01.jpg');
+    }
+}
