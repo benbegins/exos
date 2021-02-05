@@ -39,7 +39,7 @@ add_filter('tiny_mce_before_init', 'remove_h1_from_heading' );
 /*
  * Ajoute le champ collaborateur dans les colonnes de l'admin
  */
-add_filter( 'manage_posts_columns', 'exos_offres_columns' );
+add_filter( 'manage_post_posts_columns', 'exos_offres_columns' );
 function exos_offres_columns( $columns ) {
   
     $columns['collaborateur'] = __( 'Collaborateur' );
@@ -47,7 +47,7 @@ function exos_offres_columns( $columns ) {
   
 }
 
-add_action( 'manage_posts_custom_column', 'exos_offres_column', 10, 2);
+add_action( 'manage_post_posts_custom_column', 'exos_offres_column', 10, 2);
 function exos_offres_column( $column, $post_id ) {
   if ( 'collaborateur' === $column ) {
     $collaborateur = get_field('collaborateur', $post_id);
