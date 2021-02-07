@@ -237,6 +237,17 @@ if (btnPostuler && sectionPostuler) {
 }
 
 
+// BTN FILTRE OFFRE
+// Auto scroll
+const btnFiltre = document.querySelector('.filtre-offres input[type="submit"]');
+if (btnFiltre) {
+    const offres = document.querySelector('#offres');
+    btnFiltre.addEventListener('click', function () {
+        window.scrollTo(0, offres.offsetTop);
+    })
+}
+
+
 
 // PAGE INIT
 const pageInit = () => {

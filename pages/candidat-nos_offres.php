@@ -13,7 +13,7 @@ get_header();
             <h1 class="h1-title lg:w-1/2">
                 Trouver une offre
             </h1>
-            <div class="form mt-16 lg:mt-6 lg:w-1/3 lg:ml-auto">
+            <div class="form mt-16 lg:mt-6 lg:w-1/3 lg:ml-auto filtre-offres">
                 <?php echo do_shortcode('[searchandfilter slug="offres-demploi"]'); ?>
             </div>
         </div>
@@ -122,12 +122,6 @@ get_header();
     </section>
 
     <?php echo get_template_part('./template-parts/question-demande'); ?>
-
-
-    <script>
-        const offres = document.querySelector('#offres');
-        window.scrollTo(0, 0);
-    </script>
 
 </div>
 
