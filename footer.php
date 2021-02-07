@@ -113,7 +113,7 @@
                 <p>© exos 2021</p>
             </div>
             <div class="lg:order-3 lg:flex-1 lg:text-right">
-                <p><a href="<?php echo get_site_url(); ?>/mentions" class="text-light mb-2 lg:mb-0 lg:mr-6 block lg:inline">Mentions légales</a> Réalisation : <a href="https://bemy.studio" class="text-light" target="_blank">bemy studio</a></p>
+                <p><a href="<?php echo get_site_url(); ?>/mentions" class="text-light mb-2 lg:mb-0 lg:mr-6 block lg:inline">Mentions légales</a> Réalisation : <a href="https://bemy.studio" class="text-light no-transition" target="_blank">bemy studio</a></p>
             </div>
         </div>  
 
