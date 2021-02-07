@@ -19,7 +19,7 @@
                             </g>
                         </svg>
                     </a>
-                    <a href="https://www.linkedin.com/company/2740192/admin/" class="site-footer__icon-social no-transition" target="_blank">
+                    <a href="https://www.linkedin.com/company/2740192/admin/" class="site-footer__icon-social mr-5 no-transition" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="37" viewBox="0 0 38 37">
                             <g id="linkedin" transform="translate(0.326 0.291)">
                                 <g id="linkedin-2" data-name="linkedin" transform="translate(11.302 8.791)">
