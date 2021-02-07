@@ -20,8 +20,8 @@ get_header();
     </section>
 
     <!-- LISTE DES OFFRES -->
-    <section class="section-pad" id="offres">
-        <div class="container" id="main">
+    <section class="" id="offres">
+        <div class="container section-pad" id="main">
             <?php
             $args = array('post_type' => 'post');
             $args['search_filter_id'] = 1279083;
