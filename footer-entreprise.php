@@ -34,7 +34,7 @@
                             </g>
                         </svg>
                     </a>
-                    <div>
+                    <div class="ml-5">
                         <?php echo do_shortcode('[QUALIDGET type="badge"]'); ?>
                     </div>
                 </div>
