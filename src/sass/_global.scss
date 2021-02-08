@@ -87,3 +87,11 @@ h1,h2,h3,h4,h5,h6{
     @apply fixed inset-0 z-20;
     pointer-events:none;
 }
+
+// QUALIAVIS
+.tab[data-app="qualiavis-widget"]{
+    display: none;
+    @media screen and (min-width: $xl){
+        display: block;
+    }
+}
