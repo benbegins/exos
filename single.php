@@ -15,7 +15,7 @@
                         </h1>    
                     </div>
                     <div class="mt-4 lg:mt-0 lg:w-1/4 lg:ml-auto">
-                        <p class="offre-single__legende localisation" itemprop="jobLocation">
+                        <p class="offre-single__legende localisation">
                             <span itemprop="jobLocation" itemscope itemtype="https://schema.org/Place">
                                 <span itemprop="address">
                                     <?php the_field('localisation'); ?>
