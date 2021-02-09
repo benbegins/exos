@@ -15,7 +15,13 @@
                         </h1>    
                     </div>
                     <div class="mt-4 lg:mt-0 lg:w-1/4 lg:ml-auto">
-                        <p class="offre-single__legende localisation" itemprop="jobLocation"><?php the_field('localisation'); ?></p>
+                        <p class="offre-single__legende localisation" itemprop="jobLocation">
+                            <span itemprop="jobLocation" itemscope itemtype="https://schema.org/Place">
+                                <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                    <span itemprop="addressLocality"><?php the_field('localisation'); ?></span>
+                                </span>
+                            </span>
+                        </p>
                         <p class="offre-single__legende type mt-3" itemprop="employmentType"><?php the_field('type_de_contrat'); ?></p>
                         <p class="hidden" itemprop="industry"><?php echo get_the_category()[0]->name; ?></p>
                         <p class="hidden" itemprop="datePosted"><?php echo get_the_date('Y-m-d'); ?></p>
