@@ -2,148 +2,131 @@
 
 <div class="page-pt offre-single">
 
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "JobPosting",
-        "baseSalary": "nc",
-        "datePosted": "<?php echo get_the_date('Y-m-d'); ?>",
-        "description": "<?php the_field('mission'); ?>",
-        "employmentType": "<?php the_field('type_de_contrat'); ?>",
-        "hiringOrganization": "Exos",
-        "incentiveCompensation": "<?php the_field('avantages'); ?>",
-        "industry": "<?php echo get_the_category()[0]->name; ?>",
-        "jobLocation": {
-            "@type": "Place",
-            "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "<?php the_field('localisation'); ?>",
-            }
-        },
-        "skills": "<?php the_field('requis'); ?>",
-        "title": "<?php echo the_title(); ?>",
-        }
-    </script>
+    <div itemscope itemtype="https://schema.org/JobPosting">
 
-    <!-- TITRE DE LA MISSION -->
-    <section class="section-pad bg-dark text-light">
-        <div class="container">
-            <div class="lg:flex lg:items-center">
-                <div class="lg:w-1/2">
-                    <h1 class="h2-title">
-                        <?php the_title(); ?>
-                    </h1>    
-                </div>
-                <div class="mt-4 lg:mt-0 lg:w-1/4 lg:ml-auto">
-                    <p class="offre-single__legende localisation"><?php the_field('localisation'); ?></p>
-                    <p class="offre-single__legende type mt-3"><?php the_field('type_de_contrat'); ?></p>
+        <!-- TITRE DE LA MISSION -->
+        <section class="section-pad bg-dark text-light">
+            <div class="container">
+                <div class="lg:flex lg:items-center">
+                    <div class="lg:w-1/2">
+                        <h1 class="h2-title" itemprop="title">
+                            <?php the_title(); ?>
+                            <?php echo get_the_date('Y-m-d'); ?>
+                        </h1>    
+                    </div>
+                    <div class="mt-4 lg:mt-0 lg:w-1/4 lg:ml-auto">
+                        <p class="offre-single__legende localisation" itemprop="jobLocation"><?php the_field('localisation'); ?></p>
+                        <p class="offre-single__legende type mt-3" itemprop="employmentType"><?php the_field('type_de_contrat'); ?></p>
+                        <p class="hidden" itemprop="industry"><?php echo get_the_category()[0]->name; ?></p>
+                        <p class="hidden" itemprop="datePosted"><?php echo get_the_date('Y-m-d'); ?></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section-pad">
-        <div class="container lg:flex lg:items-start">
+        <section class="section-pad">
+            <div class="container lg:flex lg:items-start">
 
-            <!-- CONTENU MISSION -->
-            <div class="lg:w-7/12">
-                <?php if( get_field('mission') ): ?>
-                <h2 class="h1-title">Mission</h2>
-                <div class="zone-text zone-text__offre mt-10">
-                    <?php the_field('mission'); ?>	
+                <!-- CONTENU MISSION -->
+                <div class="lg:w-7/12">
+                    <?php if( get_field('mission') ): ?>
+                    <h2 class="h1-title">Mission</h2>
+                    <div class="zone-text zone-text__offre mt-10" itemprop="description">
+                        <?php the_field('mission'); ?>	
+                    </div>
+                    <?php endif; ?>    
+
+                    <?php if( get_field('requis') ): ?>
+                    <h2 class="h1-title mt-20">Requis</h2>
+                    <div class="zone-text zone-text__offre mt-10" itemprop="skills">
+                        <?php the_field('requis'); ?>	
+                    </div>
+                    <?php endif; ?>        
                 </div>
-                <?php endif; ?>    
 
-                <?php if( get_field('requis') ): ?>
-                <h2 class="h1-title mt-20">Requis</h2>
-                <div class="zone-text zone-text__offre mt-10">
-                    <?php the_field('requis'); ?>	
+                <!-- COLLABORATEUR -->
+                <?php 
+                $collaborateur = get_field('collaborateur');
+                if($collaborateur): 
+
+                $prenom = get_field('prenom', $collaborateur->ID);
+                $nom = get_field('nom', $collaborateur->ID);
+                $telephone = get_field('telephone', $collaborateur->ID);
+                $email = get_field('email', $collaborateur->ID);
+                $photo = get_the_post_thumbnail_url($collaborateur->ID, 'medium_large');
+
+                ?>
+                <div class="hidden lg:block w-4/12 ml-auto mt-5">
+                    <button id="btn-postuler" class="btn-primary btn-orange w-full mb-10 no-transition">Postuler</button id="postuler">
+                    <div class="bg-dark text-light">
+                        <div>
+                            <img src="<?php echo $photo; ?>" alt="<?php echo $prenom . ' ' . $nom; ?>" class="w-full">
+                        </div>
+                        <div class="p-12">
+                            <p class="h2-title">Besoin d'aide&nbsp;?</p>
+                            <p class="mt-4">N'hésitez pas à contacter <?php echo $prenom; ?> pour en savoir plus.</p>
+                            <p class="mt-2">Tel. <?php echo $telephone; ?></p>
+                            <a href="mailto:<?php echo $email; ?>" class="btn-primary btn-white mt-4" id="mailto-collaborateur">Envoyer un mail</a>
+                        </div>    
+                    </div>
+                    
                 </div>
-                <?php endif; ?>        
+
+                <?php endif; ?>
             </div>
+        </section>
+        
+        <!-- AVANTAGES -->
+        <?php if( get_field('avantages') ): ?>
+        <section class="section-pad bg-blue text-light offre__avantages">
+            <div class="container">
+                <div class="lg:w-7/12">
+                    <h2 class="h1-title">Avantages</h2>
+                    <div class="zone-text zone-text__offre mt-10" itemprop="incentiveCompensation">
+                        <?php the_field('avantages'); ?>	
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php endif; ?>
+        
+        <!-- POSTULER A L OFFRE -->
+        <section id="postuler" class="section-pad text-light relative overflow-hidden">
+            <div class="container z-10 relative lg:flex lg:justify-center">
+                <div class="lg:w-1/3 lg:mr-6">
+                    <h2 class="h2-title">Cette mission est faite pour vous&nbsp;?</h2>
+                    <p class="mt-4">Envoyez-nous votre candidature !</p>    
+                </div>
+                <div class="form mt-10 lg:w-1/3 lg:ml-6 lg:-mt-4">
+                    <?php echo do_shortcode('[forminator_form id="1279068"]'); ?>
+                </div>
+            </div>
+            <div class="offre-single__candidature img-parallax"></div>
+            <div class="overlay absolute inset-0 bg-dark opacity-50"></div>
+        </section>
 
-            <!-- COLLABORATEUR -->
-            <?php 
-            $collaborateur = get_field('collaborateur');
-            if($collaborateur): 
-
-            $prenom = get_field('prenom', $collaborateur->ID);
-            $nom = get_field('nom', $collaborateur->ID);
-            $telephone = get_field('telephone', $collaborateur->ID);
-            $email = get_field('email', $collaborateur->ID);
-            $photo = get_the_post_thumbnail_url($collaborateur->ID, 'medium_large');
-
-            ?>
-            <div class="hidden lg:block w-4/12 ml-auto mt-5">
-                <button id="btn-postuler" class="btn-primary btn-orange w-full mb-10 no-transition">Postuler</button id="postuler">
-                <div class="bg-dark text-light">
-                    <div>
+        <!-- COLLABORATEUR -->
+        <?php 
+        if($collaborateur): 
+        ?>
+        <section class="section-pad-top lg:hidden">
+            <div class="container">
+                <div class="bg-dark text-light md:flex md:items-center lg:block">
+                    <div class="md:w-1/2">
                         <img src="<?php echo $photo; ?>" alt="<?php echo $prenom . ' ' . $nom; ?>" class="w-full">
                     </div>
-                    <div class="p-12">
+                    <div class="px-6 py-12 md:w-1/2 md:p-10">
                         <p class="h2-title">Besoin d'aide&nbsp;?</p>
                         <p class="mt-4">N'hésitez pas à contacter <?php echo $prenom; ?> pour en savoir plus.</p>
                         <p class="mt-2">Tel. <?php echo $telephone; ?></p>
-                        <a href="mailto:<?php echo $email; ?>" class="btn-primary btn-white mt-4" id="mailto-collaborateur">Envoyer un mail</a>
-                    </div>    
+                        <a href="mailto:<?php echo $email; ?>" class="btn-primary btn-white mt-4">Envoyer un mail</a>
+                    </div>
                 </div>
-                
             </div>
+        </section>
+        <?php endif; ?>
 
-            <?php endif; ?>
-        </div>
-    </section>
-    
-    <!-- AVANTAGES -->
-    <?php if( get_field('avantages') ): ?>
-    <section class="section-pad bg-blue text-light offre__avantages">
-        <div class="container">
-            <div class="lg:w-7/12">
-                <h2 class="h1-title">Avantages</h2>
-                <div class="zone-text zone-text__offre mt-10">
-                    <?php the_field('avantages'); ?>	
-                </div>
-            </div>
-        </div>
-    </section>
-    <?php endif; ?>
-    
-    <!-- POSTULER A L OFFRE -->
-    <section id="postuler" class="section-pad text-light relative overflow-hidden">
-        <div class="container z-10 relative lg:flex lg:justify-center">
-            <div class="lg:w-1/3 lg:mr-6">
-                <h2 class="h2-title">Cette mission est faite pour vous&nbsp;?</h2>
-                <p class="mt-4">Envoyez-nous votre candidature !</p>    
-            </div>
-            <div class="form mt-10 lg:w-1/3 lg:ml-6 lg:-mt-4">
-                <?php echo do_shortcode('[forminator_form id="1279068"]'); ?>
-            </div>
-        </div>
-        <div class="offre-single__candidature img-parallax"></div>
-        <div class="overlay absolute inset-0 bg-dark opacity-50"></div>
-    </section>
-
-    <!-- COLLABORATEUR -->
-    <?php 
-    if($collaborateur): 
-    ?>
-    <section class="section-pad-top lg:hidden">
-        <div class="container">
-            <div class="bg-dark text-light md:flex md:items-center lg:block">
-                <div class="md:w-1/2">
-                    <img src="<?php echo $photo; ?>" alt="<?php echo $prenom . ' ' . $nom; ?>" class="w-full">
-                </div>
-                <div class="px-6 py-12 md:w-1/2 md:p-10">
-                    <p class="h2-title">Besoin d'aide&nbsp;?</p>
-                    <p class="mt-4">N'hésitez pas à contacter <?php echo $prenom; ?> pour en savoir plus.</p>
-                    <p class="mt-2">Tel. <?php echo $telephone; ?></p>
-                    <a href="mailto:<?php echo $email; ?>" class="btn-primary btn-white mt-4">Envoyer un mail</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <?php endif; ?>
-
+    </div>
 
     <!-- OFFRE SIMILAIRE -->
     <?php
