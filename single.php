@@ -17,8 +17,8 @@
                     <div class="mt-4 lg:mt-0 lg:w-1/4 lg:ml-auto">
                         <p class="offre-single__legende localisation" itemprop="jobLocation">
                             <span itemprop="jobLocation" itemscope itemtype="https://schema.org/Place">
-                                <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                                    <span itemprop="addressLocality"><?php the_field('localisation'); ?></span>
+                                <span itemprop="address">
+                                    <?php the_field('localisation'); ?>
                                 </span>
                             </span>
                         </p>
