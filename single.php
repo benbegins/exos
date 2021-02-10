@@ -11,7 +11,6 @@
                     <div class="lg:w-1/2">
                         <h1 class="h2-title" itemprop="title">
                             <?php the_title(); ?>
-                            <?php echo get_the_date('Y-m-d'); ?>
                         </h1>    
                     </div>
                     <div class="mt-4 lg:mt-0 lg:w-1/4 lg:ml-auto">
