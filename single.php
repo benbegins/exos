@@ -62,14 +62,14 @@
                 $photo = get_the_post_thumbnail_url($collaborateur->ID, 'medium_large');
 
                 ?>
-                <div class="hidden lg:block w-4/12 ml-auto mt-5">
+                <div class="hidden lg:block w-3/12 ml-auto mt-5">
                     <button id="btn-postuler" class="btn-primary btn-orange w-full mb-10 no-transition">Postuler</button id="postuler">
                     <div class="bg-dark text-light">
                         <div>
                             <img src="<?php echo $photo; ?>" alt="<?php echo $prenom . ' ' . $nom; ?>" class="w-full">
                         </div>
-                        <div class="p-12">
-                            <p class="h2-title">Besoin d'aide&nbsp;?</p>
+                        <div class="p-8">
+                            <p class="h3-title">Besoin d'aide&nbsp;?</p>
                             <p class="mt-4">N'hésitez pas à contacter <?php echo $prenom; ?> pour en savoir plus.</p>
                             <p class="mt-2">Tel. <?php echo $telephone; ?></p>
                             <a href="mailto:<?php echo $email; ?>" class="btn-primary btn-white mt-4" id="mailto-collaborateur">Envoyer un mail</a>
