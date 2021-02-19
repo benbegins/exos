@@ -105,6 +105,11 @@
         }
     }
 
+    .offre__avantages *::selection{
+        background: $dark;
+        color:$blue;
+    }
+
     form .forminator-error-message{
         color: $light;
     }
