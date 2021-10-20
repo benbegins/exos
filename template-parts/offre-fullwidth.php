@@ -7,9 +7,18 @@
         <p class="offre__legende type"><?php the_field('type_de_contrat'); ?></p>    
         <?php 
             $particularite = get_field('particularite');
+            $particularite_100 = substr($particularite, 0, 100);
             if($particularite):
         ?>
-        <p class="offre__legende particularite mt-2"><?php echo $particularite; ?></p>    
+        <p class="offre__legende particularite mt-2">
+            <?php 
+            echo $particularite_100;
+
+            if(strlen($particularite) > 100){
+                echo "(...)";
+            }
+            ?>
+        </p>    
         <?php 
             endif; 
         ?>
