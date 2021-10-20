@@ -1,182 +1,198 @@
-.form{
-    @apply text-base;
-    //LABELS
-    label{
-        @apply text-xs font-bold leading-none w-full;
-        p{
-            @apply inline-block;
-            a{
-                text-decoration: underline;
-                &:hover{
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-    span.forminator-required{
-        display: none;
-    }
+.form {
+	@apply text-base;
+	//LABELS
+	label {
+		@apply text-xs font-bold leading-none w-full;
+		p {
+			@apply inline-block;
+			a {
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	span.forminator-required {
+		display: none;
+	}
 
-    //INPUT TEXT EMAIL SELECT & TEXTAREA
-    input[type="text"], input[type="email"], input[type="file"], input[type="password"], select{
-        appearance: none;
-        @apply w-full bg-white rounded-md px-5 text-dark text-base;
-        @extend .box-shadow;
-        outline-color: rgba(0,0,0,0.1);
-        line-height: 60px;
-    }
+	//INPUT TEXT EMAIL SELECT & TEXTAREA
+	input[type="text"],
+	input[type="email"],
+	input[type="file"],
+	input[type="password"],
+	select {
+		appearance: none;
+		@apply w-full bg-white rounded-md px-5 text-dark text-base;
+		@extend .box-shadow;
+		outline-color: rgba(0, 0, 0, 0.1);
+		line-height: 60px;
+	}
 
-    //TEXTAREA
-    textarea{
-        min-height: 250px;
-        @apply w-full bg-white rounded-md px-5 py-4 text-dark text-base;
-        @extend .box-shadow;
-        outline-color: rgba(0,0,0,0.1);
-    }
+	//TEXTAREA
+	textarea {
+		min-height: 250px;
+		@apply w-full bg-white rounded-md px-5 py-4 text-dark text-base;
+		@extend .box-shadow;
+		outline-color: rgba(0, 0, 0, 0.1);
+	}
 
-    //SELECT
-    select{
-        appearance: none;
-        position: relative;
-        cursor: pointer;
-    }
-    .sf-field-category, .sf-field-taxonomy-metiers{
-        position: relative;
-        &::before{
-            content: "";
-            position: absolute;
-            background: url('./dist/img/icon-select.svg') center center no-repeat;
-            width: 12px;
-            height: 12px;
-            right: 20px;
-            top: calc(50% - 6px);
-            z-index: 10;
-            pointer-events: none;
-        }
-    }
+	//SELECT
+	select {
+		appearance: none;
+		position: relative;
+		cursor: pointer;
+	}
+	.sf-field-category,
+	.sf-field-taxonomy-metiers {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			background: url("./dist/img/icon-select.svg") center center
+				no-repeat;
+			width: 12px;
+			height: 12px;
+			right: 20px;
+			top: calc(50% - 6px);
+			z-index: 10;
+			pointer-events: none;
+		}
+	}
 
-    // BOUTON REINITIALISER (Formulaire Recherche Offre)
-    .search-filter-reset{
-        @apply font-bold underline;
-        &:hover{
-            @apply text-orange;
-        }
-    }
+	// BOUTON REINITIALISER (Formulaire Recherche Offre)
+	.search-filter-reset {
+		@apply font-bold underline;
+		&:hover {
+			@apply text-orange;
+		}
+	}
 
-    // SUBMIT
-    input[type="submit"], .forminator-button-submit, button[type="submit"]{
-        @apply inline-block rounded-md relative z-10 overflow-hidden;
-        font-weight: $weight-bold;
-        padding: 0 50px 0 20px;
-        line-height: 60px;
-        @extend .box-shadow;
-        transition: 0.2s;
-        background: $orange;
-        color: $dark;
-        cursor:pointer;
+	// SUBMIT
+	input[type="submit"],
+	.forminator-button-submit,
+	button[type="submit"] {
+		@apply inline-block rounded-md relative z-10 overflow-hidden;
+		font-weight: $weight-bold;
+		padding: 0 50px 0 20px;
+		line-height: 60px;
+		@extend .box-shadow;
+		transition: 0.2s;
+		background: $orange;
+		color: $dark;
+		cursor: pointer;
 
-        &::after{
-            content:"";
-            position: absolute;
-            width: 15px;
-            height: 13px;
-            right: 20px;
-            top: calc(50% - 6px);
-            transition: 0.2s;
-            background: url('./dist/img/arrow-right-dark.svg') center center no-repeat;
-            background-size: 15px 13px;
-        }
-    
-        &::before{
-            content: "";
-            @apply block absolute w-full h-full left-0;
-            z-index:-1;
-            transform: translateX(-101%);
-            transition: transform 0.4s $ease;
-            background: #DA7704;
-        }
-    
-        &:hover{
-            color: $light;
-            &::before{
-                transform: translateX(0);
-            }
-            &::after{
-                transform:translateX(5px);
-                background: url('./dist/img/arrow-right-white.svg') center center no-repeat;
-                background-size: 15px 13px;
-            }
-        }
-    }
-    .forminator-field#submit{
-        @apply text-right;
-    }
-    input[type="submit"]{
-        background: $orange url('./dist/img/arrow-right-dark.svg') 85% center no-repeat;
-        float:right;
-        
-        &:hover{
-            background: #DA7704 url('./dist/img/arrow-right-white.svg') calc(85% + 5px) center no-repeat;
-        }
-    }
+		&::after {
+			content: "";
+			position: absolute;
+			width: 15px;
+			height: 13px;
+			right: 20px;
+			top: calc(50% - 6px);
+			transition: 0.2s;
+			background: url("./dist/img/arrow-right-dark.svg") center center
+				no-repeat;
+			background-size: 15px 13px;
+		}
 
-    //CHECKBOX
-    input[type="checkbox"], input[type="radio"]{
-        height: 20px;
-        width: 20px;
-        min-width: 30px;
-        margin-right: 5px;
-    }
-    .forminator-checkbox, .forminator-radio{
-        @apply flex items-center pr-2 my-2;
-        p{
-            @apply font-normal;
-        }
-    }
+		&::before {
+			content: "";
+			@apply block absolute w-full h-full left-0;
+			z-index: -1;
+			transform: translateX(-101%);
+			transition: transform 0.4s $ease;
+			background: #da7704;
+		}
 
-    // FORMINATOR
-    .forminator-row{
-        display: flex;
-        flex-direction: column;
-        //width: 100%;
-    }
+		&:hover {
+			color: $light;
+			&::before {
+				transform: translateX(0);
+			}
+			&::after {
+				transform: translateX(5px);
+				background: url("./dist/img/arrow-right-white.svg") center
+					center no-repeat;
+				background-size: 15px 13px;
+			}
+		}
+	}
+	.forminator-field#submit {
+		@apply text-right;
+	}
+	input[type="submit"] {
+		background: $orange url("./dist/img/arrow-right-dark.svg") 85% center
+			no-repeat;
+		float: right;
 
-    .forminator-description{
-        @apply float-right text-xs mt-2;
-    }
+		&:hover {
+			background: #da7704 url("./dist/img/arrow-right-white.svg")
+				calc(85% + 5px) center no-repeat;
+		}
+	}
 
-    .forminator-row.forminator-row-last{
-        margin-bottom: 0;
-    }
+	//CHECKBOX
+	input[type="checkbox"],
+	input[type="radio"] {
+		height: 20px;
+		width: 20px;
+		min-width: 30px;
+		margin-right: 5px;
+	}
+	.forminator-checkbox,
+	.forminator-radio {
+		@apply flex items-center pr-2 my-2;
+		p {
+			@apply font-normal;
+		}
+	}
 
-    .forminator-error-message{
-        display: none;
-    }
+	// FORMINATOR
+	.forminator-row {
+		display: flex;
+		flex-direction: column;
+		//width: 100%;
+	}
 
-    .forminator-has_error{
-        position: relative;
-        input, textarea{
-            outline: 1px solid red;
-        }
-        .forminator-error-message{
-            background: red;
-            @apply absolute text-light block px-2 py-1 text-xs leading-tight bottom-0 right-0;
-            width: fit-content;
-        }
-    }
+	.forminator-description {
+		@apply float-right text-xs mt-2;
+	}
 
-    .forminator-file-upload{
-        input{
-            cursor: pointer;
-        }
-        button, span{
-            display: none;
-        }
-    }
+	.forminator-row.forminator-row-last {
+		margin-bottom: 0;
+	}
 
-    .forminator-is_filled{
-        .forminator-error-message{
-            display: none;
-        }
-    }
+	.forminator-error-message {
+		display: none;
+	}
+
+	.forminator-has_error {
+		position: relative;
+		input,
+		textarea {
+			outline: 1px solid red;
+		}
+		.forminator-error-message {
+			background: red;
+			@apply absolute text-light block px-2 py-1 text-xs leading-tight bottom-0 right-0;
+			width: fit-content;
+		}
+	}
+
+	.forminator-file-upload {
+		input {
+			cursor: pointer;
+		}
+		button,
+		span {
+			display: none;
+		}
+	}
+
+	.forminator-is_filled {
+		.forminator-error-message {
+			display: none;
+		}
+	}
 }

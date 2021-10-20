@@ -1,116 +1,133 @@
-.offre{
-    @apply rounded-md relative;
-    background-color: white;
-    @extend .box-shadow;
+.offre {
+	@apply rounded-md relative;
+	background-color: white;
+	@extend .box-shadow;
 
-    &__legende{
-        @apply uppercase font-medium text-xs pl-8 flex items-center;
-        line-height: 1.2;
-        min-height: 22px;
+	&__legende {
+		@apply uppercase font-medium text-xs pl-8 flex items-center;
+		line-height: 1.2;
+		min-height: 22px;
 
-        &.localisation{
-            background: url('./dist/img/icon-localisation-dark.svg') center left no-repeat;
-            background-size: 15px 22px;
-        }
-        &.type{
-            background: url('./dist/img/icon-type-dark.svg') center left no-repeat;
-            background-size: 20px 22px;
-        }
-    }
-    
-    .icon-arrow{
-        background: url('./dist/img/arrow-right-blue.svg') center center no-repeat;
-        background-size: 15px 13px;
-        width: 15px;
-        height:13px;
-        position: absolute;
-        right: 20px; 
-        bottom: 16px;
-        transition: opacity 0.1s linear; 
-    }
-    
+		&.localisation {
+			background: url("./dist/img/icon-localisation-dark.svg") center left
+				no-repeat;
+			background-size: 15px 22px;
+		}
+		&.type {
+			background: url("./dist/img/icon-type-dark.svg") center left
+				no-repeat;
+			background-size: 20px 22px;
+		}
+		&.particularite {
+			text-transform: none;
+			background: url("./dist/img/icon-particularite-dark.svg") center
+				left no-repeat;
+			background-size: 21px 20px;
+		}
+	}
 
-    &.offre-compact{
-        transition:0.3s ease;
-        &:hover{
-            @extend .box-shadow-over;
-            .icon-arrow{
-                opacity: 0;
-            }
-        }
-    }
+	.icon-arrow {
+		background: url("./dist/img/arrow-right-blue.svg") center center
+			no-repeat;
+		background-size: 15px 13px;
+		width: 15px;
+		height: 13px;
+		position: absolute;
+		right: 20px;
+		bottom: 16px;
+		transition: opacity 0.1s linear;
+	}
 
-    &.offre-fullwidth{
-        @apply overflow-hidden;
-        .icon-arrow{
-            @media screen and (min-width: $lg){
-                background: $blue url('./dist/img/arrow-right-white.svg') center center no-repeat;
-                background-size: 15px 13px;
-                width: 60px;
-                height:100%;
-                position: absolute;
-                right: 0; 
-                bottom: 0;
-                transition: width 0.4s $ease;
-            }
-        }
-        &:hover{
-            .icon-arrow{
-                @media screen and (min-width: $lg){
-                    width: 90px;
-                }
-            }
-        }
-        .h3-title{
-            @media screen and (min-width: $lg){
-                font-size: 1.875rem;
-            }
-        }
-    }
+	&.offre-compact {
+		transition: 0.3s ease;
+		&:hover {
+			@extend .box-shadow-over;
+			.icon-arrow {
+				opacity: 0;
+			}
+		}
+	}
 
-    &__avantages{
-        a{
-            &::after{
-                background: $light;
-            }
-            &:hover{
-                color: $light;
-            }
-        }
-    }
+	&.offre-fullwidth {
+		@apply overflow-hidden;
+		.icon-arrow {
+			@media screen and (min-width: $lg) {
+				background: $blue url("./dist/img/arrow-right-white.svg") center
+					center no-repeat;
+				background-size: 15px 13px;
+				width: 60px;
+				height: 100%;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				transition: width 0.4s $ease;
+			}
+		}
+		&:hover {
+			.icon-arrow {
+				@media screen and (min-width: $lg) {
+					width: 90px;
+				}
+			}
+		}
+		.h3-title {
+			@media screen and (min-width: $lg) {
+				font-size: 1.875rem;
+			}
+		}
+	}
+
+	&__avantages {
+		a {
+			&::after {
+				background: $light;
+			}
+			&:hover {
+				color: $light;
+			}
+		}
+	}
 }
 
 // PAGE OFFRE SINGLE
-.offre-single{
-    &__legende{
-        @apply uppercase font-medium text-sm pl-8 flex items-center;
-        line-height: 1.2;
-        min-height: 22px;
+.offre-single {
+	&__legende {
+		@apply uppercase font-medium text-sm pl-8 flex items-center;
+		line-height: 1.2;
+		min-height: 22px;
 
-        &.localisation{
-            background: url('./dist/img/icon-localisation-white.svg') center left no-repeat;
-            background-size: 15px 22px;
-        }
-        &.type{
-            background: url('./dist/img/icon-type-white.svg') center left no-repeat;
-            background-size: 20px 22px;
-        }
-    }
+		&.localisation {
+			background: url("./dist/img/icon-localisation-white.svg") center
+				left no-repeat;
+			background-size: 15px 22px;
+		}
+		&.type {
+			background: url("./dist/img/icon-type-white.svg") center left
+				no-repeat;
+			background-size: 20px 22px;
+		}
+		&.particularite {
+			text-transform: none;
+			background: url("./dist/img/icon-particularite-white.svg") center
+				left no-repeat;
+			background-size: 21px 20px;
+		}
+	}
 
-    &__candidature{
-        @apply absolute inset-0 bg-cover bg-no-repeat bg-center;
-        background-image: url('./dist/img/back/postuler-mobile.jpg');
-        @media screen and (min-width: $lg){
-            background-image: url('./dist/img/back/postuler.jpg');
-        }
-    }
+	&__candidature {
+		@apply absolute inset-0 bg-cover bg-no-repeat bg-center;
+		background-image: url("./dist/img/back/postuler-mobile.jpg");
+		@media screen and (min-width: $lg) {
+			background-image: url("./dist/img/back/postuler.jpg");
+		}
+	}
 
-    .offre__avantages *::selection{
-        background: $dark;
-        color:$blue;
-    }
+	.offre__avantages *::selection {
+		background: $dark;
+		color: $blue;
+	}
 
-    form .forminator-error-message{
-        color: $light;
-    }
+	form .forminator-error-message {
+		color: $light;
+	}
 }

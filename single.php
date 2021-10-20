@@ -22,6 +22,14 @@
                             </span>
                         </p>
                         <p class="offre-single__legende type mt-3" itemprop="employmentType"><?php the_field('type_de_contrat'); ?></p>
+                        <?php 
+                            $particularite = get_field('particularite');
+                            if($particularite):
+                        ?>
+                        <p class="offre-single__legende particularite mt-3" itemprop="experienceRequirements"><?php echo $particularite; ?></p>
+                        <?php 
+                            endif; 
+                        ?>
                         <p class="hidden" itemprop="industry"><?php echo get_the_category()[0]->name; ?></p>
                         <p class="hidden" itemprop="datePosted"><?php echo get_the_date('Y-m-d'); ?></p>
                         <p class="hidden" itemprop="hiringOrganization">Exos</p>
