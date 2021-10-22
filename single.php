@@ -26,7 +26,7 @@
                             $particularite = get_field('particularite');
                             if($particularite):
                         ?>
-                        <p class="offre-single__legende particularite mt-3" itemprop="experienceRequirements"><?php echo $particularite; ?></p>
+                        <p class="offre-single__legende particularite mt-3"><?php echo $particularite; ?></p>
                         <?php 
                             endif; 
                         ?>
