@@ -21,19 +21,29 @@ add_action( 'after_setup_theme', 'bemytheme_setup' );
 function bemytheme_register_assets(){
     // CSS
     wp_enqueue_style( 
-        'bemytheme', 
+        'style', 
         get_stylesheet_uri( ),
         array(),
         '1.0'
     );
     // JS
     wp_enqueue_script( 
-        'bemytheme', 
+        'app', 
         get_template_directory_uri() . '/dist/app.js', 
         array(),
         '1.0',
         true
     );
+    // Dossier de candidature
+    if(is_page('creation-dossier-candidature')){
+        wp_enqueue_script( 
+            'dossier-candidature', 
+            get_template_directory_uri() . '/dist/dossier-candidature.js', 
+            array(),
+            '1.0',
+            true
+        );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'bemytheme_register_assets');
 
@@ -41,6 +51,11 @@ add_action( 'wp_enqueue_scripts', 'bemytheme_register_assets');
 // Custom image size
 add_image_size( 'xl', 1440);
 add_image_size( 'xxl', 1900);
+
+/**
+ * Customize Posts Type
+ */
+require get_template_directory() . '/inc/custom-post-type.php';
 
 /**
  * Customize administration

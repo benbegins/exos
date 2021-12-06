@@ -1,0 +1,157 @@
+.dossier-candidature {
+	#select-collaborateur {
+		background: #fff;
+		padding: 20px;
+		border-radius: 6px;
+		box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+		width: 100%;
+		cursor: pointer;
+		margin-top: 3px;
+	}
+	label {
+		font-size: 12px;
+		font-weight: bold;
+		color: $dark;
+	}
+	.forminator-checkbox-box {
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+		border-radius: 3px !important;
+	}
+}
+
+.liste-dossiers-candidature {
+	&__item {
+		@apply relative flex justify-between items-center w-full cursor-pointer py-6 px-10 mb-4 overflow-hidden;
+		background: white;
+		box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+		border-radius: 6px;
+
+		.item-title {
+			@apply font-display font-bold text-2xl;
+		}
+
+		.item-date {
+			margin-right: 100px;
+			opacity: 0.5;
+		}
+
+		.icon-arrow {
+			@media screen and (min-width: $lg) {
+				background: $blue url("./dist/img/arrow-right-white.svg") center
+					center no-repeat;
+				background-size: 15px 13px;
+				width: 60px;
+				height: 100%;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				transition: width 0.25s $ease;
+			}
+		}
+
+		&:hover {
+			.icon-arrow {
+				@media screen and (min-width: $lg) {
+					width: 80px;
+				}
+			}
+		}
+	}
+}
+
+.single-dossier-candidature {
+	@media print {
+		.container {
+			padding: 0;
+		}
+
+		.pagebreak {
+			page-break-before: always;
+		}
+	}
+
+	header img {
+		width: 150px;
+		margin: 0 auto;
+
+		@media print {
+			width: 120px;
+		}
+	}
+
+	.nav__btn {
+		@apply px-4 py-2 text-light font-bold text-sm mr-1;
+	}
+
+	.item {
+		@apply py-3 border-b border-gray border-opacity-25;
+		@media print {
+			@apply py-2;
+			font-size: 70%;
+		}
+
+		&__label {
+			@apply inline-block font-bold;
+		}
+
+		&__text {
+			@apply inline-block;
+
+			&.block {
+				display: block;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.dossier-h1-title {
+		@apply uppercase leading-none;
+		font-size: 3.2rem;
+		font-family: "Barlow Condensed", sans-serif;
+		font-weight: 800;
+
+		@media screen and (min-width: $sm) {
+			font-size: 4rem;
+		}
+
+		@media screen and (min-width: $lg) {
+			font-size: 5.5rem;
+		}
+
+		@media screen and (min-width: $xl) {
+			font-size: 6.5rem;
+		}
+
+		@media screen and (min-width: $xxl) {
+			//font-size: 7.5vw;
+		}
+	}
+
+	.dossier-h2-title {
+		@apply uppercase leading-none;
+		font-size: 1.7rem;
+		font-family: "Barlow Condensed", sans-serif;
+		font-weight: 800;
+
+		@media screen and (min-width: $md) {
+			font-size: 2.2rem;
+		}
+
+		@media screen and (min-width: $lg) {
+			font-size: 3rem;
+		}
+
+		@media screen and (min-width: $xl) {
+			font-size: 3.5rem;
+		}
+	}
+
+	.dossier-h3-title {
+		font-size: 1.5rem;
+		line-height: 1.1;
+		font-family: "Barlow Condensed", sans-serif;
+		font-weight: 800;
+	}
+}

@@ -5,6 +5,7 @@ Theme URI: https://exos-recrutement.com
 Author: Bemy Studio
 Author URI: https://bemy.studio
 Description: Theme Exos
+Text Domain: exos
 Version: 1.0
 */
 
@@ -15,7 +16,7 @@ Version: 1.0
 // Fonts
 // Barlow 700
 // Roboto 400, 500, 700
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=Roboto:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=Roboto:wght@400;500;700&display=swap");
 
 // Global
 @import "./variables";
@@ -51,3 +52,4 @@ Version: 1.0
 @import "./pages/candidat-a-propos";
 @import "./pages/entreprise-accueil";
 @import "./pages/club-rh";
+@import "./pages/dossier-candidature";
