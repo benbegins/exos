@@ -66,6 +66,7 @@ get_header();
                 <p class="hidden lg:block mt-8 lg:mt-10">Déposez une candidature spontanée et nous vous recontacterons si une offre correspond à votre profil.</p>
                 <a href="<?php echo get_site_url(); ?>/candidature-spontanee" class="btn-primary btn-white mt-6 sm:mt-8 lg:mt-10">Candidature spontanée</a>    
             </div>
+            <div class="invisible h-0"></div>
         </div>
     </section>
     
