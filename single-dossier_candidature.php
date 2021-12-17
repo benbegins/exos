@@ -76,20 +76,24 @@ get_header('blank');
 
             <div class="grid sm:grid-cols-3 gap-x-10 print:grid-cols-2">
                 <div class="item">
-                    <p class="item__label">Nom de famille : </p>
-                    <p class="item__text"><?php the_field('nom_de_famille'); ?></p>
+                    <p class="item__label">Civilité : </p>
+                    <p class="item__text"><?php the_field('civilite'); ?></p>
+                </div>
+                <div class="item">
+                    <p class="item__label">Nom : </p>
+                    <p class="item__text"><?php the_field('nom_dusage'); ?></p>
                 </div>
                 <div class="item">
                     <p class="item__label">Prénom : </p>
                     <p class="item__text"><?php the_field('prenom'); ?></p>
                 </div>
                 <div class="item">
-                    <p class="item__label">Nom d'usage : </p>
-                    <p class="item__text"><?php the_field('nom_dusage'); ?></p>
+                    <p class="item__label">Nom de naissance : </p>
+                    <p class="item__text"><?php the_field('nom_de_famille'); ?></p>
                 </div>
                 <div class="item">
                     <p class="item__label">Nationalité : </p>
-                    <p class="item__text"><?php the_field('nationalite'); ?></p>
+                    <p class="item__text"><?php the_field('nationalite'); ?></p>de
                 </div>
                 <div class="item">
                     <p class="item__label">Date de naissance : </p>
@@ -127,7 +131,7 @@ get_header('blank');
                     <p class="item__label">Temps de transport aller que vous acceptez d’effectuer par jour : </p>
                     <p class="item__text"><?php the_field('temps_de_transport'); ?></p>
                 </div>
-                <div class="item sm:col-span-2">
+                <div class="item">
                     <p class="item__label">Informations utiles : </p>
                     <p class="item__text"><?php the_field('informations_utiles'); ?></p>
                 </div>
