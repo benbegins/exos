@@ -46,7 +46,7 @@ get_header('blank');
     <section class="section-pad print:pt-0">
         <div class="container">
             <div class="item">
-                <p class="item__label">Poste : </p>
+                <p class="item__label">Poste recherché : </p>
                 <p class="item__text"><?php the_field('poste'); ?></p>
             </div>
             <div class="item">
@@ -54,7 +54,7 @@ get_header('blank');
                 <p class="item__text"><?php the_field('disponibilite'); ?></p>
             </div>
             <div class="item">
-                <p class="item__label">Préavis : </p>
+                <p class="item__label">Préavis (en mois) : </p>
                 <p class="item__text"><?php the_field('preavis'); ?></p>
             </div>
             <div class="item">
