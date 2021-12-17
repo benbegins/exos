@@ -93,7 +93,7 @@ get_header('blank');
                 </div>
                 <div class="item">
                     <p class="item__label">Nationalité : </p>
-                    <p class="item__text"><?php the_field('nationalite'); ?></p>de
+                    <p class="item__text"><?php the_field('nationalite'); ?></p>
                 </div>
                 <div class="item">
                     <p class="item__label">Date de naissance : </p>
