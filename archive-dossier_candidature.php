@@ -53,7 +53,7 @@ get_header();
             <?php
                 endwhile;
             else :
-                echo 'Pas de dossier pour le moment';
+                echo 'Pas de dossier à afficher ou correspondant à la recherche';
             endif;
 
             wp_reset_postdata();
