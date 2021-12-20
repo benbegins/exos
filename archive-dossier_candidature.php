@@ -16,12 +16,20 @@ get_header();
         <div class="container">
             <h1 class="h1-title">Liste des dossiers de candidature</h1>
             <a class="btn-primary btn-white mt-10" href="<?php echo get_site_url(); ?>/creation-dossier-candidature/">Créer un nouveau dossier</a>
-
+            
         </div>
     </section>
 
     <section class="section-pad-bot" id="dossiers">
-        <div class="container">
+        <div class="container mb-16">
+            <div class="bg-dark bg-opacity-15 p-10 rounded-xl">
+                <div class="search form">
+                    <?php echo do_shortcode('[searchandfilter slug="dossier-de-candidatures"]'); ?>
+                </div>     
+            </div>
+        </div>
+        
+        <div class="container" id="liste-dossiers">
             <?php
             $args = array(
                 'post_type'         => 'dossier_candidature',
@@ -30,8 +38,8 @@ get_header();
             );
             $query = new WP_Query($args);
 
-            if ( $query->have_posts() ) :
-                while ( $query->have_posts() ) : $query->the_post();
+            if ( have_posts() ) :
+                while ( have_posts() ) : the_post();
 
                 $date = get_the_date("d/m/Y");
             ?>
@@ -55,15 +63,16 @@ get_header();
             <div class="pagination mt-16">
                 <div class="pagination__list">
                 <?php
-                    $big = 999999999;
-                    echo paginate_links( array(
-                        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-                        'format' => '?paged=%#%',
-                        'current' => max( 1, get_query_var('paged') ),
-                        'total' => $query->max_num_pages,
-                        'show_all' => true,
-                        'prev_next' => false
-                    ) );
+                    // $big = 999999999;
+                    // echo paginate_links( array(
+                    //     'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                    //     'format' => '?paged=%#%',
+                    //     'current' => max( 1, get_query_var('paged') ),
+                    //     'total' => $query->max_num_pages,
+                    //     'show_all' => true,
+                    //     'prev_next' => false
+                    // ) );
+                    the_posts_pagination();
                 ?>        
                 </div>
             </div>

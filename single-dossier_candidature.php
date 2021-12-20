@@ -62,6 +62,10 @@ get_header('blank');
                 <p class="item__text"><?php the_field('type_de_contrat'); ?></p>
             </div>
             <div class="item">
+                <p class="item__label">Type(s) d’organisation(s) de travail accepté(s) : </p>
+                <p class="item__text"><?php the_field('type_dorganisation'); ?></p>
+            </div>
+            <div class="item">
                 <p class="item__label">Acceptez-vous des postes/missions à temps partiel ? </p>
                 <p class="item__text"><?php the_field('temps_partiel'); ?></p>
             </div>
