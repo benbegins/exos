@@ -45,7 +45,7 @@ get_header();
         wp_reset_postdata();
         ?>
 
-        <div id="form-dossier-candidature" class="hidden">
+        <div id="form-dossier-candidature" class="mt-16 hidden">
             <?php
                 $form_shortcode = get_field('shortcode_formulaire');
                 

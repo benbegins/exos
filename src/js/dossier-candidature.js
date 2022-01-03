@@ -1,5 +1,3 @@
-console.log("Dossier de candidature")
-
 // Set email input
 const selectCollaborateur = document.getElementById("select-collaborateur")
 const inputCollaborateur = document.querySelector(
