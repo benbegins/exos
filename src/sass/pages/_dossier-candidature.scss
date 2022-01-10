@@ -92,12 +92,15 @@
 	.item {
 		@apply py-3 border-b border-gray border-opacity-25;
 		@media print {
-			@apply py-2;
-			font-size: 70%;
+			@apply py-1;
+			// font-size: 100%;
 		}
 
 		&__label {
 			@apply inline-block font-bold;
+			@media print {
+				font-size: 75%;
+			}
 		}
 
 		&__text {
