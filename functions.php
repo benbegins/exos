@@ -94,3 +94,6 @@ add_filter( 'protected_title_format', 'bl_remove_protected_title' );
 function bl_remove_protected_title( $title ) {
     return "%s";
 }
+
+//Disable plugin auto-update email notification
+add_filter('auto_plugin_update_send_email', '__return_false');
