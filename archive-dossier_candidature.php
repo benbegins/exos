@@ -39,18 +39,29 @@ get_header();
             $query = new WP_Query($args);
 
             if ( have_posts() ) :
+
+                $dossier_precedent = '';
                 while ( have_posts() ) : the_post();
 
-                $date = get_the_date("d/m/Y");
+                    $nom = get_field('nom_dusage');
+                    $date = get_the_date("d/m/Y");
+
+                    // Vérifie que le dossier n'est pas un doublon
+                    if($nom !== $dossier_precedent):
+                        $dossier_precedent = $nom;
             ?>
 
-                <a class="liste-dossiers-candidature__item" href="<?php the_permalink(); ?>">
-                    <p class="item-title"><?php the_title(); ?></p>
-                    <p class="item-date"><?php echo $date; ?></p>
-                    <div class="icon-arrow"></div>
-                </a>
+                    <a class="liste-dossiers-candidature__item" href="<?php the_permalink(); ?>">
+                        <p class="item-title"><?php the_title(); ?></p>
+                        <p class="item-date"><?php echo $date; ?></p>
+                        <div class="icon-arrow"></div>
+                    </a>
 
             <?php
+                    else:
+                        // Supprime le dossier en doublon
+                        wp_delete_post($post->ID);
+                    endif;
                 endwhile;
             else :
                 echo 'Pas de dossier à afficher ou correspondant à la recherche';
@@ -63,15 +74,6 @@ get_header();
             <div class="pagination mt-16">
                 <div class="pagination__list">
                 <?php
-                    // $big = 999999999;
-                    // echo paginate_links( array(
-                    //     'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-                    //     'format' => '?paged=%#%',
-                    //     'current' => max( 1, get_query_var('paged') ),
-                    //     'total' => $query->max_num_pages,
-                    //     'show_all' => true,
-                    //     'prev_next' => false
-                    // ) );
                     the_posts_pagination();
                 ?>        
                 </div>
