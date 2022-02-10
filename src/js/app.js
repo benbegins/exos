@@ -148,12 +148,10 @@ const animation = () => {
 					const href = link.href
 					e.preventDefault()
 					pageTransition.classList.remove("fade-out")
-					pageTransition.addEventListener(
-						"transitionend",
-						function() {
-							window.location.assign(href)
-						}
-					)
+					// Change page after transition
+					setTimeout(() => {
+						window.location.assign(href)
+					}, 250)
 				}
 			})
 		})
@@ -265,4 +263,4 @@ const pageInit = () => {
 }
 
 window.addEventListener("popstate", animation, false)
-window.addEventListener("load", pageInit)
+window.addEventListener("pageshow", pageInit)
