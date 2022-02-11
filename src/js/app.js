@@ -151,7 +151,7 @@ const animation = () => {
 					// Change page after transition
 					setTimeout(() => {
 						window.location.assign(href)
-					}, 250)
+					}, 200)
 				}
 			})
 		})
