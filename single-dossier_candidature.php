@@ -26,7 +26,7 @@ get_header('blank');
 
     <section class="section-pad bg-blue text-light print:bg-white print:text-dark">
         <div class="container">
-            <p class="font-bold leading-none -mb-2 text-lg print:text-xs">Dossier de candidature</p>
+            <p class="font-bold leading-none -mb-2 text-lg print:text-xs print:mb-0">Dossier de candidature</p>
             <h1 class="dossier-h1-title lg:w-3/4"><?php the_title(); ?></h1>
             <div class="print:hidden flex items-center mt-10">
                 <button class="btn-primary btn-white-2 mr-10" onClick="window.print()">Imprimer / exporter</button>
@@ -67,7 +67,7 @@ get_header('blank');
     </section>
 
     <!-- Présentation -->
-    <section class="section-pad-bot">
+    <section class="section-pad-bot print:pb-0">
         <div class="container">
 
             <h2 class="dossier-h2-title mb-10">Présentation</h2>
@@ -157,7 +157,7 @@ get_header('blank');
     </section>
 
     <!-- Expériences pro -->
-    <section class="section-pad-bot">
+    <section class="section-pad-bot print:pb-0">
         <div class="container">
             <h2 class="dossier-h2-title mb-10 pagebreak">Expérience professionnelle</h2>
 
@@ -282,7 +282,7 @@ get_header('blank');
     </section>
 
     <!-- Questions annexes -->
-    <section class="section-pad-bot">
+    <section class="section-pad-bot print:pb-0">
         <div class="container">
             <h2 class="dossier-h2-title mb-10 pagebreak">Questions annexes</h2>  
             

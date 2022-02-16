@@ -92,7 +92,7 @@
 	.item {
 		@apply py-3 border-b border-gray border-opacity-25;
 		@media print {
-			@apply py-1;
+			padding: 0.1rem 0;
 			// font-size: 100%;
 		}
 
