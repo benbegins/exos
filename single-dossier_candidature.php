@@ -24,12 +24,6 @@ get_header('blank');
         </div>
     </header>
 
-    <nav class="print:hidden">
-        <div class="container text-center">
-            
-        </div>
-    </nav>
-
     <section class="section-pad bg-blue text-light print:bg-white print:text-dark">
         <div class="container">
             <p class="font-bold leading-none -mb-2 text-lg print:text-xs">Dossier de candidature</p>
@@ -140,7 +134,25 @@ get_header('blank');
                     <p class="item__text"><?php the_field('informations_utiles'); ?></p>
                 </div>
             </div>
-            
+
+            <!-- Contact en cas d'urgence -->
+            <h3 class="dossier-h3-title mt-10 mb-3">Contact en cas d'urgence</h3>
+
+            <div class="grid sm:grid-cols-3 gap-x-10 print:grid-cols-2">
+                <div class="item">
+                    <p class="item__label">Prénom / Nom : </p>
+                    <p class="item__text"><?php the_field('contact_nom'); ?></p>
+                </div>
+                <div class="item">
+                    <p class="item__label">Lien : </p>
+                    <p class="item__text"><?php the_field('contact_lien'); ?></p>
+                </div>
+                <div class="item">
+                    <p class="item__label">Téléphone : </p>
+                    <p class="item__text"><?php the_field('contact_telephone'); ?></p>
+                </div>
+            </div>
+
         </div>
     </section>
 
