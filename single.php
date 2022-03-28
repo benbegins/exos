@@ -56,6 +56,13 @@
                         <?php the_field('requis'); ?>	
                     </div>
                     <?php endif; ?>        
+                    
+                    <?php if( get_field('avantages') ): ?>
+                    <h2 class="h1-title mt-20">Avantages</h2>
+                    <div class="zone-text zone-text__offre mt-10" itemprop="incentiveCompensation">
+                        <?php the_field('avantages'); ?>	
+                    </div>
+                    <?php endif; ?>        
                 </div>
 
                 <!-- COLLABORATEUR -->
@@ -90,33 +97,19 @@
             </div>
         </section>
         
-        <!-- AVANTAGES -->
-        <?php if( get_field('avantages') ): ?>
-        <section class="section-pad bg-blue text-light offre__avantages">
-            <div class="container">
-                <div class="lg:w-7/12">
-                    <h2 class="h1-title">Avantages</h2>
-                    <div class="zone-text zone-text__offre mt-10" itemprop="incentiveCompensation">
-                        <?php the_field('avantages'); ?>	
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php endif; ?>
-        
         <!-- POSTULER A L OFFRE -->
-        <section id="postuler" class="section-pad text-light relative overflow-hidden">
+        <section id="postuler" class="section-pad bg-blue text-light relative overflow-hidden">
             <div class="container z-10 relative lg:flex lg:justify-center">
-                <div class="lg:w-1/3 lg:mr-6">
+                <div class="lg:w-1/2 lg:mr-6">
                     <h2 class="h2-title">Cette mission est faite pour vous&nbsp;?</h2>
                     <p class="mt-4">Envoyez-nous votre candidature !</p>    
                 </div>
-                <div class="form mt-10 lg:w-1/3 lg:ml-6 lg:-mt-4">
+                <div class="form mt-10 lg:w-1/2 lg:ml-6 lg:-mt-4">
                     <?php echo do_shortcode('[forminator_form id="1279068"]'); ?>
                 </div>
             </div>
-            <div class="offre-single__candidature img-parallax"></div>
-            <div class="overlay absolute inset-0 bg-dark opacity-50"></div>
+            <!-- <div class="offre-single__candidature img-parallax"></div> -->
+            <!-- <div class="overlay absolute inset-0 bg-dark opacity-50"></div> -->
         </section>
 
         <!-- COLLABORATEUR -->

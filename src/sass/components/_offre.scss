@@ -115,11 +115,11 @@
 	}
 
 	&__candidature {
-		@apply absolute inset-0 bg-cover bg-no-repeat bg-center;
-		background-image: url("./dist/img/back/postuler-mobile.jpg");
-		@media screen and (min-width: $lg) {
-			background-image: url("./dist/img/back/postuler.jpg");
-		}
+		// @apply absolute inset-0 bg-cover bg-no-repeat bg-center;
+		// background-image: url("./dist/img/back/postuler-mobile.jpg");
+		// @media screen and (min-width: $lg) {
+		// 	background-image: url("./dist/img/back/postuler.jpg");
+		// }
 	}
 
 	.offre__avantages *::selection {
