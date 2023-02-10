@@ -39,9 +39,10 @@
                     </div>
                 </div>
                 <div class="flex items-center justify-start">
-                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-charte-diversite-white.png" alt="Logo Charte de la diversité">
-                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-a-competence-egale-white.png" alt="Logo Association A compétence égale" class="md:mx-16">
-                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-prism-emploi-white.png" alt="Logo Prism'emploi">
+                <img width="75" src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-charte-diversite-light.png" alt="Logo Charte de la diversité">
+                    <img width="85" src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-competence-egale-dark.png" alt="Logo Association A compétence égale" class="md:mx-16">
+                    <img width="125" src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-prism-emploi-light.png" alt="Logo Prism'emploi">
+                    <img width="100" src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-socamett-light.png" alt="Logo Socamett" class="md:mx-16">
                 </div>
             </div>
 
@@ -85,10 +86,11 @@
                         </svg>
                     </a>
                 </div>
-                <div class="flex items-center justify-between md:justify-start lg:hidden">
-                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-charte-diversite-white.png" alt="Logo Charte de la diversité">
-                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-a-competence-egale-white.png" alt="Logo Association A compétence égale" class="md:mx-16">
-                    <img src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-prism-emploi-white.png" alt="Logo Prism'emploi">
+                <div class="grid grid-cols-2 justify-items-center gap-4 items-center lg:hidden">
+                    <img width="75" src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-charte-diversite-light.png" alt="Logo Charte de la diversité">
+                    <img width="85" src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-competence-egale-dark.png" alt="Logo Association A compétence égale" class="md:mx-16">
+                    <img width="125" src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-prism-emploi-light.png" alt="Logo Prism'emploi">
+                    <img width="100" src="<?php echo get_template_directory_uri(  ); ?>/dist/img/logo-socamett-light.png" alt="Logo Socamett">
                 </div>
             </div>
 
