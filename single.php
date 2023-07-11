@@ -1,9 +1,9 @@
 <?php get_header(); 
 
 $title = get_the_title();
-$description = get_field('mission');
-$skills = get_field('requis');
-$incentiveCompensation = get_field('avantages');
+$description = strip_tags(get_field('mission'));
+$skills = strip_tags(get_field('requis'));
+$incentiveCompensation = strip_tags(get_field('avantages'));
 $job_date_posted = get_the_date('Y-m-d');
 $job_valid_through = date('Y-m-d', strtotime('+30 days'));
 $organization_logo = get_template_directory_uri() . '/dist/img/logo-exos.png';
