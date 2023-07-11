@@ -1,27 +1,78 @@
-<?php get_header(); ?>
+<?php get_header(); 
+
+$title = get_the_title();
+$description = get_field('mission');
+$skills = get_field('requis');
+$incentiveCompensation = get_field('avantages');
+$job_date_posted = get_the_date('Y-m-d');
+$job_valid_through = date('Y-m-d', strtotime('+30 days'));
+$organization_logo = get_template_directory_uri() . '/dist/img/logo-exos.png';
+$base_salary = get_field('salaire');
+$adress_street = get_field('adresse')['rue'];
+$adress_city = get_field('adresse')['ville'];
+$adress_postal_code = get_field('adresse')['code_postal'];
+$industry = get_the_category()[0]->name;
+$employmentType = get_field('type_de_contrat');
+
+
+$schema = array(
+    '@context' => 'https://schema.org',
+    '@type' => 'JobPosting',
+    'title' => $title,
+    'description' => $description,
+    'datePosted' => $job_date_posted,
+    'validThrough' => $job_valid_through,
+    'hiringOrganization' => array(
+        '@type' => 'Organization',
+        'name' => 'Exos',
+        'sameAs' => 'https://www.exos-recrutement.com',
+        'logo' => $organization_logo
+    ),
+    'jobLocation' => array(
+        '@type' => 'Place',
+        'address' => array(
+            '@type' => 'PostalAddress',
+            "streetAddress" => $adress_street,
+            "addressLocality" => $adress_city,
+            "postalCode" => $adress_postal_code,
+            "addressCountry" => "FR"
+        )
+    ),
+    'baseSalary' => array(
+        '@type' => 'MonetaryAmount',
+        'currency' => 'EUR',
+        'value' => array(
+            '@type' => 'QuantitativeValue',
+            'value' => $base_salary,
+            'unitText' => 'YEAR'
+        )
+    ),
+    'industry' => $industry,
+    'employmentType' => $employmentType,
+);
+
+echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
+?>
+
 
 <div class="page-pt offre-single">
 
-    <div itemscope itemtype="https://schema.org/JobPosting">
+    <div>
 
         <!-- TITRE DE LA MISSION -->
         <section class="section-pad bg-dark text-light">
             <div class="container">
                 <div class="lg:flex lg:items-center">
                     <div class="lg:w-1/2">
-                        <h1 class="h2-title" itemprop="title">
+                        <h1 class="h2-title">
                             <?php the_title(); ?>
                         </h1>    
                     </div>
                     <div class="mt-4 lg:mt-0 lg:w-1/4 lg:ml-auto">
                         <p class="offre-single__legende localisation">
-                            <span itemprop="jobLocation" itemscope itemtype="https://schema.org/Place">
-                                <span itemprop="address">
                                     <?php the_field('localisation'); ?>
-                                </span>
-                            </span>
                         </p>
-                        <p class="offre-single__legende type mt-3" itemprop="employmentType"><?php the_field('type_de_contrat'); ?></p>
+                        <p class="offre-single__legende type mt-3"><?php the_field('type_de_contrat'); ?></p>
                         <?php 
                             $particularite = get_field('particularite');
                             if($particularite):
@@ -30,9 +81,9 @@
                         <?php 
                             endif; 
                         ?>
-                        <p class="hidden" itemprop="industry"><?php echo get_the_category()[0]->name; ?></p>
-                        <p class="hidden" itemprop="datePosted"><?php echo get_the_date('Y-m-d'); ?></p>
-                        <p class="hidden" itemprop="hiringOrganization">Exos</p>
+                        <p class="hidden"><?php echo get_the_category()[0]->name; ?></p>
+                        <p class="hidden"><?php echo get_the_date('Y-m-d'); ?></p>
+                        <p class="hidden">Exos</p>
                     </div>
                 </div>
             </div>
@@ -45,21 +96,21 @@
                 <div class="lg:w-7/12">
                     <?php if( get_field('mission') ): ?>
                     <h2 class="h1-title">Mission</h2>
-                    <div class="zone-text zone-text__offre mt-10" itemprop="description">
+                    <div class="zone-text zone-text__offre mt-10">
                         <?php the_field('mission'); ?>	
                     </div>
                     <?php endif; ?>    
 
                     <?php if( get_field('requis') ): ?>
                     <h2 class="h1-title mt-20">Requis</h2>
-                    <div class="zone-text zone-text__offre mt-10" itemprop="skills">
+                    <div class="zone-text zone-text__offre mt-10">
                         <?php the_field('requis'); ?>	
                     </div>
                     <?php endif; ?>        
                     
                     <?php if( get_field('avantages') ): ?>
                     <h2 class="h1-title mt-20">Avantages</h2>
-                    <div class="zone-text zone-text__offre mt-10" itemprop="incentiveCompensation">
+                    <div class="zone-text zone-text__offre mt-10">
                         <?php the_field('avantages'); ?>	
                     </div>
                     <?php endif; ?>        
