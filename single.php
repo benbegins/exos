@@ -49,6 +49,8 @@ $schema = array(
     ),
     'industry' => $industry,
     'employmentType' => $employmentType,
+    'skills' => $skills,
+    'incentiveCompensation' => $incentiveCompensation
 );
 
 echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
