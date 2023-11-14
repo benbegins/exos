@@ -10,7 +10,7 @@ get_header("entreprise");
     <section class="section-pad">
         <div class="container">
             <h1 class="h1-title lg:w-3/4 relative">
-                Fournisseur de talents depuis 2001
+                Fournisseur de talents depuis 2003
             </h1>
         </div>
     </section>
@@ -129,7 +129,7 @@ get_header("entreprise");
                 
                 <li class="histoire__item">
                     <div class="histoire__date">
-                        <p class="text-xs">2001</p>
+                        <p class="text-xs">2003</p>
                     </div>
                     <div class="histoire__text">
                         <h3 class="h3-title">Création d'Exos Intérim</h3>

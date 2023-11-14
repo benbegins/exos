@@ -8,7 +8,7 @@ get_header();
 <div class="page-pt">
     <section class="section-pad">
         <div class="container">
-            <h1 class="h1-title lg:w-3/4">Partenaires de votre carrière depuis 2001</h1>
+            <h1 class="h1-title lg:w-3/4">Partenaires de votre carrière depuis 2003</h1>
         </div>
     </section>
 

@@ -12,7 +12,7 @@ get_header();
         <div class="z-10 container xxl:max-w-none">
             <div class="lg:w-1/2 xl:w-5/12 hero-full__content">
                 <h1 class="hero-title">Partenaire <br>de votre carrière</h1>
-                <p class="hero-text hidden lg:block">Depuis 2001, nous accompagnons de manière professionnelle et conviviale les candidats et les entreprises sur des missions de recrutement en CDI, en CDD ou en intérim.</p>
+                <p class="hero-text hidden lg:block">Depuis 2003, nous accompagnons de manière professionnelle et conviviale les candidats et les entreprises sur des missions de recrutement en CDI, en CDD ou en intérim.</p>
                 <div class="flex flex-col items-start lg:flex-row lg:items-center">
                     <a href="<?php echo get_site_url(); ?>/nos-offres" class="btn-primary btn-orange mt-4 mr-10">Voir nos offres</a>
                     <a href="<?php echo get_site_url(); ?>/entreprise/" class="btn-secondary btn-white mt-4">Vous êtes une entreprise ?</a>    
@@ -180,7 +180,7 @@ get_header();
         <div class="section-split__text py-10">
             <div class="container">
                 <h2 class="h2-title">Vous êtes une <br>entreprise&nbsp;?</h2>
-                <p class="hidden lg:block mt-8 lg:mt-10">Nous sommes votre partenaire de confiance depuis 2001, du recrutement clé en main au sourcing de candidats, dans les fonctions supports et industrie-ingénierie.</p>
+                <p class="hidden lg:block mt-8 lg:mt-10">Nous sommes votre partenaire de confiance depuis 2003, du recrutement clé en main au sourcing de candidats, dans les fonctions supports et industrie-ingénierie.</p>
                 <a href="<?php echo get_site_url(); ?>/entreprise/services" class="btn-primary btn-white mt-6 sm:mt-8 lg:mt-10">Découvrir nos services</a>    
             </div>
         </div>
