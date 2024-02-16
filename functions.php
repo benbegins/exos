@@ -96,4 +96,4 @@ function bl_remove_protected_title( $title ) {
 }
 
 //Disable plugin auto-update email notification
-add_filter('auto_plugin_update_send_email', '__return_false');
+// add_filter('auto_plugin_update_send_email', '__return_false');
