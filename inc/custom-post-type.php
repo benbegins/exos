@@ -594,3 +594,12 @@ function dossier_candidature_post_type() {
 
 }
 add_action( 'init', 'dossier_candidature_post_type', 0 );
+
+
+/*
+// Remove editor support for post post type
+*/
+function remove_editor_support() {
+	remove_post_type_support( 'post', 'editor' );
+}
+add_action( 'init', 'remove_editor_support' );
